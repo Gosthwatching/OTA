@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #101828;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  height: 100vh;
+}
+
+.controls {
+  position: relative;
+  z-index: 1100;
+  padding: 14px;
+  border-right: 1px solid #d0d5dd;
+  overflow-y: auto;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+label,
+legend {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+select,
+button {
+  width: 100%;
+  margin: 6px 0 12px;
+  padding: 9px;
+}
+
+fieldset {
+  border: 1px solid #d0d5dd;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+fieldset label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+}
+
+#status {
+  margin-top: 12px;
+  padding: 9px;
+  background: #f2f4f7;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-line {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .controls {
+    border-right: 0;
+    border-bottom: 1px solid #d0d5dd;
+  }
+}
