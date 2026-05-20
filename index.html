@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTA Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="controls">
+        <h1>Carte OTA</h1>
+
+        <label for="scope">Niveau de chargement</label>
+        <select id="scope">
+          <option value="single">1 element (test rapide)</option>
+          <option value="department">1 departement</option>
+        </select>
+
+        <label for="department">Departement</label>
+        <select id="department">
+          <option value="44">44 - Loire-Atlantique</option>
+          <option value="56">56 - Morbihan</option>
+          <option value="29">29 - Finistere</option>
+        </select>
+
+        <label for="zone">Zone bunker</label>
+        <select id="zone">
+          <option value="department">Departement courant</option>
+          <option value="atlantic">Facade atlantique</option>
+        </select>
+
+        <fieldset>
+          <legend>Types</legend>
+          <label><input type="checkbox" value="lighthouse" checked /> Phare</label>
+          <label><input type="checkbox" value="beach" checked /> Plage</label>
+          <label><input type="checkbox" value="bunker" checked /> Bunker</label>
+        </fieldset>
+
+        <label for="activation">Activation</label>
+        <select id="activation">
+          <option value="all">Tous</option>
+          <option value="activated">Actives</option>
+          <option value="not-activated">Pas encore actives</option>
+        </select>
+
+        <div class="actions">
+          <button id="loadBtn">Charger les points OSM</button>
+          <button id="locateBtn">Ma position</button>
+        </div>
+
+        <p id="status">Pret.</p>
+      </section>
+
+      <section id="map"></section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
