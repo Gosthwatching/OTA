@@ -2,6 +2,22 @@
 window.OTA = window.OTA || {};
 
 OTA.pointsOsm = {
+  extractCoordinates: function (element) {
+    if (typeof element.lat === "number" && typeof element.lon === "number") {
+      return { lat: element.lat, lon: element.lon };
+    }
+
+    if (
+      element.center &&
+      typeof element.center.lat === "number" &&
+      typeof element.center.lon === "number"
+    ) {
+      return { lat: element.center.lat, lon: element.center.lon };
+    }
+
+    return null;
+  },
+
   transform: function (elementsOsm, typesSelectionnes) {
     const points = [];
 
@@ -13,7 +29,9 @@ OTA.pointsOsm = {
         continue;
       }
 
-      if (typeof element.lat !== "number" || typeof element.lon !== "number") {
+      const coord = OTA.pointsOsm.extractCoordinates(element);
+
+      if (!coord) {
         continue;
       }
 
@@ -30,8 +48,8 @@ OTA.pointsOsm = {
 
       points.push({
         id: id,
-        lat: element.lat,
-        lon: element.lon,
+        lat: coord.lat,
+        lon: coord.lon,
         nom: nom,
         typePoint: typePoint,
         estActif: OTA.config.idsActifsDemo.has(id),

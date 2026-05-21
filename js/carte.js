@@ -5,10 +5,9 @@ OTA.carte = {
   init: function () {
     OTA.etat.carte = L.map("map").setView([47.35, -1.55], 8);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors",
-    }).addTo(OTA.etat.carte);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(OTA.etat.carte);
 
     OTA.etat.couchePoints = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);

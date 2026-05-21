@@ -20,6 +20,15 @@ OTA.config = {
     maxTentativesParEndpoint: 2,
     backoffBaseMs: 1200,
   },
+  
+  zoneFrance: {
+    id: "france",
+    nom: "France entière",
+    bbox: [41.3, -5.3, 51.1, 9.6],
+    centre: [46.5, 2.5],
+    zoom: 5,
+  },
+
   zoneAtlantique: {
     id: "atlantic",
     nom: "Facade atlantique (FR)",

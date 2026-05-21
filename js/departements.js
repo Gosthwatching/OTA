@@ -358,6 +358,10 @@ OTA.departements = {
       return OTA.config.pointTest;
     }
 
+    if (portee === "country") {
+      return OTA.config.zoneFrance;
+    }
+
     if (OTA.etat.dom.champZone.value === OTA.config.zoneAtlantique.id) {
       return OTA.config.zoneAtlantique;
     }

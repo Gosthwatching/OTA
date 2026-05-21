@@ -4,24 +4,40 @@ window.OTA = window.OTA || {};
 OTA.overpass = {
   buildQuery: function (typesSelectionnes, portee, zoneRecherche) {
     const morceaux = [];
+    const timeoutSeconds = portee === "country" ? 60 : 25;
 
     for (let i = 0; i < typesSelectionnes.length; i += 1) {
       const type = typesSelectionnes[i];
       morceaux.push(OTA.overpass.buildPart(type, portee, zoneRecherche));
     }
 
-    return `[out:json][timeout:25];(${morceaux.join("")});out body;`;
+    // Include center so ways/relations can be displayed as points.
+    return `[out:json][timeout:${timeoutSeconds}];(${morceaux.join("")});out body center;`;
   },
 
   buildPart: function (type, portee, zoneRecherche) {
     const config = OTA.config.configTypePoint[type];
     const pointTest = OTA.config.pointTest;
+    let selecteur = "";
 
     if (portee === "single") {
-      return `node(around:${pointTest.rayonMetres},${pointTest.lat},${pointTest.lon})[${config.tag}];`;
+      selecteur = `(around:${pointTest.rayonMetres},${pointTest.lat},${pointTest.lon})`;
+    } else {
+      selecteur = `(${OTA.geo.bboxToText(zoneRecherche.bbox)})`;
     }
 
-    return `node(${OTA.geo.bboxToText(zoneRecherche.bbox)})[${config.tag}];`;
+    const inclureRelations = portee !== "country";
+
+    const morceaux = [
+      `node${selecteur}[${config.tag}];`,
+      `way${selecteur}[${config.tag}];`,
+    ];
+
+    if (inclureRelations) {
+      morceaux.push(`relation${selecteur}[${config.tag}];`);
+    }
+
+    return morceaux.join("");
   },
 
   loadWithRetry: async function (requeteOverpass) {

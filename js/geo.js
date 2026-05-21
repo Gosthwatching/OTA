@@ -91,6 +91,83 @@ OTA.geo = {
     return null;
   },
 
+  isPointInRing: function (lat, lon, ring) {
+    let dedans = false;
+
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
+      const xi = ring[i][0];
+      const yi = ring[i][1];
+      const xj = ring[j][0];
+      const yj = ring[j][1];
+
+      const intersecte =
+        yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi;
+
+      if (intersecte) {
+        dedans = !dedans;
+      }
+    }
+
+    return dedans;
+  },
+
+  isPointInPolygon: function (lat, lon, polygon) {
+    if (!Array.isArray(polygon) || polygon.length === 0) {
+      return false;
+    }
+
+    const ringExterieur = polygon[0];
+
+    if (!OTA.geo.isPointInRing(lat, lon, ringExterieur)) {
+      return false;
+    }
+
+    for (let i = 1; i < polygon.length; i += 1) {
+      if (OTA.geo.isPointInRing(lat, lon, polygon[i])) {
+        return false;
+      }
+    }
+
+    return true;
+  },
+
+  isPointInContour: function (lat, lon, contour) {
+    if (!contour || !Array.isArray(contour.coordinates)) {
+      return false;
+    }
+
+    if (contour.type === "Polygon") {
+      return OTA.geo.isPointInPolygon(lat, lon, contour.coordinates);
+    }
+
+    if (contour.type === "MultiPolygon") {
+      for (let i = 0; i < contour.coordinates.length; i += 1) {
+        if (OTA.geo.isPointInPolygon(lat, lon, contour.coordinates[i])) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  },
+
+  isPointInDepartment: function (lat, lon, departement) {
+    if (departement.contour) {
+      return OTA.geo.isPointInContour(lat, lon, departement.contour);
+    }
+
+    if (!departement.bbox) {
+      return false;
+    }
+
+    return (
+      lat >= departement.bbox[0] &&
+      lat <= departement.bbox[2] &&
+      lon >= departement.bbox[1] &&
+      lon <= departement.bbox[3]
+    );
+  },
+
   buildDepartmentGeoJson: function (departement) {
     if (departement.contour && departement.contour.coordinates) {
       return {

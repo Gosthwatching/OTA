@@ -66,12 +66,12 @@ OTA.main = {
     const portee = OTA.etat.dom.champPortee.value;
     let departementChoisi = OTA.departements.findSelected();
 
-    if (!departementChoisi) {
+    if (portee === "department" && !departementChoisi) {
       OTA.ui.showStatus("Departement indisponible.");
       return;
     }
 
-    if (portee !== "single" && OTA.etat.dom.champZone.value !== OTA.config.zoneAtlantique.id) {
+    if (portee === "department" && OTA.etat.dom.champZone.value !== OTA.config.zoneAtlantique.id) {
       departementChoisi = await OTA.departements.ensureGeometry(departementChoisi);
 
       if (!departementChoisi.bbox) {
@@ -110,8 +110,22 @@ OTA.main = {
         OTA.etat.dom.champActivation.value
       );
 
-      OTA.carte.showPoints(pointsFiltres, zoneRecherche, portee);
-      OTA.ui.showStatus(`${pointsFiltres.length} points affiches (${points.length} recuperes).`);
+      let pointsAffiches = pointsFiltres;
+
+      const estZoneDepartement =
+        portee === "department" &&
+        departementChoisi &&
+        zoneRecherche &&
+        zoneRecherche.code === departementChoisi.code;
+
+      if (estZoneDepartement) {
+        pointsAffiches = pointsFiltres.filter(function (point) {
+          return OTA.geo.isPointInDepartment(point.lat, point.lon, departementChoisi);
+        });
+      }
+
+      OTA.carte.showPoints(pointsAffiches, zoneRecherche, portee);
+      OTA.ui.showStatus(`${pointsAffiches.length} points affiches (${points.length} recuperes).`);
     } catch (erreur) {
       OTA.ui.showStatus(`Echec de chargement: ${OTA.overpass.errorMessage(erreur)}`);
     }
