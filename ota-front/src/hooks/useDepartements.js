@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 import { config } from '../legacy/config';
-import { contourToBbox, bboxCenter, extractLonLat } from '../legacy/geo';
+import { contourToBbox, bboxCenter, centerToBbox, extractLonLat } from '../legacy/geo';
 
 function createFromApi(depApi) {
   let bbox = contourToBbox(depApi.contour);
-  if (!bbox) bbox = depApi.centre ? bboxCenter([depApi.centre[0], depApi.centre[1]]) : null;
-  // fallback: compute centre from centre property
+  const centrePoint = extractLonLat(depApi.centre);
+  if (!bbox && centrePoint) {
+    bbox = centerToBbox([centrePoint.lon, centrePoint.lat], config.departementRayonBboxDeg);
+  }
+
   let centre = null;
-  if (bbox) centre = bboxCenter(bbox);
-  const point = extractLonLat(depApi.centre);
-  if (point) centre = [point.lat, point.lon];
+  if (centrePoint) centre = [centrePoint.lat, centrePoint.lon];
+  else if (bbox) centre = bboxCenter(bbox);
+
   return {
     code: String(depApi.code),
     nom: depApi.nom,

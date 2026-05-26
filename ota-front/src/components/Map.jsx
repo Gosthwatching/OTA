@@ -55,17 +55,16 @@ export const Map = forwardRef(function Map(_, ref) {
       ]);
     },
 
-    drawDepartment(departement, geoJson) {
+    drawDepartment(geoJson) {
       if (!mapInstanceRef.current) return;
       if (departementLayerRef.current) {
         mapInstanceRef.current.removeLayer(departementLayerRef.current);
         departementLayerRef.current = null;
       }
 
-      const gj = geoJson;
-      if (!gj) return;
+      if (!geoJson) return;
 
-      departementLayerRef.current = L.geoJSON(gj, {
+      departementLayerRef.current = L.geoJSON(geoJson, {
         style: {
           color: '#0ea5e9',
           weight: 2,
