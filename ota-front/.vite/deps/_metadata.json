@@ -1,0 +1,38 @@
+{
+  "hash": "a0c7360e",
+  "configHash": "e6a36c77",
+  "lockfileHash": "6cbd444e",
+  "browserHash": "6228444d",
+  "optimized": {
+    "leaflet": {
+      "src": "../../node_modules/leaflet/dist/leaflet-src.js",
+      "file": "leaflet.js",
+      "fileHash": "8137fac2",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "5746e6ca",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "5e8af656",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "f60890fc",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-BvCyGRYZ": {
+      "file": "chunk-BvCyGRYZ.js",
+      "isDynamicEntry": false
+    }
+  }
+}
