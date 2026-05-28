@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.topbar {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #d0d5dd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.topbar h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  height: calc(100vh - 120px); /* 60px header + 60px footer */
+}
+
+/* MAP */
+#map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Footer */
+.bottombar {
+  height: 60px;
+  background: white;
+  border-top: 1px solid #d0d5dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.bottombar h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+p{
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+legend-item.name {
+  font-weight: bold;
+  margin : 0px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Couleurs identiques à tes marqueurs Leaflet */
+.dot.red {
+  background: #ff4d4d;
+}
+
+.dot.green {
+  background: #4dff4d;
+}
+
+.dot.yellow {
+  background: #ffe44d;
+}
+
+.dot.cyan {
+  background: #4ddaff;
+}

@@ -21,7 +21,7 @@ OTA.geolocalisation = {
         marqueur.bindPopup("Tu es ici").openPopup();
 
         OTA.etat.carte.setView([lat, lon], 13);
-        OTA.ui.showStatus("Position detectee.");
+        OTA.Qui.showStatus("Position detectee.");
       },
       function (erreur) {
         OTA.ui.showStatus(`Geolocalisation refusee/indisponible: ${erreur.message}`);
