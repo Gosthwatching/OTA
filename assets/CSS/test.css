@@ -30,13 +30,14 @@ body {
 
 /* MAIN */
 main {
+  display: flex;
   width: 100%;
   height: calc(100vh - 120px); /* 60px header + 60px footer */
 }
 
 /* MAP */
 #map {
-  width: 100%;
+  width: 280em;
   height: 100%;
   position: relative;
 }

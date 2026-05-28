@@ -1,14 +1,22 @@
 // Carte Leaflet : tuiles, marqueurs, contour département
 window.OTA = window.OTA || {};
-
 OTA.carte = {
   init: function () {
-    OTA.etat.carte = L.map("map").setView([47.35, -1.55], 8);
+    // Carte centrée sur Paris au démarrage
+    OTA.etat.carte = L.map("map").setView([48.8566, 2.3522], 12);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    // Déplacement du zoom en haut à droite
+    OTA.etat.carte.zoomControl.remove();
+    L.control.zoom({
+      position: 'topright'
+    }).addTo(OTA.etat.carte);
+
+    // Tuiles
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(OTA.etat.carte);
+    }).addTo(OTA.etat.carte);
 
+    // Couches
     OTA.etat.couchePoints = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheDepartement = null;
@@ -28,13 +36,15 @@ OTA.carte = {
   showPoints: function (points, zoneRecherche, portee) {
     OTA.etat.couchePoints.clearLayers();
 
+    // 🔥 Correction : ne recadre QUE si une bbox existe
     if (portee === "single") {
       const p = OTA.config.pointTest;
       OTA.etat.carte.setView([p.lat, p.lon], 13);
-    } else {
+    } else if (zoneRecherche && zoneRecherche.bbox) {
       OTA.carte.fitBbox(zoneRecherche.bbox);
     }
 
+    // Ajout des points
     for (let i = 0; i < points.length; i += 1) {
       const point = points[i];
       const config = OTA.config.configTypePoint[point.typePoint];

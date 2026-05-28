@@ -315,30 +315,29 @@ OTA.departements = {
   },
 
   chooseDefault: async function () {
-    const liste = OTA.etat.listeDepartements;
+  const liste = OTA.etat.listeDepartements;
 
-    if (liste.length === 0) {
-      OTA.ui.showStatus("Aucun departement disponible.");
-      return;
+  if (liste.length === 0) {
+    OTA.ui.showStatus("Aucun departement disponible.");
+    return;
+  }
+
+  let depParDefaut = liste[0];
+
+  // On garde 44 comme département sélectionné par défaut
+  for (let i = 0; i < liste.length; i += 1) {
+    if (liste[i].code === "75") {
+      depParDefaut = liste[i];
+      break;
     }
+  }
 
-    let depParDefaut = liste[0];
-
-    for (let i = 0; i < liste.length; i += 1) {
-      if (liste[i].code === "44") {
-        depParDefaut = liste[i];
-        break;
-      }
-    }
-
-    OTA.etat.dom.champDepartement.value = depParDefaut.code;
-    await OTA.departements.ensureGeometry(depParDefaut);
-
-    if (depParDefaut.centre) {
-      OTA.carte.goTo(depParDefaut.centre, depParDefaut.zoom);
-    }
-    OTA.carte.drawDepartment(depParDefaut);
+  OTA.etat.dom.champDepartement.value = depParDefaut.code;
+  await OTA.departements.ensureGeometry(depParDefaut);
+  // ✔️ On dessine juste le contour
+  OTA.carte.drawDepartment(depParDefaut);
   },
+
 
   findSelected: function () {
     const code = OTA.etat.dom.champDepartement.value;

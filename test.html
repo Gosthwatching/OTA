@@ -24,7 +24,72 @@
           <button id="locateBtnHeader" class="btn btn-primary">Me localiser</button>
         </header>
     <main>
-        <section id="map"></section>
+      <section class="controls bg-light border-end p-3">
+        <div class="mb-3">
+          <label for="scope" class="form-label fw-bold">Niveau de chargement</label>
+          <select id="scope" class="form-select">
+            <option value="country">Pays entier</option>
+            <option value="department">Département</option>
+            <option value="single">Point de test</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="department" class="form-label fw-bold">Département</label>
+          <select id="department" class="form-select">
+            <option value="75">75 - Paris</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="zone" class="form-label fw-bold">Zone bunker</label>
+          <select id="zone" class="form-select">
+            <option value="department">Département courant</option>
+            <option value="atlantic">Facade atlantique</option>
+          </select>
+        </div>
+
+        <fieldset class="border rounded p-3 mb-3">
+          <legend class="float-none w-auto px-2 fw-bold">Types</legend>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="lighthouse" id="typeLighthouse" checked>
+            <label class="form-check-label" for="typeLighthouse">Phare</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="beach" id="typeBeach" checked>
+            <label class="form-check-label" for="typeBeach">Plage</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="military_bunker" id="typeMil" checked>
+            <label class="form-check-label" for="typeMil">Military Bunker</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="civil_bunker" id="typeCiv" checked>
+            <label class="form-check-label" for="typeCiv">Civil Bunker</label>
+          </div>
+        </fieldset>
+
+        <div class="mb-3">
+          <label for="activation" class="form-label fw-bold">Activation</label>
+          <select id="activation" class="form-select">
+            <option value="all">Tous</option>
+            <option value="activated">Actives</option>
+            <option value="not-activated">Pas encore actives</option>
+          </select>
+        </div>
+
+        <div class="d-grid gap-2 mb-3">
+          <button id="loadBtn" class="btn btn-primary">Charger les points OSM</button>
+          <button id="locateBtn" class="btn btn-outline-secondary">Ma position</button>
+        </div>
+
+        <p id="status" class="alert alert-secondary py-2 mb-0">Prêt.</p>
+      </section>
+      <section id="map"></section>
     </main>
 
 <footer class="bottombar">
