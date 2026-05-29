@@ -2,56 +2,37 @@
 window.OTA = window.OTA || {};
 
 OTA.pointsOsm = {
-  extractCoordinates: function (element) {
+  extractCoordinates(element) {
     if (typeof element.lat === "number" && typeof element.lon === "number") {
       return { lat: element.lat, lon: element.lon };
     }
 
-    if (
-      element.center &&
-      typeof element.center.lat === "number" &&
-      typeof element.center.lon === "number"
-    ) {
+    if (element.center) {
       return { lat: element.center.lat, lon: element.center.lon };
     }
 
     return null;
   },
 
-  transform: function (elementsOsm, typesSelectionnes) {
+  transform(elementsOsm, typesSelectionnes) {
     const points = [];
 
-    for (let i = 0; i < elementsOsm.length; i += 1) {
-      const element = elementsOsm[i];
+    for (let element of elementsOsm) {
       const typePoint = OTA.pointsOsm.findType(element);
-
-      if (!typePoint || !typesSelectionnes.includes(typePoint)) {
-        continue;
-      }
+      if (!typePoint || !typesSelectionnes.includes(typePoint)) continue;
 
       const coord = OTA.pointsOsm.extractCoordinates(element);
-
-      if (!coord) {
-        continue;
-      }
+      if (!coord) continue;
 
       const id = `${element.type}/${element.id}`;
-      let nom = "";
-
-      if (element.tags) {
-        if (element.tags.name) {
-          nom = element.tags.name;
-        } else if (element.tags.ref) {
-          nom = element.tags.ref;
-        }
-      }
+      let nom = element.tags?.name || element.tags?.ref || "";
 
       points.push({
-        id: id,
+        id,
         lat: coord.lat,
         lon: coord.lon,
-        nom: nom,
-        typePoint: typePoint,
+        nom,
+        typePoint,
         estActif: OTA.config.idsActifsDemo.has(id),
       });
     }
@@ -59,7 +40,7 @@ OTA.pointsOsm = {
     return points;
   },
 
-  findType: function (element) {
+  findType(element) {
     const tags = element.tags || {};
 
     if (tags.man_made === "lighthouse") return "lighthouse";
@@ -70,17 +51,13 @@ OTA.pointsOsm = {
     return null;
   },
 
-  filterByActivation: function (points, filtreActivation) {
+  filterByActivation(points, filtreActivation) {
     if (filtreActivation === "activated") {
-      return points.filter(function (point) {
-        return point.estActif;
-      });
+      return points.filter(p => p.estActif);
     }
 
     if (filtreActivation === "not-activated") {
-      return points.filter(function (point) {
-        return !point.estActif;
-      });
+      return points.filter(p => !p.estActif);
     }
 
     return points;

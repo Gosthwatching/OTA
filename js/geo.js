@@ -2,46 +2,31 @@
 window.OTA = window.OTA || {};
 
 OTA.geo = {
-  bboxToText: function (bbox) {
+  bboxToText(bbox) {
     return `${bbox[0]},${bbox[1]},${bbox[2]},${bbox[3]}`;
   },
 
-  bboxCenter: function (bbox) {
-    const latCentre = (bbox[0] + bbox[2]) / 2;
-    const lonCentre = (bbox[1] + bbox[3]) / 2;
-    return [latCentre, lonCentre];
+  bboxCenter(bbox) {
+    return [
+      (bbox[0] + bbox[2]) / 2,
+      (bbox[1] + bbox[3]) / 2,
+    ];
   },
 
-  contourToBbox: function (contour) {
-    if (!contour || !Array.isArray(contour.coordinates)) {
-      return null;
-    }
+  contourToBbox(contour) {
+    if (!contour || !Array.isArray(contour.coordinates)) return null;
 
-    let minLat = Infinity;
-    let minLon = Infinity;
-    let maxLat = -Infinity;
-    let maxLon = -Infinity;
+    let minLat = Infinity, minLon = Infinity;
+    let maxLat = -Infinity, maxLon = -Infinity;
 
-    let polygons = contour.coordinates;
+    let polygons = contour.type === "Polygon"
+      ? [contour.coordinates]
+      : contour.coordinates;
 
-    if (contour.type === "Polygon") {
-      polygons = [contour.coordinates];
-    } else if (contour.type === "MultiPolygon") {
-      polygons = contour.coordinates;
-    }
-
-    for (let i = 0; i < polygons.length; i += 1) {
-      const polygon = polygons[i];
-
-      for (let j = 0; j < polygon.length; j += 1) {
-        const ring = polygon[j];
-
-        for (let k = 0; k < ring.length; k += 1) {
-          const point = ring[k];
-
-          if (!Array.isArray(point) || point.length < 2) {
-            continue;
-          }
+    for (let polygon of polygons) {
+      for (let ring of polygon) {
+        for (let point of ring) {
+          if (!Array.isArray(point) || point.length < 2) continue;
 
           const lon = point[0];
           const lat = point[1];
@@ -54,33 +39,27 @@ OTA.geo = {
       }
     }
 
-    if (!Number.isFinite(minLat)) {
-      return null;
-    }
+    if (!Number.isFinite(minLat)) return null;
 
     return [minLat, minLon, maxLat, maxLon];
   },
 
-  centerToBbox: function (centre, rayonDeg) {
+  centerToBbox(centre, rayonDeg) {
     const point = OTA.geo.extractLonLat(centre);
-    if (!point) {
-      return null;
-    }
+    if (!point) return null;
 
-    const r = typeof rayonDeg === "number" ? rayonDeg : OTA.config.departementRayonBboxDeg;
+    const r = rayonDeg ?? OTA.config.departementRayonBboxDeg;
     return [point.lat - r, point.lon - r, point.lat + r, point.lon + r];
   },
 
-  extractLonLat: function (centre) {
-    if (!centre) {
-      return null;
-    }
+  extractLonLat(centre) {
+    if (!centre) return null;
 
-    if (Array.isArray(centre) && centre.length >= 2) {
+    if (Array.isArray(centre)) {
       return { lon: centre[0], lat: centre[1] };
     }
 
-    if (centre.coordinates && Array.isArray(centre.coordinates)) {
+    if (centre.coordinates) {
       return { lon: centre.coordinates[0], lat: centre.coordinates[1] };
     }
 
@@ -91,74 +70,57 @@ OTA.geo = {
     return null;
   },
 
-  isPointInRing: function (lat, lon, ring) {
+  isPointInRing(lat, lon, ring) {
     let dedans = false;
 
-    for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
-      const xi = ring[i][0];
-      const yi = ring[i][1];
-      const xj = ring[j][0];
-      const yj = ring[j][1];
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i][0], yi = ring[i][1];
+      const xj = ring[j][0], yj = ring[j][1];
 
       const intersecte =
-        yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi;
+        yi > lat !== yj > lat &&
+        lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi;
 
-      if (intersecte) {
-        dedans = !dedans;
-      }
+      if (intersecte) dedans = !dedans;
     }
 
     return dedans;
   },
 
-  isPointInPolygon: function (lat, lon, polygon) {
-    if (!Array.isArray(polygon) || polygon.length === 0) {
-      return false;
-    }
+  isPointInPolygon(lat, lon, polygon) {
+    if (!polygon.length) return false;
 
-    const ringExterieur = polygon[0];
+    if (!OTA.geo.isPointInRing(lat, lon, polygon[0])) return false;
 
-    if (!OTA.geo.isPointInRing(lat, lon, ringExterieur)) {
-      return false;
-    }
-
-    for (let i = 1; i < polygon.length; i += 1) {
-      if (OTA.geo.isPointInRing(lat, lon, polygon[i])) {
-        return false;
-      }
+    for (let i = 1; i < polygon.length; i++) {
+      if (OTA.geo.isPointInRing(lat, lon, polygon[i])) return false;
     }
 
     return true;
   },
 
-  isPointInContour: function (lat, lon, contour) {
-    if (!contour || !Array.isArray(contour.coordinates)) {
-      return false;
-    }
+  isPointInContour(lat, lon, contour) {
+    if (!contour?.coordinates) return false;
 
     if (contour.type === "Polygon") {
       return OTA.geo.isPointInPolygon(lat, lon, contour.coordinates);
     }
 
     if (contour.type === "MultiPolygon") {
-      for (let i = 0; i < contour.coordinates.length; i += 1) {
-        if (OTA.geo.isPointInPolygon(lat, lon, contour.coordinates[i])) {
-          return true;
-        }
-      }
+      return contour.coordinates.some(poly =>
+        OTA.geo.isPointInPolygon(lat, lon, poly)
+      );
     }
 
     return false;
   },
 
-  isPointInDepartment: function (lat, lon, departement) {
+  isPointInDepartment(lat, lon, departement) {
     if (departement.contour) {
       return OTA.geo.isPointInContour(lat, lon, departement.contour);
     }
 
-    if (!departement.bbox) {
-      return false;
-    }
+    if (!departement.bbox) return false;
 
     return (
       lat >= departement.bbox[0] &&
@@ -168,44 +130,31 @@ OTA.geo = {
     );
   },
 
-  buildDepartmentGeoJson: function (departement) {
-    if (departement.contour && departement.contour.coordinates) {
+  buildDepartmentGeoJson(departement) {
+    if (departement.contour) {
       return {
         type: "Feature",
-        properties: {
-          code: departement.code,
-          nom: departement.nom,
-        },
+        properties: { code: departement.code, nom: departement.nom },
         geometry: departement.contour,
       };
     }
 
-    if (!departement.bbox) {
-      return null;
-    }
+    if (!departement.bbox) return null;
 
-    const minLat = departement.bbox[0];
-    const minLon = departement.bbox[1];
-    const maxLat = departement.bbox[2];
-    const maxLon = departement.bbox[3];
+    const [minLat, minLon, maxLat, maxLon] = departement.bbox;
 
     return {
       type: "Feature",
-      properties: {
-        code: departement.code,
-        nom: departement.nom,
-      },
+      properties: { code: departement.code, nom: departement.nom },
       geometry: {
         type: "Polygon",
-        coordinates: [
-          [
-            [minLon, minLat],
-            [maxLon, minLat],
-            [maxLon, maxLat],
-            [minLon, maxLat],
-            [minLon, minLat],
-          ],
-        ],
+        coordinates: [[
+          [minLon, minLat],
+          [maxLon, minLat],
+          [maxLon, maxLat],
+          [minLon, maxLat],
+          [minLon, minLat],
+        ]],
       },
     };
   },

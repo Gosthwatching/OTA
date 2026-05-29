@@ -1,8 +1,7 @@
-// Position GPS de l'utilisateur
 window.OTA = window.OTA || {};
 
 OTA.geolocalisation = {
-  locateMe: function () {
+  locateMe() {
     if (!navigator.geolocation) {
       OTA.ui.showStatus("Geolocalisation non supportee.");
       return;
@@ -11,7 +10,7 @@ OTA.geolocalisation = {
     OTA.ui.showStatus("Recherche de ta position...");
 
     navigator.geolocation.getCurrentPosition(
-      function (position) {
+      position => {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
 
@@ -21,9 +20,9 @@ OTA.geolocalisation = {
         marqueur.bindPopup("Tu es ici").openPopup();
 
         OTA.etat.carte.setView([lat, lon], 13);
-        OTA.Qui.showStatus("Position detectee.");
+        OTA.ui.showStatus("Position detectee.");
       },
-      function (erreur) {
+      erreur => {
         OTA.ui.showStatus(`Geolocalisation refusee/indisponible: ${erreur.message}`);
       },
       { enableHighAccuracy: true, timeout: 10000 }

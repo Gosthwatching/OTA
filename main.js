@@ -1,4 +1,3 @@
-// Point d'entrée : démarrage et événements
 window.OTA = window.OTA || {};
 
 OTA.etat = {
@@ -11,10 +10,10 @@ OTA.etat = {
 };
 
 OTA.main = {
-  start: function () {
+  start() {
     if (typeof L === "undefined") {
       document.getElementById("status").textContent =
-        "Leaflet non charge. Verifie ta connexion internet.";
+        "Leaflet non charge.";
       return;
     }
 
@@ -22,12 +21,12 @@ OTA.main = {
     OTA.carte.init();
     OTA.main.bindEvents();
 
-    OTA.departements.init().catch(function (erreur) {
-      OTA.ui.showStatus(`Erreur demarrage: ${erreur.message}`);
+    OTA.departements.init().catch(err => {
+      OTA.ui.showStatus(`Erreur demarrage: ${err.message}`);
     });
   },
 
-  readDom: function () {
+  readDom() {
     OTA.etat.dom = {
       champPortee: document.getElementById("scope"),
       champDepartement: document.getElementById("department"),
@@ -37,7 +36,7 @@ OTA.main = {
     };
   },
 
-  bindEvents: function () {
+  bindEvents() {
     document.getElementById("loadBtn").addEventListener("click", OTA.main.loadPoints);
     document.getElementById("locateBtn").addEventListener("click", OTA.geolocalisation.locateMe);
     OTA.etat.dom.champDepartement.addEventListener("change", OTA.main.onDepartmentChange);
@@ -45,9 +44,7 @@ OTA.main = {
 
   onDepartmentChange: async function () {
     const dep = OTA.departements.findSelected();
-    if (!dep) {
-      return;
-    }
+    if (!dep) return;
 
     await OTA.departements.ensureGeometry(dep);
 
@@ -62,74 +59,98 @@ OTA.main = {
     }
   },
 
-  loadPoints: async function () {
-    const portee = OTA.etat.dom.champPortee.value;
-    let departementChoisi = OTA.departements.findSelected();
+  loadPointsFromType: async function (typeKey) {
+    try {
+      OTA.etat.couchePoints.clearLayers();
 
-    if (portee === "department" && !departementChoisi) {
-      OTA.ui.showStatus("Departement indisponible.");
-      return;
-    }
+      const fileMap = {
+        lighthouse: "./json/lighthouse.geojson",
+        beach: "./json/beach.geojson",
+        bunkers: "./json/bunkers.geojson",
+      };
 
-    if (portee === "department" && OTA.etat.dom.champZone.value !== OTA.config.zoneAtlantique.id) {
-      departementChoisi = await OTA.departements.ensureGeometry(departementChoisi);
-
-      if (!departementChoisi.bbox) {
-        OTA.ui.showStatus(
-          "Geometrie du departement indisponible. Verifie la connexion ou choisis la zone Atlantique."
-        );
+      const url = fileMap[typeKey];
+      if (!url) {
+        OTA.ui.showStatus("Type inconnu");
         return;
       }
-    }
 
-    const zoneRecherche = OTA.departements.chooseSearchZone(portee, departementChoisi);
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const geo = await resp.json();
 
-    if (!zoneRecherche) {
-      OTA.ui.showStatus("Zone de recherche indisponible pour ce departement.");
-      return;
-    }
-
-    const typesSelectionnes = OTA.ui.readCheckedTypes();
-
-    if (typesSelectionnes.length === 0) {
-      OTA.ui.showStatus("Selectionne au moins un type.");
-      return;
-    }
-
-    const requeteOverpass = OTA.overpass.buildQuery(typesSelectionnes, portee, zoneRecherche);
-
-    OTA.ui.showStatus("Chargement OSM en cours...");
-
-    try {
-      const donnees = await OTA.overpass.loadWithRetry(requeteOverpass);
-      const elements = donnees.elements || [];
-
-      const points = OTA.pointsOsm.transform(elements, typesSelectionnes);
-      const pointsFiltres = OTA.pointsOsm.filterByActivation(
-        points,
-        OTA.etat.dom.champActivation.value
-      );
-
-      let pointsAffiches = pointsFiltres;
-
-      const estZoneDepartement =
-        portee === "department" &&
-        departementChoisi &&
-        zoneRecherche &&
-        zoneRecherche.code === departementChoisi.code;
-
-      if (estZoneDepartement) {
-        pointsAffiches = pointsFiltres.filter(function (point) {
-          return OTA.geo.isPointInDepartment(point.lat, point.lon, departementChoisi);
-        });
+      const dep = OTA.departements.findSelected();
+      if (!dep) {
+        OTA.ui.showStatus("Aucun département sélectionné");
+        return;
       }
 
-      OTA.carte.showPoints(pointsAffiches, zoneRecherche, portee);
-      OTA.ui.showStatus(`${pointsAffiches.length} points affiches (${points.length} recuperes).`);
-    } catch (erreur) {
-      OTA.ui.showStatus(`Echec de chargement: ${OTA.overpass.errorMessage(erreur)}`);
+      const features = (geo.features || []).filter(f => {
+        if (!f.geometry || f.geometry.type !== "Point") return false;
+        const lon = f.geometry.coordinates[0];
+        const lat = f.geometry.coordinates[1];
+        return OTA.geo.isPointInDepartment(lat, lon, dep);
+      });
+
+      const points = features.map((f, idx) => {
+        const coords = f.geometry.coordinates;
+        return {
+          id: f.id || `${typeKey}/${idx}`,
+          lat: coords[1],
+          lon: coords[0],
+          nom: f.properties?.name || f.properties?.nom || "",
+          typePoint: typeKey,
+          estActif: OTA.config.idsActifsDemo.has(f.id || ""),
+        };
+      });
+
+      OTA.carte.showPoints(points, dep, "department");
+      OTA.ui.showStatus(`${points.length} points affichés (${typeKey})`);
+    } catch (err) {
+      OTA.ui.showStatus(`Erreur chargement points: ${err.message}`);
     }
   },
+
+  loadTestPoint: function () {
+    OTA.etat.couchePoints.clearLayers();
+
+    L.marker([48.8566, 2.3522])
+      .addTo(OTA.etat.couchePoints)
+      .bindPopup("Test : Paris centre")
+      .openPopup();
+
+    OTA.ui.showStatus("Point test affiché.");
+  },
+
+  loadGeoJSONPoint: async function () {
+    OTA.etat.couchePoints.clearLayers();
+
+    const geo = await fetch("./data/test-point.geojson").then(r => r.json());
+    L.geoJSON(geo).addTo(OTA.etat.couchePoints);
+
+    OTA.ui.showStatus("Point GeoJSON affiché.");
+  },
+
+  loadGeoJSONMulti: async function () {
+    OTA.etat.couchePoints.clearLayers();
+
+    const geo = await fetch("./data/test-multi.geojson").then(r => r.json());
+    L.geoJSON(geo).addTo(OTA.etat.couchePoints);
+
+    OTA.ui.showStatus("Points GeoJSON affichés.");
+  },
+
+  loadPoints: async function () {
+    // test possible
+    // OTA.main.loadTestPoint();
+    // OTA.main.loadGeoJSONPoint();
+    // OTA.main.loadGeoJSONMulti();
+
+    // Exemple : charger les phares filtrés par département
+    OTA.main.loadPointsFromType("lighthouse");
+  },
+
+  
 };
 
 OTA.main.start();

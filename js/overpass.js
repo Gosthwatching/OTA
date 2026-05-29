@@ -11,7 +11,6 @@ OTA.overpass = {
       morceaux.push(OTA.overpass.buildPart(type, portee, zoneRecherche));
     }
 
-    // Include center so ways/relations can be displayed as points.
     return `[out:json][timeout:${timeoutSeconds}];(${morceaux.join("")});out body center;`;
   },
 
@@ -87,34 +86,26 @@ OTA.overpass = {
 
   fetchWithTimeout: function (url, options, timeoutMs) {
     const controleur = new AbortController();
-    const timeoutId = setTimeout(function () {
-      controleur.abort();
-    }, timeoutMs);
+    const timeoutId = setTimeout(() => controleur.abort(), timeoutMs);
 
     return fetch(url, {
       ...options,
       signal: controleur.signal,
-    }).finally(function () {
-      clearTimeout(timeoutId);
-    });
+    }).finally(() => clearTimeout(timeoutId));
   },
 
   wait: function (ms) {
-    return new Promise(function (resolve) {
-      setTimeout(resolve, ms);
-    });
+    return new Promise(resolve => setTimeout(resolve, ms));
   },
 
   errorMessage: function (erreur) {
-    if (!erreur) {
-      return "Erreur inconnue.";
-    }
+    if (!erreur) return "Erreur inconnue.";
 
     if (erreur.name === "AbortError") {
       return "Timeout reseau. Les serveurs OSM sont peut-etre surcharges.";
     }
 
-    if (typeof erreur.status === "number" && erreur.status === 504) {
+    if (erreur.status === 504) {
       return "Erreur 504 (Gateway Timeout): le serveur OSM n'a pas repondu a temps.";
     }
 
