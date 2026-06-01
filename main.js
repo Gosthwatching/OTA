@@ -59,6 +59,17 @@ OTA.main = {
     }
   },
 
+  getGeoJSONPointType: function (feature) {
+    const props = feature.properties || {};
+
+    if (props.man_made === "lighthouse") return "lighthouse";
+    if (props.natural === "beach") return "beach";
+    if (props.military === "bunker") return "military_bunker";
+    if (props.building === "bunker") return "civil_bunker";
+
+    return null;
+  },
+
   loadPointsFromType: async function (typeKey) {
     try {
       OTA.etat.couchePoints.clearLayers();
@@ -66,7 +77,8 @@ OTA.main = {
       const fileMap = {
         lighthouse: "./json/lighthouse.geojson",
         beach: "./json/beach.geojson",
-        bunkers: "./json/bunkers.geojson",
+        military_bunker: "./json/bunkers.geojson",
+        civil_bunker: "./json/bunkers.geojson",
       };
 
       const url = fileMap[typeKey];
@@ -86,6 +98,8 @@ OTA.main = {
       }
 
       const features = (geo.features || []).filter(f => {
+        const pointType = OTA.main.getGeoJSONPointType(f);
+        if (pointType !== typeKey) return false;
         if (!f.geometry || f.geometry.type !== "Point") return false;
         const lon = f.geometry.coordinates[0];
         const lat = f.geometry.coordinates[1];
@@ -140,17 +154,97 @@ OTA.main = {
     OTA.ui.showStatus("Points GeoJSON affichés.");
   },
 
-  loadPoints: async function () {
-    // test possible
-    // OTA.main.loadTestPoint();
-    // OTA.main.loadGeoJSONPoint();
-    // OTA.main.loadGeoJSONMulti();
+loadPoints: async function () {
 
-    // Exemple : charger les phares filtrés par département
-    OTA.main.loadPointsFromType("lighthouse");
-  },
+  OTA.etat.couchePoints.clearLayers();
 
-  
+  const types = OTA.ui.readCheckedTypes();
+  const filtreActivation = OTA.etat.dom.champActivation.value;
+
+  if (types.length === 0) {
+    OTA.ui.showStatus("Aucun type sélectionné.");
+    return;
+  }
+
+  const dep = OTA.departements.findSelected();
+  if (!dep) {
+    OTA.ui.showStatus("Aucun département sélectionné.");
+    return;
+  }
+
+  const fileMap = {
+    lighthouse: "./json/lighthouse.geojson",
+    beach: "./json/beach.geojson",
+    military_bunker: "./json/bunkers.geojson",
+    civil_bunker: "./json/bunkers.geojson",
+  };
+
+  const urlToTypes = {};
+  for (let typeKey of types) {
+    const url = fileMap[typeKey];
+    if (!url) continue;
+    urlToTypes[url] = urlToTypes[url] || new Set();
+    urlToTypes[url].add(typeKey);
+  }
+
+  let allPoints = [];
+
+  for (const url in urlToTypes) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Erreur HTTP " + response.status);
+
+      const geojson = await response.json();
+      const features = geojson.features || [];
+      const selectedTypes = urlToTypes[url];
+      const filtered = [];
+
+      for (let j = 0; j < features.length; j++) {
+        const f = features[j];
+        if (!f.geometry) continue;
+
+        const featureType = OTA.main.getGeoJSONPointType(f);
+        if (!featureType || !selectedTypes.has(featureType)) continue;
+
+        let lon, lat;
+
+        if (f.geometry.type === "Point") {
+          lon = f.geometry.coordinates[0];
+          lat = f.geometry.coordinates[1];
+        } else if (f.geometry.type === "Polygon") {
+          const ring = f.geometry.coordinates[0];
+          lon = ring[0][0];
+          lat = ring[0][1];
+        } else if (f.geometry.type === "MultiPolygon") {
+          const ring = f.geometry.coordinates[0][0];
+          lon = ring[0][0];
+          lat = ring[0][1];
+        } else {
+          continue;
+        }
+
+        if (!OTA.geo.isPointInDepartment(lat, lon, dep)) continue;
+
+        filtered.push({
+          id: f.id || `${featureType}/${j}`,
+          lat: lat,
+          lon: lon,
+          nom: f.properties?.name || f.properties?.nom || "",
+          typePoint: featureType,
+          estActif: OTA.config.idsActifsDemo.has(f.id || ""),
+        });
+      }
+
+      const pointsFiltres = OTA.pointsOsm.filterByActivation(filtered, filtreActivation);
+      allPoints.push(...pointsFiltres);
+    } catch (err) {
+      OTA.ui.showStatus("Erreur chargement " + url + " : " + err.message);
+    }
+  }
+
+  OTA.carte.showPoints(allPoints, dep, "department");
+  OTA.ui.showStatus(allPoints.length + " points affichés.");
+},
 };
 
 OTA.main.start();

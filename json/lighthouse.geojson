@@ -23,7 +23,7 @@
         "wikipedia": "fr:Phare de Chassiron",
         "@geometry": "center"
       },
-      "geometry": {
+        "geometry": {
         "type": "Point",
         "coordinates": [
           -1.41027,
