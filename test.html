@@ -29,7 +29,6 @@
       <section class="controls bg-light border-end p-3">
         <div class="mb-3">
           <label for="scope" class="form-label fw-bold">Niveau de chargement</label>
-          <!-- Hidden native select kept for existing logic; visually replaced by the dropdown below -->
           <select id="scope" class="form-select d-none">
             <option value="department">Département</option>
             <option value="single">Point de test</option>
@@ -38,14 +37,13 @@
           <div class="dropdown d-inline-block">
             <button id="scopeDropdownBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Département</button>
             <ul id="scopeDropdownMenu" class="dropdown-menu dropdown-menu-dark">
-              <!-- items populated by JS to keep values in sync with hidden select -->
             </ul>
           </div>
         </div>
 
         <div class="mb-3">
           <label for="department" class="form-label fw-bold">Département</label>
-          <select id="department" class="form-select">
+          <select id="department" class="form-select select-btn">
             <option value="75">75 - Paris</option>
           </select>
         </div>

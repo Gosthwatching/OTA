@@ -306,6 +306,9 @@ OTA.departements = {
       option.textContent = `${dep.code} - ${dep.nom}`;
       select.appendChild(option);
     }
+
+    const event = new CustomEvent('dropdown:optionsChanged', { bubbles: true });
+    select.dispatchEvent(event);
   },
 
   chooseDefault: async function () {

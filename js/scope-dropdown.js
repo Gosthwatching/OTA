@@ -1,38 +1,59 @@
-// Sync hidden <select id="scope"> with visual Bootstrap dropdown
 (function(){
-  document.addEventListener('DOMContentLoaded', function(){
-    const select = document.getElementById('scope');
-    const btn = document.getElementById('scopeDropdownBtn');
-    const menu = document.getElementById('scopeDropdownMenu');
+  function syncDropdown(selectId, btnId, menuId) {
+    const select = document.getElementById(selectId);
+    const btn = document.getElementById(btnId);
+    const menu = document.getElementById(menuId);
     if(!select || !btn || !menu) return;
 
-    // Populate menu from select options
-    Array.from(select.options).forEach(function(opt){
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.className = 'dropdown-item';
-      a.href = '#';
-      a.dataset.value = opt.value;
-      a.textContent = opt.textContent;
-      if(opt.selected) a.classList.add('active');
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        // update button text
-        btn.textContent = opt.textContent;
-        // update hidden select value and dispatch change
-        select.value = opt.value;
-        const evt = new Event('change', {bubbles: true});
-        select.dispatchEvent(evt);
-        // active state
-        menu.querySelectorAll('.dropdown-item').forEach(function(it){ it.classList.remove('active'); });
-        a.classList.add('active');
+    function updateButtonLabel() {
+      const selected = select.options[select.selectedIndex];
+      btn.textContent = selected ? selected.textContent : '';
+    }
+
+    function setActiveItem(value) {
+      menu.querySelectorAll('.dropdown-item').forEach(function(item){
+        item.classList.toggle('active', item.dataset.value === value);
       });
-      li.appendChild(a);
-      menu.appendChild(li);
+    }
+
+    function populateMenu() {
+      menu.innerHTML = '';
+
+      Array.from(select.options).forEach(function(opt){
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.className = 'dropdown-item';
+        a.href = '#';
+        a.dataset.value = opt.value;
+        a.textContent = opt.textContent;
+        if(opt.selected) a.classList.add('active');
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          select.value = opt.value;
+          const evt = new Event('change', {bubbles: true});
+          select.dispatchEvent(evt);
+          updateButtonLabel();
+          setActiveItem(opt.value);
+        });
+        li.appendChild(a);
+        menu.appendChild(li);
+      });
+
+      updateButtonLabel();
+      setActiveItem(select.value);
+    }
+
+    select.addEventListener('change', function() {
+      updateButtonLabel();
+      setActiveItem(select.value);
     });
 
-    // initialize button label from selected option
-    const sel = select.options[select.selectedIndex];
-    if(sel) btn.textContent = sel.textContent;
+    select.addEventListener('dropdown:optionsChanged', populateMenu);
+    populateMenu();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    syncDropdown('scope', 'scopeDropdownBtn', 'scopeDropdownMenu');
+    syncDropdown('department', 'departmentDropdownBtn', 'departmentDropdownMenu');
   });
 })();

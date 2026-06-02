@@ -37,7 +37,7 @@ main {
 
 /* MAP */
 #map {
-  width: 280em;
+  width: 200em;
   height: 100%;
   position: relative;
 }
@@ -110,20 +110,29 @@ legend-item.name {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: inline-block;
-  padding: .375rem .75rem;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-width: 170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: .375rem 2.1rem .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #fff;
   background-color: #6c757d; /* bootstrap secondary */
   border: 1px solid #6c757d;
   border-radius: .375rem;
-  padding-right: 2.5rem; /* space for caret */
-  background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.5) 50%), linear-gradient(135deg, rgba(255,255,255,0.5) 50%, transparent 50%);
-  background-position: calc(100% - 1rem) calc(50% - .15rem), calc(100% - .55rem) calc(50% + .15rem);
-  background-size: .45em .45em, .45em .45em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffffff' d='M0 0l4 5 4-5Z'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+  background-size: .75rem .5rem;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.select-btn::-ms-expand,
+.form-select.select-btn::-ms-expand {
+  display: none;
 }
 
 .form-select.select-btn option {
