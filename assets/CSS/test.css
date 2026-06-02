@@ -88,7 +88,7 @@ legend-item.name {
   display: inline-block;
 }
 
-/* Couleurs identiques à tes marqueurs Leaflet */
+/* Couleurs marqueurs Leaflet */
 .dot.red {
   background: #ff4d4d;
 }
@@ -103,4 +103,35 @@ legend-item.name {
 
 .dot.cyan {
   background: #4ddaff;
+}
+
+.select-btn,
+.form-select.select-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #6c757d; /* bootstrap secondary */
+  border: 1px solid #6c757d;
+  border-radius: .375rem;
+  padding-right: 2.5rem; /* space for caret */
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.5) 50%), linear-gradient(135deg, rgba(255,255,255,0.5) 50%, transparent 50%);
+  background-position: calc(100% - 1rem) calc(50% - .15rem), calc(100% - .55rem) calc(50% + .15rem);
+  background-size: .45em .45em, .45em .45em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form-select.select-btn option {
+  color: #000;
+}
+
+.form-select.select-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 .25rem rgba(108,117,125,.25);
+  border-color: #5a6268;
 }

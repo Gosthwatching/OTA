@@ -1,0 +1,21 @@
+(function() {
+  const scripts = [
+    './js/config.js',
+    './js/geo.js',
+    './js/ui.js',
+    './js/departements.js',
+    './js/overpass.js',
+    './js/points-osm.js',
+    './js/carte.js',
+    './js/geolocalisation.js',
+    './main.js',
+    './js/scope-dropdown.js'
+  ];
+
+  scripts.forEach(src => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false; //assure que les scripts sont chargés dans l'ordre
+    document.body.appendChild(script);
+  });
+})();
