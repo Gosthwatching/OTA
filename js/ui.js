@@ -16,7 +16,8 @@ OTA.ui = {
   },
 
   readCheckedTypes: function () {
-    const cases = document.querySelectorAll('fieldset input[type="checkbox"]');
+    // Support legacy fieldset checkboxes and the new dropdown (.types-dropdown)
+    const cases = document.querySelectorAll('.types-dropdown input[type="checkbox"], fieldset input[type="checkbox"]');
     const types = [];
 
     for (let i = 0; i < cases.length; i += 1) {

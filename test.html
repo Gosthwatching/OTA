@@ -13,89 +13,58 @@
   <body>
     <header class="topbar">
       <h1 class="title">Carte OTA</h1>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item active" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-        </div>
-          <button id="locateBtnHeader" class="btn btn-primary">Me localiser</button>
-        </header>
-    <main>
-      <section class="controls bg-light border-end p-3">
-        <div class="mb-3">
-          <label for="scope" class="form-label fw-bold">Niveau de chargement</label>
-          <select id="scope" class="form-select d-none">
-            <option value="department">Département</option>
-            <option value="single">Point de test</option>
-          </select>
-
-          <div class="dropdown d-inline-block">
-            <button id="scopeDropdownBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Département</button>
-            <ul id="scopeDropdownMenu" class="dropdown-menu dropdown-menu-dark">
-            </ul>
-          </div>
-        </div>
-
         <div class="mb-3">
           <label for="department" class="form-label fw-bold">Département</label>
           <select id="department" class="form-select select-btn">
             <option value="75">75 - Paris</option>
           </select>
         </div>
+        <div class="mb-3 types-dropdown">
+            <label class="form-label fw-bold">Types</label>
 
-        <div class="mb-3">
-          <label for="zone" class="form-label fw-bold">Zone bunker</label>
-          <select id="zone" class="form-select">
-            <option value="department">Département courant</option>
-            <option value="atlantic">Facade atlantique</option>
-          </select>
-        </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle w-100 text-start" type="button" id="typesDropdownBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Sélectionner les types
+              </button>
+              <div class="dropdown-menu p-3" aria-labelledby="typesDropdownBtn">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="lighthouse" id="typeLighthouse" checked>
+                  <label class="form-check-label" for="typeLighthouse">Phare</label>
+                </div>
 
-        <fieldset class="border rounded p-3 mb-3">
-          <legend class="float-none w-auto px-2 fw-bold">Types</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="beach" id="typeBeach" checked>
+                  <label class="form-check-label" for="typeBeach">Plage</label>
+                </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="lighthouse" id="typeLighthouse" checked>
-            <label class="form-check-label" for="typeLighthouse">Phare</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="military_bunker" id="typeMil" checked>
+                  <label class="form-check-label" for="typeMil">Military Bunker</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="civil_bunker" id="typeCiv" checked>
+                  <label class="form-check-label" for="typeCiv">Civil Bunker</label>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <div class="mb-3">
+            <label for="activation" class="form-label fw-bold">Activation</label>
+            <select id="activation" class="form-select">
+              <option value="all">Tous</option>
+              <option value="activated">Actives</option>
+              <option value="not-activated">Pas encore actives</option>
+            </select>
           </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="beach" id="typeBeach" checked>
-            <label class="form-check-label" for="typeBeach">Plage</label>
+          <div class="d-grid gap-2 mb-3">
+            <button id="loadBtn" class="btn btn-primary">Charger les points OSM</button>
           </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="military_bunker" id="typeMil" checked>
-            <label class="form-check-label" for="typeMil">Military Bunker</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="civil_bunker" id="typeCiv" checked>
-            <label class="form-check-label" for="typeCiv">Civil Bunker</label>
-          </div>
-        </fieldset>
-
-        <div class="mb-3">
-          <label for="activation" class="form-label fw-bold">Activation</label>
-          <select id="activation" class="form-select">
-            <option value="all">Tous</option>
-            <option value="activated">Actives</option>
-            <option value="not-activated">Pas encore actives</option>
-          </select>
-        </div>
-
-        <div class="d-grid gap-2 mb-3">
-          <button id="loadBtn" class="btn btn-primary">Charger les points OSM</button>
-          <button id="locateBtn" class="btn btn-outline-secondary">Ma position</button>
-        </div>
-
-        <p id="status" class="alert alert-secondary py-2 mb-0">Prêt.</p>
-      </section>
+          <p id="status" class="alert alert-secondary py-2 mb-0">Prêt.</p>
+        <button id="locateBtnHeader" class="btn btn-primary">Me localiser</button>
+    </header>
+    <main>
       <section id="map"></section>
     </main>
 

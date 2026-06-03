@@ -28,7 +28,6 @@ OTA.main = {
 
   readDom() {
     OTA.etat.dom = {
-      champPortee: document.getElementById("scope"),
       champDepartement: document.getElementById("department"),
       champZone: document.getElementById("zone"),
       champActivation: document.getElementById("activation"),
@@ -38,7 +37,10 @@ OTA.main = {
 
   bindEvents() {
     document.getElementById("loadBtn").addEventListener("click", OTA.main.loadPoints);
-    document.getElementById("locateBtn").addEventListener("click", OTA.geolocalisation.locateMe);
+    const locateBtn = document.getElementById("locateBtn");
+    if (locateBtn) {
+      locateBtn.addEventListener("click", OTA.geolocalisation.locateMe);
+    }
     OTA.etat.dom.champDepartement.addEventListener("change", OTA.main.onDepartmentChange);
   },
 

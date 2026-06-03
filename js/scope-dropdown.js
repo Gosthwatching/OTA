@@ -53,7 +53,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    syncDropdown('scope', 'scopeDropdownBtn', 'scopeDropdownMenu');
     syncDropdown('department', 'departmentDropdownBtn', 'departmentDropdownMenu');
+    syncDropdown('zone', 'zoneDropdownBtn', 'zoneDropdownMenu');
   });
 })();

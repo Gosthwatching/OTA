@@ -15,6 +15,44 @@ OTA.carte = {
     OTA.etat.couchePoints = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheDepartement = null;
+
+    // Add legend as custom control in top-left
+    OTA.carte.addLegendControl();
+  },
+
+  addLegendControl() {
+    const LegendControl = L.Control.extend({
+      options: {
+        position: "topleft"
+      },
+      onAdd: function (map) {
+        const div = L.DomUtil.create("div", "legend-control");
+        div.innerHTML = `
+          <div class="legend-box">
+            <p class="legend-title">Légende</p>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #ef4444;"></span>
+              <span>Phare</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #22c55e;"></span>
+              <span>Bunker militaire</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #38bdf8;"></span>
+              <span>Bunker civil</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #facc15;"></span>
+              <span>Plage</span>
+            </div>
+          </div>
+        `;
+        return div;
+      }
+    });
+
+    new LegendControl().addTo(OTA.etat.carte);
   },
 
   goTo(centre, zoom) {
