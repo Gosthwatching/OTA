@@ -40,7 +40,11 @@ OTA.config = {
     rayonMetres: 2500,
   },
 
+  departementsFallback: [],
+
   idsActifsDemo: new Set(["node/3999631495", "way/15252233"]),
+
+  departementsFallback: [],
 
   configTypePoint: {
     lighthouse: { nom: "Phare", couleur: "#921e28", tag: '"man_made"="lighthouse"' },

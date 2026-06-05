@@ -232,9 +232,30 @@ legend-item.name {
   border-radius: 50%;
 }
 
-/* Hide original footer legend */
+/* Footer — ensure visible and readable */
 .bottombar {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  border-top: 1px solid #d0d5dd;
+  padding: 8px 16px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bottombar #status {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  box-shadow: none;
 }
 
 

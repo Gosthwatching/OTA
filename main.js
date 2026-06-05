@@ -65,11 +65,21 @@ OTA.main = {
     const props = feature.properties || {};
 
     if (props.man_made === "lighthouse") return "lighthouse";
-    if (props.natural === "beach") return "beach";
+    if (props.natural === "beach" || props.leisure === "beach") return "beach";
     if (props.military === "bunker") return "military_bunker";
     if (props.building === "bunker") return "civil_bunker";
 
     return null;
+  },
+
+  isBeachFeatureByText: function (feature) {
+    const props = feature.properties || {};
+    const text = Object.values(props)
+      .filter(value => typeof value === "string")
+      .join(" ")
+      .toLowerCase();
+
+    return /\b(plage|beach)\b/.test(text);
   },
 
   loadPointsFromType: async function (typeKey) {
@@ -100,8 +110,15 @@ OTA.main = {
       }
 
       const features = (geo.features || []).filter(f => {
-        const pointType = OTA.main.getGeoJSONPointType(f);
-        if (pointType !== typeKey) return false;
+        let pointType = OTA.main.getGeoJSONPointType(f);
+        if (pointType !== typeKey) {
+          if (typeKey === "beach" && (OTA.main.isBeachFeatureByText(f) || url.endsWith("beach.geojson"))) {
+            pointType = "beach";
+          } else {
+            return false;
+          }
+        }
+
         if (!f.geometry || f.geometry.type !== "Point") return false;
         const lon = f.geometry.coordinates[0];
         const lat = f.geometry.coordinates[1];
@@ -168,17 +185,23 @@ loadPoints: async function () {
     return;
   }
 
-  const dep = OTA.departements.findSelected();
+  let dep = OTA.departements.findSelected();
   if (!dep) {
     OTA.ui.showStatus("Aucun département sélectionné.");
     return;
   }
 
+  await OTA.departements.ensureGeometry(dep);
+  const zoneRecherche = OTA.departements.chooseSearchZone(
+    (OTA.etat.dom.champZone?.value || "department"), 
+    dep
+  );
+
   const fileMap = {
     lighthouse: "./json/lighthouse.geojson",
     beach: "./json/beach.geojson",
-    military_bunker: "./json/bunkers.geojson",
-    civil_bunker: "./json/bunkers.geojson",
+    military_bunker: "./json/bunkers_all.json",
+    civil_bunker: "./json/bunkers_all.json",
   };
 
   const urlToTypes = {};
@@ -196,8 +219,24 @@ loadPoints: async function () {
       const response = await fetch(url);
       if (!response.ok) throw new Error("Erreur HTTP " + response.status);
 
-      const geojson = await response.json();
-      const features = geojson.features || [];
+      let features;
+      if (url.includes("bunkers_all.json")) {
+        // Format spécial pour bunkers_all.json
+        const bunkersData = await response.json();
+        features = bunkersData.map((b, idx) => ({
+          id: b.bunker || `bunker/${idx}`,
+          geometry: { coordinates: [b.lon, b.lat], type: "Point" },
+          properties: {
+            name: b.name || b.bunker,
+            building: "bunker",
+          },
+          activated: b.activated,
+        }));
+      } else {
+        const geojson = await response.json();
+        features = geojson.features || [];
+      }
+
       const selectedTypes = urlToTypes[url];
       const filtered = [];
 
@@ -205,15 +244,27 @@ loadPoints: async function () {
         const f = features[j];
         if (!f.geometry) continue;
 
-        const featureType = OTA.main.getGeoJSONPointType(f);
-        if (!featureType || !selectedTypes.has(featureType)) continue;
+      let featureType = OTA.main.getGeoJSONPointType(f);
+      if (!featureType && selectedTypes.has("beach") && (OTA.main.isBeachFeatureByText(f) || url.endsWith("beach.geojson"))) {
+        featureType = "beach";
+      }
 
-        let lon, lat;
+      if (!featureType && url.includes("bunkers_all.json")) {
+        if (selectedTypes.has("military_bunker")) {
+          featureType = "military_bunker";
+        } else if (selectedTypes.has("civil_bunker")) {
+          featureType = "civil_bunker";
+        }
+      }
 
-        if (f.geometry.type === "Point") {
-          lon = f.geometry.coordinates[0];
-          lat = f.geometry.coordinates[1];
-        } else if (f.geometry.type === "Polygon") {
+      if (!featureType || !selectedTypes.has(featureType)) continue;
+
+      let lon, lat;
+
+      if (f.geometry.type === "Point") {
+        lon = f.geometry.coordinates[0];
+        lat = f.geometry.coordinates[1];
+      } else if (f.geometry.type === "Polygon") {
           const ring = f.geometry.coordinates[0];
           lon = ring[0][0];
           lat = ring[0][1];
@@ -225,7 +276,7 @@ loadPoints: async function () {
           continue;
         }
 
-        if (!OTA.geo.isPointInDepartment(lat, lon, dep)) continue;
+        if (!OTA.geo.isPointInDepartment(lat, lon, zoneRecherche || dep)) continue;
 
         filtered.push({
           id: f.id || `${featureType}/${j}`,
@@ -233,7 +284,7 @@ loadPoints: async function () {
           lon: lon,
           nom: f.properties?.name || f.properties?.nom || "",
           typePoint: featureType,
-          estActif: OTA.config.idsActifsDemo.has(f.id || ""),
+          estActif: f.activated !== undefined ? f.activated : OTA.config.idsActifsDemo.has(f.id || ""),
         });
       }
 
@@ -244,7 +295,22 @@ loadPoints: async function () {
     }
   }
 
-  OTA.carte.showPoints(allPoints, dep, "department");
+  if (allPoints.length === 0) {
+    if (types.includes("beach")) {
+      if (zoneRecherche && zoneRecherche !== dep) {
+        OTA.ui.showStatus("Aucune plage trouvée dans la zone sélectionnée.");
+      } else {
+        OTA.ui.showStatus(
+          "Aucune plage trouvée pour ce département. Choisissez un département côtier ou la zone Atlantique."
+        );
+      }
+    } else {
+      OTA.ui.showStatus("Aucun point trouvé pour les filtres sélectionnés.");
+    }
+    return;
+  }
+
+  OTA.carte.showPoints(allPoints, zoneRecherche || dep, "department");
   OTA.ui.showStatus(allPoints.length + " points affichés.");
 },
 };

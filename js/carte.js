@@ -36,11 +36,11 @@ OTA.carte = {
             </div>
             <div class="legend-item">
               <span class="legend-dot" style="background: #22c55e;"></span>
-              <span>Bunker militaire</span>
+              <span>Bunker activé</span>
             </div>
             <div class="legend-item">
-              <span class="legend-dot" style="background: #38bdf8;"></span>
-              <span>Bunker civil</span>
+              <span class="legend-dot" style="background: #6b7280;"></span>
+              <span>Bunker non-activé</span>
             </div>
             <div class="legend-item">
               <span class="legend-dot" style="background: #facc15;"></span>
@@ -77,18 +77,26 @@ OTA.carte = {
     }
 
     for (let point of points) {
-      const config = OTA.config.configTypePoint[point.typePoint];
+      let couleur;
+      
+      // Pour les bunkers, utiliser une couleur basée sur le statut d'activation
+      if (point.typePoint === "military_bunker" || point.typePoint === "civil_bunker") {
+        couleur = point.estActif ? "#22c55e" : "#6b7280"; // Vert activé, gris non-activé
+      } else {
+        const config = OTA.config.configTypePoint[point.typePoint];
+        couleur = config ? config.couleur : "#808080";
+      }
 
       const marqueur = L.circleMarker([point.lat, point.lon], {
         radius: 6,
-        color: config.couleur,
+        color: couleur,
         fillOpacity: 0.8,
       });
 
       marqueur.bindPopup(`
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
-        <p>${config.nom}</p>
-        <p>Statut: ${point.estActif ? "active" : "pas active"}</p>
+        <p>${point.typePoint === "military_bunker" ? "Bunker militaire" : point.typePoint === "civil_bunker" ? "Bunker civil" : OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
+        <p>Statut: ${point.estActif ? "✓ Activé" : "✗ Non-activé"}</p>
         <a target="_blank" href="https://www.openstreetmap.org/${point.id}">Voir sur OSM</a>
       `);
 

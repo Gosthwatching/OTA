@@ -62,12 +62,25 @@ OTA.departements = {
     OTA.ui.showStatus("Chargement des departements...");
 
     let liste = [];
+    const protocol = window.location.protocol;
+    const canLoadLocal = protocol === "http:" || protocol === "https:";
 
-    try {
-      liste = await OTA.departements.loadLocalList();
-    } catch (erreur) {
-      OTA.ui.showStatus(`Erreur liste locale: ${erreur.message}`);
-      liste = OTA.departements.loadConfigList();
+    if (canLoadLocal) {
+      try {
+        liste = await OTA.departements.loadLocalList();
+      } catch (erreur) {
+        OTA.ui.showStatus(`Erreur liste locale: ${erreur.message}`);
+      }
+    } else {
+      OTA.ui.showStatus("Navigation en file:// détectée, chargement des départements depuis l'API distante...");
+    }
+
+    if (liste.length === 0) {
+      try {
+        liste = await OTA.departements.loadRemoteList();
+      } catch (erreur) {
+        OTA.ui.showStatus(`Erreur liste distante: ${erreur.message}`);
+      }
     }
 
     if (liste.length === 0) {
@@ -136,12 +149,29 @@ OTA.departements = {
 
   loadConfigList: function () {
     const resultat = [];
-    const liste = OTA.config.departementsFallback;
+    const liste = OTA.config.departementsFallback || [];
 
     for (let i = 0; i < liste.length; i += 1) {
       resultat.push(OTA.departements.createFromLocal(liste[i]));
     }
 
+    return resultat;
+  },
+
+  loadRemoteList: async function () {
+    const reponse = await fetch(OTA.config.urlApiDepartements);
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP ${reponse.status}`);
+    }
+
+    const listeApi = await reponse.json();
+    const resultat = [];
+
+    for (let i = 0; i < listeApi.length; i += 1) {
+      resultat.push(OTA.departements.createFromApi(listeApi[i]));
+    }
+
+    OTA.departements.sortByCode(resultat);
     return resultat;
   },
 
@@ -355,7 +385,7 @@ OTA.departements = {
       return OTA.config.zoneFrance;
     }
 
-    if (OTA.etat.dom.champZone.value === OTA.config.zoneAtlantique.id) {
+    if (portee === OTA.config.zoneAtlantique.id) {
       return OTA.config.zoneAtlantique;
     }
 
