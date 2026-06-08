@@ -12,3 +12,4 @@
 .idea/
 .idea/*
 # Ignore all files in the .idea folder
+./scripts/__pycache__/

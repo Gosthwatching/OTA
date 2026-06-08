@@ -66,8 +66,7 @@ OTA.main = {
 
     if (props.man_made === "lighthouse") return "lighthouse";
     if (props.natural === "beach" || props.leisure === "beach") return "beach";
-    if (props.military === "bunker") return "military_bunker";
-    if (props.building === "bunker") return "civil_bunker";
+    if (props.military === "bunker" || props.building === "bunker") return "bunker";
 
     return null;
   },
@@ -89,8 +88,7 @@ OTA.main = {
       const fileMap = {
         lighthouse: "./json/lighthouse.geojson",
         beach: "./json/beach.geojson",
-        military_bunker: "./json/bunkers.geojson",
-        civil_bunker: "./json/bunkers.geojson",
+        bunker: "./json/bunkers.geojson",
       };
 
       const url = fileMap[typeKey];
@@ -200,8 +198,7 @@ loadPoints: async function () {
   const fileMap = {
     lighthouse: "./json/lighthouse.geojson",
     beach: "./json/beach.geojson",
-    military_bunker: "./json/bunkers_all.json",
-    civil_bunker: "./json/bunkers_all.json",
+    bunker: "./json/bunkers.geojson",
   };
 
   const urlToTypes = {};
@@ -247,14 +244,6 @@ loadPoints: async function () {
       let featureType = OTA.main.getGeoJSONPointType(f);
       if (!featureType && selectedTypes.has("beach") && (OTA.main.isBeachFeatureByText(f) || url.endsWith("beach.geojson"))) {
         featureType = "beach";
-      }
-
-      if (!featureType && url.includes("bunkers_all.json")) {
-        if (selectedTypes.has("military_bunker")) {
-          featureType = "military_bunker";
-        } else if (selectedTypes.has("civil_bunker")) {
-          featureType = "civil_bunker";
-        }
       }
 
       if (!featureType || !selectedTypes.has(featureType)) continue;

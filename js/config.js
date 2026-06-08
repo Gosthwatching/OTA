@@ -49,7 +49,6 @@ OTA.config = {
   configTypePoint: {
     lighthouse: { nom: "Phare", couleur: "#921e28", tag: '"man_made"="lighthouse"' },
     beach: { nom: "Plage", couleur: "#d3d60c", tag: '"natural"="beach"' },
-    military_bunker: { nom: "Military Bunker", couleur: "#5a865d", tag: '"military"="bunker"' },
-    civil_bunker: { nom: "Civil Bunker", couleur: "#2cf8f8", tag: '"building"="bunker"' },
+    bunker: { nom: "Bunker", couleur: "#2cf8f8", tag: '"building"="bunker"' },
   },
 };

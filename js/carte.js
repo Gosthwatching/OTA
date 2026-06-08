@@ -76,11 +76,24 @@ OTA.carte = {
       OTA.carte.fitBbox(zoneRecherche.bbox);
     }
 
-    for (let point of points) {
+    const sortedPoints = [...points].sort((a, b) => {
+      if (a.typePoint === "lighthouse" && b.typePoint !== "lighthouse") return 1;
+      if (b.typePoint === "lighthouse" && a.typePoint !== "lighthouse") return -1;
+      return 0;
+    });
+
+    for (let point of sortedPoints) {
       let couleur;
-      
-      // Pour les bunkers, utiliser une couleur basée sur le statut d'activation
-      if (point.typePoint === "military_bunker" || point.typePoint === "civil_bunker") {
+      let radius = 6;
+      let weight = 1;
+      let fillOpacity = 0.8;
+
+      if (point.typePoint === "lighthouse") {
+        couleur = "#ef4444";
+        radius = 8;
+        weight = 2;
+        fillOpacity = 1;
+      } else if (point.typePoint === "bunker") {
         couleur = point.estActif ? "#22c55e" : "#6b7280"; // Vert activé, gris non-activé
       } else {
         const config = OTA.config.configTypePoint[point.typePoint];
@@ -88,14 +101,16 @@ OTA.carte = {
       }
 
       const marqueur = L.circleMarker([point.lat, point.lon], {
-        radius: 6,
+        radius,
         color: couleur,
-        fillOpacity: 0.8,
+        weight,
+        fillColor: couleur,
+        fillOpacity,
       });
 
       marqueur.bindPopup(`
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
-        <p>${point.typePoint === "military_bunker" ? "Bunker militaire" : point.typePoint === "civil_bunker" ? "Bunker civil" : OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
+        <p>${point.typePoint === "bunker" ? "Bunker" : OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
         <p>Statut: ${point.estActif ? "✓ Activé" : "✗ Non-activé"}</p>
         <a target="_blank" href="https://www.openstreetmap.org/${point.id}">Voir sur OSM</a>
       `);

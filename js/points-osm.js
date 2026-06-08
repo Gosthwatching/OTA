@@ -46,8 +46,7 @@ OTA.pointsOsm = {
     if (tags.man_made === "lighthouse") return "lighthouse";
     if (tags.natural === "beach" || tags.leisure === "beach") return "beach";
     if (String(tags.name || tags.ref || "").toLowerCase().match(/\b(plage|beach)\b/)) return "beach";
-    if (tags.military === "bunker") return "military_bunker";
-    if (tags.building === "bunker") return "civil_bunker";
+    if (tags.military === "bunker" || tags.building === "bunker") return "bunker";
 
     return null;
   },
