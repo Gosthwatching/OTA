@@ -81,6 +81,22 @@ OTA.main = {
     return /\b(plage|beach)\b/.test(text);
   },
 
+  getFeatureOsmId: function (feature) {
+    const props = feature.properties || {};
+    return String(feature.id || props["@id"] || props.id || "");
+  },
+
+  isFeatureActif: function (feature) {
+    if (feature.activated === true) return true;
+    if (feature.activated === false) return false;
+
+    const props = feature.properties || {};
+    if (props.activated === true) return true;
+    if (props.activated === false) return false;
+
+    return OTA.config.isIdActif(OTA.main.getFeatureOsmId(feature));
+  },
+
   loadPointsFromType: async function (typeKey) {
     try {
       OTA.etat.couchePoints.clearLayers();
@@ -126,12 +142,12 @@ OTA.main = {
       const points = features.map((f, idx) => {
         const coords = f.geometry.coordinates;
         return {
-          id: f.id || `${typeKey}/${idx}`,
+          id: OTA.main.getFeatureOsmId(f) || `${typeKey}/${idx}`,
           lat: coords[1],
           lon: coords[0],
           nom: f.properties?.name || f.properties?.nom || "",
           typePoint: typeKey,
-          estActif: OTA.config.idsActifsDemo.has(f.id || ""),
+          estActif: OTA.main.isFeatureActif(f),
         };
       });
 
@@ -278,12 +294,12 @@ loadPoints: async function () {
         if (!OTA.geo.isPointInDepartment(lat, lon, zoneRecherche || dep)) continue;
 
         filtered.push({
-          id: f.id || `${featureType}/${j}`,
+          id: OTA.main.getFeatureOsmId(f) || `${featureType}/${j}`,
           lat: lat,
           lon: lon,
           nom: f.properties?.name || f.properties?.nom || "",
           typePoint: featureType,
-          estActif: f.activated !== undefined ? f.activated : OTA.config.idsActifsDemo.has(f.id || ""),
+          estActif: OTA.main.isFeatureActif(f),
         });
       }
 
@@ -296,11 +312,19 @@ loadPoints: async function () {
 
   if (allPoints.length === 0) {
     if (types.includes("beach")) {
-      if (zoneRecherche && zoneRecherche !== dep) {
+      if (filtreActivation === "activated") {
+        OTA.ui.showStatus(
+          "Aucune plage active dans ce département. Mettez Activation sur « Tous » ou choisissez le Finistère (29)."
+        );
+      } else if (dep.code === "75") {
+        OTA.ui.showStatus(
+          "Paris n'a pas de plages. Choisissez un département côtier (ex. 29 - Finistère, 56 - Morbihan)."
+        );
+      } else if (zoneRecherche && zoneRecherche !== dep) {
         OTA.ui.showStatus("Aucune plage trouvée dans la zone sélectionnée.");
       } else {
         OTA.ui.showStatus(
-          "Aucune plage trouvée pour ce département. Choisissez un département côtier ou la zone Atlantique."
+          "Aucune plage trouvée pour ce département. Choisissez un département côtier (ex. 29 - Finistère)."
         );
       }
     } else {
@@ -309,8 +333,13 @@ loadPoints: async function () {
     return;
   }
 
+  const nbActifs = allPoints.filter(point => point.estActif).length;
+  const nbInactifs = allPoints.length - nbActifs;
+
   OTA.carte.showPoints(allPoints, zoneRecherche || dep, "department");
-  OTA.ui.showStatus(allPoints.length + " points affichés.");
+  OTA.ui.showStatus(
+    `${allPoints.length} points affichés (${nbActifs} actifs, ${nbInactifs} inactifs).`
+  );
 },
 };
 

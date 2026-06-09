@@ -43,10 +43,13 @@ OTA.config = {
   departementsFallback: [],
 
   idsActifsDemo: new Set([
-    "node/3999631495",
-    "way/15252233",
-    "relation/2695735", // Phare de la pointe du Raz (Finistère) — pour tester vert/rouge
+    "relation/2695735", // Phare — Sémaphore de la pointe du Raz (Finistère)
+    "way/42275182",     // Plage — Plage des Trépassés (Finistère, même zone)
   ]),
+
+  isIdActif(osmId) {
+    return Boolean(osmId) && this.idsActifsDemo.has(String(osmId));
+  },
 
   departementsFallback: [],
 

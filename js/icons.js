@@ -2,7 +2,7 @@ window.OTA = window.OTA || {};
 
 OTA.icons = {
   colors: {
-    activationColor: "#22c55e",
+    activationColor: "#4ade80",
     inactiveColor: "#ef4444",
   },
 
@@ -20,10 +20,11 @@ OTA.icons = {
 
       case "beach":
         return `<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-          <path fill="${couleur}" d="M12 2.5a7.5 7.5 0 0 0-7.5 7.5h15A7.5 7.5 0 0 0 12 2.5z"/>
-          <path fill="${couleur}" d="M12 10v8.5"/>
-          <path fill="${couleur}" d="M8.5 21h7v-1.2h-7V21z"/>
-          <path fill="${couleur}" d="M2 18.2c1.8-.8 3.4-.8 5.2 0 1.8.8 3.4.8 5.2 0 1.8-.8 3.4-.8 5.2 0 1.8.8 3.4.8 5.2 0v.8H2v-.8z"/>
+          <circle fill="${couleur}" cx="17.5" cy="6" r="3.5"/>
+          <path fill="${couleur}" d="M17.5 1.2v1.6M17.5 9.2v1.6M21.8 6h-1.6M13.2 6h-1.6M20.6 2.9l-1.1 1.1M14.4 9.1l-1.1 1.1M20.6 9.1l-1.1-1.1M14.4 2.9l-1.1-1.1"/>
+          <path fill="${couleur}" d="M1 13.8h22v1.4H1z"/>
+          <path fill="${couleur}" d="M1 17c2.3-1.1 4.6-1.1 6.9 0 2.3 1.1 4.6 1.1 6.9 0 2.3-1.1 4.6-1.1 6.9 0"/>
+          <path fill="${couleur}" d="M1 20.2c2.3-1.1 4.6-1.1 6.9 0 2.3 1.1 4.6 1.1 6.9 0 2.3-1.1 4.6-1.1 6.9 0"/>
         </svg>`;
 
       default:

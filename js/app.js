@@ -15,7 +15,7 @@
 
   scripts.forEach(src => {
     const script = document.createElement('script');
-    script.src = src;
+    script.src = `${src}?v=5`;
     script.async = false; //assure que les scripts sont chargés dans l'ordre
     document.body.appendChild(script);
   });

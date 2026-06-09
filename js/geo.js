@@ -115,19 +115,26 @@ OTA.geo = {
     return false;
   },
 
-  isPointInDepartment(lat, lon, departement) {
-    if (departement.contour) {
-      return OTA.geo.isPointInContour(lat, lon, departement.contour);
-    }
-
-    if (!departement.bbox) return false;
+  isPointInBbox(lat, lon, bbox) {
+    if (!bbox) return false;
 
     return (
-      lat >= departement.bbox[0] &&
-      lat <= departement.bbox[2] &&
-      lon >= departement.bbox[1] &&
-      lon <= departement.bbox[3]
+      lat >= bbox[0] &&
+      lat <= bbox[2] &&
+      lon >= bbox[1] &&
+      lon <= bbox[3]
     );
+  },
+
+  isPointInDepartment(lat, lon, departement) {
+    if (!departement) return false;
+
+    if (departement.contour && OTA.geo.isPointInContour(lat, lon, departement.contour)) {
+      return true;
+    }
+
+    // Contours simplifiés : les plages/phares en bord de mer peuvent être hors polygone.
+    return OTA.geo.isPointInBbox(lat, lon, departement.bbox);
   },
 
   buildDepartmentGeoJson(departement) {

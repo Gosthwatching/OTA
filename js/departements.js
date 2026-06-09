@@ -352,7 +352,7 @@ OTA.departements = {
     let depParDefaut = liste[0];
 
     for (let i = 0; i < liste.length; i += 1) {
-      if (liste[i].code === "75") {
+      if (liste[i].code === "29") {
         depParDefaut = liste[i];
         break;
       }
