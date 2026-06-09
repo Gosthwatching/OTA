@@ -242,7 +242,17 @@ loadPoints: async function () {
         if (!f.geometry) continue;
 
       let featureType = OTA.main.getGeoJSONPointType(f);
-      if (!featureType && selectedTypes.has("beach") && (OTA.main.isBeachFeatureByText(f) || url.endsWith("beach.geojson"))) {
+      if (selectedTypes.has("beach") && url.endsWith("beach.geojson")) {
+        const props = f.properties || {};
+        if (
+          props.natural === "beach" ||
+          props.leisure === "beach" ||
+          OTA.main.isBeachFeatureByText(f) ||
+          !featureType
+        ) {
+          featureType = "beach";
+        }
+      } else if (!featureType && selectedTypes.has("beach") && OTA.main.isBeachFeatureByText(f)) {
         featureType = "beach";
       }
 
