@@ -42,7 +42,11 @@ OTA.config = {
 
   departementsFallback: [],
 
-  idsActifsDemo: new Set(["node/3999631495", "way/15252233"]),
+  idsActifsDemo: new Set([
+    "node/3999631495",
+    "way/15252233",
+    "relation/2695735", // Phare de la pointe du Raz (Finistère) — pour tester vert/rouge
+  ]),
 
   departementsFallback: [],
 

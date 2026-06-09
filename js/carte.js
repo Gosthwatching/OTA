@@ -83,30 +83,9 @@ OTA.carte = {
     });
 
     for (let point of sortedPoints) {
-      let couleur;
-      let radius = 6;
-      let weight = 1;
-      let fillOpacity = 0.8;
-
-      if (point.typePoint === "lighthouse") {
-        couleur = "#ef4444";
-        radius = 8;
-        weight = 2;
-        fillOpacity = 1;
-      } else if (point.typePoint === "bunker") {
-        couleur = point.estActif ? "#22c55e" : "#6b7280"; // Vert activé, gris non-activé
-      } else {
-        const config = OTA.config.configTypePoint[point.typePoint];
-        couleur = config ? config.couleur : "#808080";
-      }
-
-      const marqueur = L.circleMarker([point.lat, point.lon], {
-        radius,
-        color: couleur,
-        weight,
-        fillColor: couleur,
-        fillOpacity,
-      });
+      const marqueur = L.marker([point.lat, point.lon], {
+      icon: OTA.icons.create(point.typePoint, point.estActif),
+    });
 
       marqueur.bindPopup(`
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
