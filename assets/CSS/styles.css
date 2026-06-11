@@ -1,87 +1,329 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #101828;
+  padding: 0;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 330px 1fr;
-  height: 100vh;
-}
-
-.controls {
-  position: relative;
-  z-index: 1100;
-  padding: 14px;
-  border-right: 1px solid #d0d5dd;
-  overflow-y: auto;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-label,
-legend {
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-select,
-button {
-  width: 100%;
-  margin: 6px 0 12px;
-  padding: 9px;
-}
-
-fieldset {
-  border: 1px solid #d0d5dd;
-  padding: 10px;
-  margin-bottom: 12px;
-}
-
-fieldset label {
-  display: block;
-  font-weight: 400;
-  margin-bottom: 6px;
-}
-
-.actions {
-  display: grid;
-  gap: 8px;
-}
-
-#status {
-  margin-top: 12px;
-  padding: 9px;
-  background: #f2f4f7;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-#map {
-  width: 100%;
+html, body {
   height: 100%;
 }
 
-.popup-line {
-  margin: 0.25rem 0;
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
+/* Header */
+.topbar {
+  height: 100px;
+  background: white;
+  border-bottom: 1px solid #d0d5dd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
 
-  .controls {
-    border-right: 0;
-    border-bottom: 1px solid #d0d5dd;
-  }
+.topbar h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.mb-3{
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  width: 100%;
+  height: 811px /* 60px header + 60px footer */
+}
+
+/* MAP */
+#map {
+  width: 200em;
+  height: 811px;
+  position: relative;
+}
+
+/* Footer */
+.bottombar {
+  height: 60px;
+  background: white;
+  border-top: 1px solid #d0d5dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.bottombar h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+p{
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+legend-item.name {
+  font-weight: bold;
+  margin : 0px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Couleurs marqueurs Leaflet */
+.dot.red {
+  background: #ff4d4d;
+}
+
+.dot.green {
+  background: #4dff4d;
+}
+
+.dot.yellow {
+  background: #ffe44d;
+}
+
+.dot.cyan {
+  background: #4ddaff;
+}
+
+.select-btn,
+.form-select.select-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-width: 170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: .375rem 2.1rem .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #6c757d; /* bootstrap secondary */
+  border: 1px solid #6c757d;
+  border-radius: .375rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffffff' d='M0 0l4 5 4-5Z'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+  background-size: .75rem .5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.select-btn::-ms-expand,
+.form-select.select-btn::-ms-expand {
+  display: none;
+}
+
+.form-select.select-btn option {
+  color: #000;
+}
+
+.form-select.select-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 .25rem rgba(108,117,125,.25);
+  border-color: #5a6268;
+}
+
+/* Types dropdown fixes: ensure it displays above content and is not clipped */
+.controls {
+  position: relative;
+  overflow: visible; /* allow dropdowns to extend */
+}
+
+.types-dropdown {
+  position: relative;
+}
+
+.types-dropdown .dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.types-dropdown .dropdown-menu {
+  position: absolute !important;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 2050; /* above map controls */
+  width: calc(100% - 0px);
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.types-dropdown .dropdown-menu .form-check {
+  margin-bottom: 0.6rem;
+}
+
+.types-dropdown .dropdown-menu .form-check-label {
+  color: #111827;
+}
+
+/* Ensure dropdown buttons don't inherit unwanted colors */
+.types-dropdown .btn {
+  background: #6c757d;
+  color: #fff;
+  border-color: #6c757d;
+}
+
+/* Small screens: dropdown full width */
+@media (max-width: 480px) {
+  .types-dropdown .dropdown-menu { left: 0; right: 0; width: auto; }
+}
+
+/* Legend control styling */
+.legend-control {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+}
+
+.legend-box {
+  margin: 0;
+}
+
+.legend-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  color: #111827;
+}
+
+.legend-control .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.legend-control .legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Footer — ensure visible and readable */
+.bottombar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  border-top: 1px solid #d0d5dd;
+  padding: 8px 16px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bottombar #status {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+
+.types-dropdown .dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.types-dropdown .dropdown-menu {
+  width: 100%;
+  min-width: 230px;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+}
+
+.types-dropdown .dropdown-menu .form-check {
+  margin-bottom: 0.75rem;
+}
+
+.types-dropdown .dropdown-menu .form-check-label {
+  color: #111827;
+}
+
+.ota-marker-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ota-marker-icon svg {
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* Regroupement des marqueurs (clusters) */
+.ota-cluster {
+  background: transparent;
+  border: none;
+}
+
+.ota-cluster div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.85);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.ota-cluster-medium div {
+  background: rgba(59, 130, 246, 0.9);
+  font-size: 0.95rem;
+}
+
+.ota-cluster-large div {
+  background: rgba(37, 99, 235, 0.95);
+  font-size: 1rem;
 }

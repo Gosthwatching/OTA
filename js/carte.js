@@ -2,7 +2,7 @@ window.OTA = window.OTA || {};
 
 OTA.carte = {
   init() {
-    OTA.etat.carte = L.map("map").setView([48.8566, 2.3522], 12);
+    OTA.etat.carte = L.map("map").setView([48.8566, 2.3522], 13);
 
     OTA.etat.carte.zoomControl.remove();
     L.control.zoom({ position: "topright" }).addTo(OTA.etat.carte);
@@ -12,12 +12,43 @@ OTA.carte = {
       { attribution: "&copy; OpenStreetMap contributors" }
     ).addTo(OTA.etat.carte);
 
-    OTA.etat.couchePoints = L.layerGroup().addTo(OTA.etat.carte);
+    OTA.etat.couchePoints = OTA.carte.createClusterGroup();
+    OTA.etat.couchePoints.addTo(OTA.etat.carte);
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheDepartement = null;
 
     // Add legend as custom control in top-left
     OTA.carte.addLegendControl();
+  },
+
+  createClusterGroup() {
+    if (typeof L.markerClusterGroup !== "function") {
+      return L.layerGroup();
+    }
+
+    return L.markerClusterGroup({
+      maxClusterRadius: 60,
+      disableClusteringAtZoom: 20,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: true,
+      zoomToBoundsOnClick: true,
+      iconCreateFunction: function (cluster) {
+        const count = cluster.getChildCount();
+        let size = "small";
+
+        if (count >= 100) {
+          size = "large";
+        } else if (count >= 50) {
+          size = "medium";
+        }
+        
+        return L.divIcon({
+          html: `<div><span>${count}</span></div>`,
+          className: `ota-cluster ota-cluster-${size}`,
+          iconSize: L.point(42, 42),
+        });
+      },
+    });
   },
 
   addLegendControl() {
@@ -61,10 +92,13 @@ OTA.carte = {
 
   fitBbox(bbox) {
     OTA.etat.carte.fitBounds([
-      [bbox[0], bbox[1]],
-      [bbox[2], bbox[3]],
-    ]);
-  },
+        [bbox[0], bbox[1]],
+        [bbox[2], bbox[3]],
+      ], {
+        maxZoom: 13,   // empêche le dézoom
+        padding: [20, 20] // optionnel : petite marge
+      });
+    },
 
   showPoints(points, zoneRecherche, portee) {
     OTA.etat.couchePoints.clearLayers();
@@ -94,7 +128,7 @@ OTA.carte = {
         <a target="_blank" href="https://www.openstreetmap.org/${point.id}">Voir sur OSM</a>
       `);
 
-      marqueur.addTo(OTA.etat.couchePoints);
+      OTA.etat.couchePoints.addLayer(marqueur);
     }
   },
 

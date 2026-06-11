@@ -261,6 +261,10 @@ OTA.departements = {
       nb += 1;
     }
 
+    if (dep.code === "75") {
+      dep.bbox = [48.80, 2.25, 48.92, 2.42]; // bbox propre de Paris
+    }
+
     return nb;
   },
 
@@ -352,14 +356,22 @@ OTA.departements = {
     let depParDefaut = liste[0];
 
     for (let i = 0; i < liste.length; i += 1) {
-      if (liste[i].code === "29") {
+      if (liste[i].code === "75") {
         depParDefaut = liste[i];
         break;
       }
     }
 
+
     OTA.etat.dom.champDepartement.value = depParDefaut.code;
     await OTA.departements.ensureGeometry(depParDefaut);
+
+    if (depParDefaut.centre) {
+      OTA.carte.goTo(depParDefaut.centre, depParDefaut.zoom || 9);
+    } else if (depParDefaut.bbox) {
+      OTA.carte.fitBbox(depParDefaut.bbox);
+    }
+
     OTA.carte.drawDepartment(depParDefaut);
   },
 
