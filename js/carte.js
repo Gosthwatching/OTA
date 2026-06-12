@@ -63,19 +63,11 @@ OTA.carte = {
             <p class="legend-title">Légende</p>
             <div class="legend-item">
               <span class="legend-dot" style="background: #ef4444;"></span>
-              <span>Phare</span>
+              <span>Non Activé</span>
             </div>
             <div class="legend-item">
               <span class="legend-dot" style="background: #22c55e;"></span>
-              <span>Bunker activé</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-dot" style="background: #6b7280;"></span>
-              <span>Bunker non-activé</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-dot" style="background: #facc15;"></span>
-              <span>Plage</span>
+              <span>Activé</span>
             </div>
           </div>
         `;
@@ -95,7 +87,7 @@ OTA.carte = {
         [bbox[0], bbox[1]],
         [bbox[2], bbox[3]],
       ], {
-        maxZoom: 13,   // empêche le dézoom
+        maxZoom: 15,   // empêche le dézoom
         padding: [20, 20] // optionnel : petite marge
       });
     },

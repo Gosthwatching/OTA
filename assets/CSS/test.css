@@ -14,21 +14,37 @@ body {
 
 /* Header */
 .topbar {
-  height: 100px;
-  background: white;
-  border-bottom: 1px solid #d0d5dd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
+    height: 100px;
+    background: white;
+    border-bottom: 1px solid #d0d5dd;
+
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
 }
 
-.topbar h1 {
-  font-size: 1.4rem;
-  margin: 0;
+.title {
+    margin: 0;
 }
 
-.mb-3{
+.form-label.fw-bold{
+  text-align: center;
+}
+
+.filters {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-end;
+    flex: 1;
+    justify-content: center; /* centre les filtres */
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-group {
     display: flex;
     flex-direction: column;
 }
@@ -241,7 +257,6 @@ legend-item.name {
 .bottombar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 16px;
   background: #ffffff;
   border-top: 1px solid #d0d5dd;

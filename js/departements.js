@@ -366,12 +366,13 @@ OTA.departements = {
     OTA.etat.dom.champDepartement.value = depParDefaut.code;
     await OTA.departements.ensureGeometry(depParDefaut);
 
-    if (depParDefaut.centre) {
-      OTA.carte.goTo(depParDefaut.centre, depParDefaut.zoom || 9);
+    if (depParDefaut.code === "75") {
+        OTA.carte.goTo([48.8566, 2.3522], 12);
+    } else if (depParDefaut.centre) {
+        OTA.carte.goTo(depParDefaut.centre, depParDefaut.zoom || 9);
     } else if (depParDefaut.bbox) {
-      OTA.carte.fitBbox(depParDefaut.bbox);
+        OTA.carte.fitBbox(depParDefaut.bbox);
     }
-
     OTA.carte.drawDepartment(depParDefaut);
   },
 
