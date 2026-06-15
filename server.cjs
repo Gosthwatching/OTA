@@ -1,12 +1,15 @@
 const express = require("express");
 const fs = require("fs");
-const fetch = require("node-fetch");
 const pdfParse = require("pdf-parse");
+
+// fetch compatible CommonJS
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const app = express();
 app.use(express.json());
 
-const ACTIVATED_JSON = "./assets/json/bunker_activated.json";
+const ACTIVATED_JSON = "./json/bunker_activated.json";
 
 app.post("/api/check-new-activations", async (req, res) => {
   const { pdf_url } = req.body;
@@ -19,7 +22,9 @@ app.post("/api/check-new-activations", async (req, res) => {
     console.log("Téléchargement du PDF :", pdf_url);
 
     // Télécharger le PDF
-    const pdfBuffer = await fetch(pdf_url).then(r => r.buffer());
+    const response = await fetch(pdf_url);
+    const arrayBuffer = await response.arrayBuffer();
+    const pdfBuffer = Buffer.from(arrayBuffer);
 
     // Extraire le texte
     const data = await pdfParse(pdfBuffer);
@@ -39,7 +44,7 @@ app.post("/api/check-new-activations", async (req, res) => {
 
     return res.json({ ok: true, count: unique.length });
   } catch (err) {
-    console.error("Erreur traitement PDF :", err);
+    console.error("Erreur traitement PDF :", err.stack || err);
     return res.status(500).json({ error: "Erreur traitement PDF" });
   }
 });
