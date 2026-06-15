@@ -10,21 +10,28 @@ OTA.etat = {
 };
 
 OTA.main = {
-  start() {
-    if (typeof L === "undefined") {
-      document.getElementById("status").textContent =
-        "Leaflet non charge.";
-      return;
-    }
+  start: async function () {
+  if (typeof L === "undefined") {
+    document.getElementById("status").textContent =
+      "Leaflet non charge.";
+    return;
+  }
 
-    OTA.main.readDom();
-    OTA.carte.init();
-    OTA.main.bindEvents();
+  OTA.main.readDom();
 
-    OTA.departements.init().catch(err => {
-      OTA.ui.showStatus(`Erreur demarrage: ${err.message}`);
-    });
-  },
+  OTA.config.bunkersActivated = await fetch("./assets/json/bunkers_mapped.json")
+  .then(r => r.json())
+  .catch(() => []);
+
+
+  OTA.carte.init();
+  OTA.main.bindEvents();
+
+  OTA.departements.init().catch(err => {
+    OTA.ui.showStatus(`Erreur demarrage: ${err.message}`);
+  });
+},
+
 
   readDom() {
     OTA.etat.dom = {
@@ -186,6 +193,7 @@ OTA.main = {
 
     OTA.ui.showStatus("Points GeoJSON affichés.");
   },
+
 
 loadPoints: async function () {
 

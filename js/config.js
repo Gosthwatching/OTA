@@ -40,15 +40,10 @@ OTA.config = {
     rayonMetres: 2500,
   },
 
-  departementsFallback: [],
-
-  idsActifsDemo: new Set([
-    "relation/2695735", // Phare — Sémaphore de la pointe du Raz (Finistère)
-    "way/42275182",     // Plage — Plage des Trépassés (Finistère, même zone)
-  ]),
+  bunkersActivated: [],
 
   isIdActif(osmId) {
-    return Boolean(osmId) && this.idsActifsDemo.has(String(osmId));
+    return this.bunkersActivated.some(b => b.osmId === osmId);
   },
 
   departementsFallback: [],

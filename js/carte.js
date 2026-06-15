@@ -142,3 +142,14 @@ OTA.carte = {
     }).addTo(OTA.etat.carte);
   },
 };
+
+OTA.carte.tagActivatedBunkers = function(points) {
+  const activated = OTA.config.bunkersActivated || [];
+
+  for (let p of points) {
+    if (p.typePoint === "bunker") {
+      p.estActif = activated.some(a => a.bunker === p.bunker);
+    }
+  }
+};
+
