@@ -9,54 +9,114 @@ html, body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0a0f1c;
+  color: #d7e3ff;
+  font-family: "Orbitron", sans-serif;
 }
 
 /* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 .topbar {
-  height: 100px;
-  background: white;
-  border-bottom: 1px solid #d0d5dd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
+    height: 80px;
 }
 
-.topbar h1 {
-  font-size: 1.4rem;
-  margin: 0;
+.types-dropdown {
+    position: relative;
+    z-index: 3000;
 }
 
-.mb-3{
+.types-dropdown .dropdown-menu {
+    position: absolute;
+    z-index: 4000;
+}
+
+.title {
+    margin: 0;
+}
+
+.form-label.fw-bold{
+  text-align: center;
+}
+
+.filters {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-end;
+    flex: 1;
+    justify-content: center; /* centre les filtres */
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-group {
     display: flex;
     flex-direction: column;
 }
 
 /* MAIN */
 main {
-  display: flex;
-  width: 100%;
-  height: 811px /* 60px header + 60px footer */
+    flex: 1;
+    display: flex;
+    padding: 15px;
 }
 
 /* MAP */
 #map {
-  width: 200em;
-  height: 811px;
+  height: auto;
+  width: 100%;
+  flex: 1 1 0%;
   position: relative;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 20px #00eaff, inset 0 0 20px #007a99;
+  border-radius: 12px;
 }
+
+.ota-stats-box {
+    background: rgba(10, 20, 40, 0.85);
+    border: 1px solid #00eaff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #00eaff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 0 12px #00eaff;
+    backdrop-filter: blur(4px);
+}
+
 
 /* Footer */
 .bottombar {
   height: 60px;
-  background: white;
-  border-top: 1px solid #d0d5dd;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 16px;
+  background: rgba(10, 20, 40, 0.8);
+  border-top: 2px solid #00eaff;
+  backdrop-filter: blur(6px);
 }
+
+.bottombar #status {
+  background: transparent;
+  color: #00eaff;
+  border: 1px solid #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+}
+
 
 .bottombar h1 {
   font-size: 1.4rem;
@@ -110,6 +170,31 @@ legend-item.name {
   background: #4ddaff;
 }
 
+.btn-primary {
+    background: transparent;
+    border: 1px solid #00eaff;
+    color: #00eaff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.15s ease-out;
+}
+
+.btn-primary:hover {
+    background: rgba(0, 234, 255, 0.15);
+    border-color: #00eaff;
+    color: #00eaff;
+    transform: translateY(-1px);
+}
+
+select, .form-select {
+    background: rgba(5, 10, 20, 0.9);
+    border: 1px solid #00eaff;
+    color: #d7e3ff;
+    box-shadow: 0 0 10px #00eaff;
+}
+
 .select-btn,
 .form-select.select-btn {
   -webkit-appearance: none;
@@ -151,6 +236,12 @@ legend-item.name {
 }
 
 /* Types dropdown fixes: ensure it displays above content and is not clipped */
+.dropdown-menu {
+    background: rgba(5, 10, 20, 0.9);
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+}
+
 .controls {
   position: relative;
   overflow: visible; /* allow dropdowns to extend */
@@ -237,33 +328,6 @@ legend-item.name {
   border-radius: 50%;
 }
 
-/* Footer — ensure visible and readable */
-.bottombar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  background: #ffffff;
-  border-top: 1px solid #d0d5dd;
-  padding: 8px 16px;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.bottombar #status {
-  margin: 0;
-  padding: 0.35rem 0.75rem;
-  background: #ffffff;
-  color: #111827;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 6px;
-  box-shadow: none;
-}
-
-
 .types-dropdown .dropdown-toggle {
   width: 100%;
   text-align: left;
@@ -318,12 +382,17 @@ legend-item.name {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
+.ota-cluster-small div {
+  background: rgba(14, 165, 233, 0.85);
+  font-size: 0.75rem;
+}
+
 .ota-cluster-medium div {
   background: rgba(59, 130, 246, 0.9);
   font-size: 0.95rem;
 }
 
 .ota-cluster-large div {
-  background: rgba(37, 99, 235, 0.95);
+  background: rgba(255, 0, 0, 0.95);
   font-size: 1rem;
 }

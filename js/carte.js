@@ -17,8 +17,11 @@ OTA.carte = {
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheDepartement = null;
 
-    // Add legend as custom control in top-left
+    // Légende
     OTA.carte.addLegendControl();
+
+    // Panneau de stats
+    OTA.carte.addStatsControl();
   },
 
   createClusterGroup() {
@@ -36,12 +39,9 @@ OTA.carte = {
         const count = cluster.getChildCount();
         let size = "small";
 
-        if (count >= 100) {
-          size = "large";
-        } else if (count >= 50) {
-          size = "medium";
-        }
-        
+        if (count >= 100) size = "large";
+        else if (count >= 50) size = "medium";
+
         return L.divIcon({
           html: `<div><span>${count}</span></div>`,
           className: `ota-cluster ota-cluster-${size}`,
@@ -53,10 +53,8 @@ OTA.carte = {
 
   addLegendControl() {
     const LegendControl = L.Control.extend({
-      options: {
-        position: "topleft"
-      },
-      onAdd: function (map) {
+      options: { position: "topleft" },
+      onAdd: function () {
         const div = L.DomUtil.create("div", "legend-control");
         div.innerHTML = `
           <div class="legend-box">
@@ -78,19 +76,36 @@ OTA.carte = {
     new LegendControl().addTo(OTA.etat.carte);
   },
 
+  // ⭐ Nouveau : panneau de stats
+  addStatsControl() {
+    OTA.carte.statsControl = L.control({ position: "topleft" });
+
+    OTA.carte.statsControl.onAdd = function () {
+      const div = L.DomUtil.create("div", "ota-stats-box");
+      div.id = "ota-stats";
+      div.innerHTML = "0 point affiché";
+      return div;
+    };
+
+    OTA.carte.statsControl.addTo(OTA.etat.carte);
+  },
+
   goTo(centre, zoom) {
     OTA.etat.carte.setView(centre, zoom);
   },
 
   fitBbox(bbox) {
-    OTA.etat.carte.fitBounds([
+    OTA.etat.carte.fitBounds(
+      [
         [bbox[0], bbox[1]],
         [bbox[2], bbox[3]],
-      ], {
-        maxZoom: 15,   // empêche le dézoom
-        padding: [20, 20] // optionnel : petite marge
-      });
-    },
+      ],
+      {
+        maxZoom: 15,
+        padding: [20, 20],
+      }
+    );
+  },
 
   showPoints(points, zoneRecherche, portee) {
     OTA.etat.couchePoints.clearLayers();
@@ -110,8 +125,8 @@ OTA.carte = {
 
     for (let point of sortedPoints) {
       const marqueur = L.marker([point.lat, point.lon], {
-      icon: OTA.icons.create(point.typePoint, point.estActif),
-    });
+        icon: OTA.icons.create(point.typePoint, point.estActif),
+      });
 
       marqueur.bindPopup(`
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
@@ -122,6 +137,14 @@ OTA.carte = {
 
       OTA.etat.couchePoints.addLayer(marqueur);
     }
+
+    // ⭐ Mise à jour du panneau de stats
+    const total = points.length;
+    const actifs = points.filter(p => p.estActif).length;
+    const inactifs = total - actifs;
+
+    document.getElementById("ota-stats").innerHTML =
+      `${total} points affichés (${actifs} actifs, ${inactifs} inactifs)`;
   },
 
   drawDepartment(departement) {
@@ -143,7 +166,7 @@ OTA.carte = {
   },
 };
 
-OTA.carte.tagActivatedBunkers = function(points) {
+OTA.carte.tagActivatedBunkers = function (points) {
   const activated = OTA.config.bunkersActivated || [];
 
   for (let p of points) {
@@ -152,4 +175,3 @@ OTA.carte.tagActivatedBunkers = function(points) {
     }
   }
 };
-
