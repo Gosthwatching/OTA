@@ -19,7 +19,7 @@ OTA.main = {
 
   OTA.main.readDom();
 
-  OTA.config.bunkersActivated = await fetch("./assets/json/bunkers_mapped.json")
+  OTA.config.bunkersActivated = await fetch("./json/bunkers_mapped.json")
   .then(r => r.json())
   .catch(() => []);
 

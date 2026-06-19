@@ -4,21 +4,9 @@ const fs = require("fs");
 const bunkersOSM = JSON.parse(fs.readFileSync("./json/bunkers.geojson", "utf8"));
 const bunkersFBOTA = JSON.parse(fs.readFileSync("./json/bunker_activated.json", "utf8"));
 
-// Fonction distance simple (Haversine)
-function distance(lat1, lon1, lat2, lon2) {
-  const R = 6371000; // mètres
-  const toRad = x => (x * Math.PI) / 180;
-
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
-
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(toRad(lat1)) *
-      Math.cos(toRad(lat2)) *
-      Math.sin(dLon / 2) ** 2;
-
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+// Fonction pour normaliser les IDs (garde uniquement les chiffres)
+function normalize(id) {
+  return id.replace(/[^0-9]/g, "");
 }
 
 // Extraire les bunkers OSM sous forme simple
@@ -28,33 +16,26 @@ const osmList = bunkersOSM.features
     const coords = f.geometry.coordinates[0][0]; // premier point du polygone
     return {
       osmId: f.id,
+      bunkerId: normalize(f.id), // normalisation de l'ID OSM
       lat: coords[1],
       lon: coords[0]
     };
   });
 
-// Faire le mapping
+// Faire le mapping par ID
 const result = [];
 
 for (const fb of bunkersFBOTA) {
-  let best = null;
-  let bestDist = Infinity;
+  const fbId = normalize(fb.bunker);
 
-  for (const osm of osmList) {
-    const d = distance(fb.lat, fb.lon, osm.lat, osm.lon);
-    if (d < bestDist) {
-      bestDist = d;
-      best = osm;
-    }
-  }
+  const match = osmList.find(o => o.bunkerId === fbId);
 
-  // Si distance < 80m → on considère que c'est le même bunker
-  if (best && bestDist < 80) {
+  if (match) {
     result.push({
-      osmId: best.osmId,
+      osmId: match.osmId,
       bunker: fb.bunker,
-      lat: best.lat,
-      lon: best.lon,
+      lat: match.lat,
+      lon: match.lon,
       activated: true
     });
   }
