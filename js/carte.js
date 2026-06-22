@@ -132,7 +132,7 @@ OTA.carte = {
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
         <p>${point.typePoint === "bunker" ? "Bunker" : OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
         <p>Statut: ${point.estActif ? "✓ Activé" : "✗ Non-activé"}</p>
-        <a target="_blank" href="https://www.openstreetmap.org/${point.id}">Voir sur OSM</a>
+        <a target="_blank" href="https://www.openstreetmap.org/?mlat=${point.lat}&mlon=${point.lon}#map=18/${point.lat}/${point.lon}">Voir sur OSM</a>
       `);
 
       OTA.etat.couchePoints.addLayer(marqueur);
