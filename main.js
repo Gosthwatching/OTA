@@ -19,7 +19,7 @@ OTA.main = {
 
   OTA.main.readDom();
 
-  OTA.config.bunkersActivated = await fetch("./json/bunkers_mapped.json")
+  OTA.config.bunkersActivated = await fetch("./json/bunker/bunkers_all_with_activation.json")
   .then(r => r.json())
   .catch(() => []);
 
@@ -111,7 +111,7 @@ OTA.main = {
       const fileMap = {
         lighthouse: "./json/lighthouse.geojson",
         beach: "./json/beach.geojson",
-        bunker: "./json/bunkers.geojson",
+        bunker: "./json/bunker/bunkers_all_with_activation.json",
       };
 
       const url = fileMap[typeKey];
@@ -222,7 +222,7 @@ loadPoints: async function () {
   const fileMap = {
     lighthouse: "./json/lighthouse.geojson",
     beach: "./json/beach.geojson",
-    bunker: "./json/bunkers.geojson",
+    bunker: "./json/bunker/bunkers_all_with_activation.json",
   };
 
   const urlToTypes = {};
@@ -235,37 +235,47 @@ loadPoints: async function () {
 
   let allPoints = [];
 
-  for (const url in urlToTypes) {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error("Erreur HTTP " + response.status);
+for (const url in urlToTypes) {
+  console.log("URL chargée :", url);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Erreur HTTP " + response.status);
 
-      let features;
-      if (url.includes("bunkers_all.json")) {
-        // Format spécial pour bunkers_all.json
-        const bunkersData = await response.json();
-        features = bunkersData.map((b, idx) => ({
-          id: b.bunker || `bunker/${idx}`,
-          geometry: { coordinates: [b.lon, b.lat], type: "Point" },
-          properties: {
-            name: b.name || b.bunker,
-            building: "bunker",
-          },
-          activated: b.activated,
-        }));
-      } else {
-        const geojson = await response.json();
-        features = geojson.features || [];
-      }
+    let features;
 
-      const selectedTypes = urlToTypes[url];
-      const filtered = [];
+    // --- FORMAT SPÉCIAL POUR LES BUNKERS ---
+    if (url.includes("bunkers_all_with_activation.json")) {
+      const bunkersData = await response.json();
+      features = bunkersData.map((b, idx) => ({
+        id: b.bunker || `bunker/${idx}`,
+        geometry: { coordinates: [b.lon, b.lat], type: "Point" },
+        properties: {
+          name: b.name || b.bunker,
+          building: "bunker",
+        },
+        activated: b.activated,
+      }));
+    }
+
+    // --- FORMAT GEOJSON NORMAL ---
+    else {
+      const geojson = await response.json();
+      features = geojson.features || [];
+    }
+
+    // À PARTIR D’ICI → TON CODE EXISTANT CONTINUE
+    const selectedTypes = urlToTypes[url];
+    const filtered = [];
 
       for (let j = 0; j < features.length; j++) {
         const f = features[j];
         if (!f.geometry) continue;
 
       let featureType = OTA.main.getGeoJSONPointType(f);
+      // Forcer le type pour les bunkers
+      if (url.includes("bunkers_all_with_activation.json")) {
+          featureType = "bunker";
+      }
       if (selectedTypes.has("beach") && url.endsWith("beach.geojson")) {
         const props = f.properties || {};
         if (

@@ -4,7 +4,7 @@
     './js/geo.js',
     './js/ui.js',
     './js/departements.js',
-    './js/overpass.js',
+    './js/overpass.osm.js',
     './js/points-osm.js',
     './js/icons.js',
     './js/carte.js',
