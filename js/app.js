@@ -6,6 +6,7 @@
     './js/departements.js',
     './js/overpass.osm.js',
     './js/points-osm.js',
+    './js/points-loader.js',
     './js/icons.js',
     './js/carte.js',
     './js/geolocalisation.js',
