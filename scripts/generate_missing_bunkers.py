@@ -5,8 +5,8 @@ import json
 import re
 from pathlib import Path
 
-bunker_re = re.compile(r"B/F-\d{4}")
-lat_re = re.compile(r" (-?\d{1,2}[.,]\d{4},) ")
+bunker_re = re.compile(r"B/F-\d{4,5}")
+coord_re = re.compile(r"\s(-?\d{1,2}[.,]\d+)\s+(-?\d{1,3}[.,]\d+)\s+([A-X]{2}\d{2}[A-X]{2})")
 qth_re = re.compile(r"[A-X]{2}[0-9]{2}[A-X]{2}")
 
 demo_path = Path("scripts/demo.txt")
@@ -45,25 +45,24 @@ for line_number, line in enumerate(lines, start=1):
     qth = None
     name = ""
 
-    lat_match = lat_re.search(line)
-    if lat_match:
-        lat_text = lat_match.group(1).replace(",", ".")
+    coord_match = coord_re.search(line)
+    if coord_match:
+        lat_text = coord_match.group(1).replace(",", ".")
         try:
             lat = float(lat_text)
         except ValueError:
             lat = None
-        name = line[bunker_match.end(): lat_match.start()].strip(" ,;")
-
-    qth_match = qth_re.search(line)
-    if qth_match:
-        qth = qth_match.group(0)
-        if lat_match:
-            lon_text = line[lat_match.end(): qth_match.start()].strip(" ,;")
-            lon_text = lon_text.replace(",", ".")
-            try:
-                lon = float(lon_text)
-            except ValueError:
-                lon = None
+        lon_text = coord_match.group(2).replace(",", ".")
+        try:
+            lon = float(lon_text)
+        except ValueError:
+            lon = None
+        qth = coord_match.group(3)
+        name = line[bunker_match.end(): coord_match.start()].strip(" ,;")
+    else:
+        qth_match = qth_re.search(line)
+        if qth_match:
+            qth = qth_match.group(0)
 
     if bunker_code not in missing:
         missing[bunker_code] = {

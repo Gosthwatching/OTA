@@ -6,7 +6,7 @@ PDF_PATH = "data/FBOTAV324Web.pdf"
 OUTPUT = "json/bunkers_all.json"
 
 LINE_REGEX = re.compile(
-    r"(B/F-\d+)\s+([A-Z0-9]+)\s+-\s+(.+?)\s+([0-9]+\.[0-9]+)\s+([0-9]+\.[0-9]+)\s+([A-R]{2}\d{2}[A-X]{2})"
+    r"(B/F-\d{4,5})\s+(.+?)\s+(-?[0-9]+\.[0-9]+)\s+(-?[0-9]+\.[0-9]+)\s+([A-R]{2}\d{2}[A-X]{2})"
 )
 
 def extract_bunkers():
@@ -22,11 +22,17 @@ def extract_bunkers():
                 match = LINE_REGEX.search(line)
                 if match:
                     bunker_id = match.group(1)
-                    code = match.group(2)
-                    name = match.group(3).strip()
-                    lat = float(match.group(4))
-                    lon = float(match.group(5))
-                    qth = match.group(6)
+                    raw_name = match.group(2).strip()
+                    lat = float(match.group(3))
+                    lon = float(match.group(4))
+                    qth = match.group(5)
+
+                    code = ""
+                    name = raw_name
+                    if " - " in raw_name:
+                        code, name = raw_name.split(" - ", 1)
+                        code = code.strip()
+                        name = name.strip()
 
                     bunkers.append({
                         "bunker": bunker_id,

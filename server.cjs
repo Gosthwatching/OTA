@@ -31,7 +31,7 @@ app.post("/api/check-new-activations", async (req, res) => {
     const text = data.text;
 
     // Extraire les bunkers activés
-    const matches = text.match(/B\/F-\d{4}/g) || [];
+    const matches = text.match(/B\/F-\d{4,5}/g) || [];
     const unique = [...new Set(matches)];
 
     console.log("Bunkers activés trouvés :", unique.length);
