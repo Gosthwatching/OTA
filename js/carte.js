@@ -76,7 +76,7 @@ OTA.carte = {
     new LegendControl().addTo(OTA.etat.carte);
   },
 
-  // ⭐ Nouveau : panneau de stats
+  // Nouveau : panneau de stats
   addStatsControl() {
     OTA.carte.statsControl = L.control({ position: "topleft" });
 
@@ -138,7 +138,7 @@ OTA.carte = {
       OTA.etat.couchePoints.addLayer(marqueur);
     }
 
-    // ⭐ Mise à jour du panneau de stats
+    // Mise à jour du panneau de stats
     const total = points.length;
     const actifs = points.filter(p => p.estActif).length;
     const inactifs = total - actifs;

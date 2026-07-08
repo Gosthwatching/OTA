@@ -129,11 +129,10 @@ OTA.geo = {
   isPointInDepartment(lat, lon, departement) {
     if (!departement) return false;
 
-    if (departement.contour && OTA.geo.isPointInContour(lat, lon, departement.contour)) {
-      return true;
+    if (departement.contour) {
+      return OTA.geo.isPointInContour(lat, lon, departement.contour);
     }
 
-    // Contours simplifiés : les plages/phares en bord de mer peuvent être hors polygone.
     return OTA.geo.isPointInBbox(lat, lon, departement.bbox);
   },
 
