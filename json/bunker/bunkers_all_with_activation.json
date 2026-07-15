@@ -66310,5 +66310,113 @@
     "lon": -1.674263,
     "qth": "IN99DO",
     "activated": false
+  },
+  {
+    "bunker": "B/F-7369",
+    "code": "",
+    "name": "Murs-Erigne",
+    "lat": 47.400587,
+    "lon": -0.535967,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7370",
+    "code": "",
+    "name": "Bessonneau",
+    "lat": 47.469668,
+    "lon": -0.540731,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7371",
+    "code": "",
+    "name": "Pointe Bechard 1",
+    "lat": 48.634285,
+    "lon": -2.030668,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7372",
+    "code": "",
+    "name": "Pointe Bechard 2",
+    "lat": 48.635105,
+    "lon": -2.030373,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7373",
+    "code": "",
+    "name": "Les Corbières 1",
+    "lat": 48.632882,
+    "lon": -2.02083,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7374",
+    "code": "",
+    "name": "Les Corbières 2",
+    "lat": 48.632615,
+    "lon": -2.022606,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7375",
+    "code": "",
+    "name": "Goule des fées",
+    "lat": 48.640416,
+    "lon": -2.075338,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7376",
+    "code": "",
+    "name": "Barbe Brulee 1",
+    "lat": 48.703117,
+    "lon": -1.843493,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7377",
+    "code": "",
+    "name": "Barbe Brulee 2",
+    "lat": 48.702893,
+    "lon": -1.84448,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7378",
+    "code": "",
+    "name": "Barbe Brulee 3",
+    "lat": 48.702498,
+    "lon": -1.844263,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7379",
+    "code": "",
+    "name": "Radar Wurzburg Riese",
+    "lat": 48.681002,
+    "lon": -2.325743,
+    "qth": null,
+    "activated": false
+  },
+  {
+    "bunker": "B/F-7380",
+    "code": "",
+    "name": "Pleneuf",
+    "lat": 48.596697,
+    "lon": -2.538169,
+    "qth": null,
+    "activated": false
   }
 ]
