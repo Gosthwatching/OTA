@@ -136,6 +136,8 @@ OTA.pointsLoader = {
     const coords = OTA.pointsLoader.getFeatureCoordinates(feature);
     if (!coords) return null;
 
+    const sources = featureType === "bunker" ? ["FBOTA"] : [];
+
     return {
       id: OTA.pointsLoader.getFeatureOsmId(feature) || `${featureType}/${index}`,
       lat: coords.lat,
@@ -143,6 +145,8 @@ OTA.pointsLoader = {
       nom: feature.properties?.name || feature.properties?.nom || "",
       typePoint: featureType,
       estActif: OTA.pointsLoader.isFeatureActif(feature),
+      source: sources[0] || null,
+      sources,
     };
   },
 

@@ -37,10 +37,10 @@ OTA.icons = {
     }
   },
 
-  create(typePoint, estActif) {
-    const couleur = estActif
+  create(typePoint, estActif, couleurFornee) {
+    const couleur = couleurFornee || (estActif
       ? this.colors.activationColor
-      : this.colors.inactiveColor;
+      : this.colors.inactiveColor);
 
     const html = this.svg(typePoint, couleur);
 

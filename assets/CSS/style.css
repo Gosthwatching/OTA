@@ -309,6 +309,19 @@ select, .form-select {
   color: #111827;
 }
 
+.legend-section-title {
+  margin: 10px 0 6px 0;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legend-section-spacing {
+  margin-top: 12px;
+}
+
 .legend-control .legend-item {
   display: flex;
   align-items: center;
@@ -359,6 +372,61 @@ select, .form-select {
 .ota-marker-icon svg {
   display: block;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ota-popup-source {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ota-popup-activation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ota-source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ota-source-unknown {
+  background: #64748b;
+}
+
+.ota-activation-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+.ota-activation-badge-active {
+  background: #22c55e;
+}
+
+.ota-activation-badge-inactive {
+  background: #ef4444;
+}
+
+.ota-activation-badge-unknown {
+  background: #64748b;
 }
 
 /* Regroupement des marqueurs (clusters) */

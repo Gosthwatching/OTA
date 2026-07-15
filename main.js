@@ -209,6 +209,8 @@ OTA.main = {
       }
     }
 
+    allPoints = OTA.main.mergePointsById(allPoints);
+
     if (allPoints.length === 0) {
       OTA.main.showNoResultStatus(types, filtreActivation, dep, zoneRecherche);
       return;
@@ -221,6 +223,34 @@ OTA.main = {
     OTA.ui.showStatus(
       `${allPoints.length} points affichés (${nbActifs} actifs, ${nbInactifs} inactifs).`
     );
+  },
+
+  mergePointsById: function (points) {
+    const pointsParId = new Map();
+
+    for (const point of points) {
+      const sourceList = Array.isArray(point.sources)
+        ? point.sources
+        : point.source
+          ? [point.source]
+          : [];
+
+      if (!pointsParId.has(point.id)) {
+        pointsParId.set(point.id, {
+          ...point,
+          sources: [...new Set(sourceList)],
+        });
+        continue;
+      }
+
+      const courant = pointsParId.get(point.id);
+      courant.sources = [...new Set([...(courant.sources || []), ...sourceList])];
+      if (!courant.source && courant.sources.length > 0) {
+        courant.source = courant.sources[0];
+      }
+    }
+
+    return Array.from(pointsParId.values());
   },
 };
 

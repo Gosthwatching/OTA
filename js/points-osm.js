@@ -34,6 +34,8 @@ OTA.pointsOsm = {
         nom,
         typePoint,
         estActif: OTA.config.idsActifsDemo.has(id),
+        source: "OSM",
+        sources: ["OSM"],
       });
     }
 

@@ -1,0 +1,43 @@
+name: Monthly Bunker Data Sync
+
+on:
+  schedule:
+    # Tous les 1ers du mois a 03:00 UTC
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-bunkers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Sync FBOTA bunker data
+        run: python scripts/sync_fbota_data.py
+
+      - name: Commit and push data updates
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain json/bunker)" ]; then
+            echo "No bunker data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add json/bunker
+          git commit -m "chore(data): monthly bunker sync"
+          git push

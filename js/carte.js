@@ -1,6 +1,11 @@
 window.OTA = window.OTA || {};
 
 OTA.carte = {
+  sourceLabels: {
+    OSM: { label: "OSM", color: "#3b82f6" },
+    FBOTA: { label: "FBOTA", color: "#f59e0b" },
+  },
+
   init() {
     OTA.etat.carte = L.map("map").setView([48.8566, 2.3522], 13);
 
@@ -24,6 +29,62 @@ OTA.carte = {
     OTA.carte.addStatsControl();
   },
 
+  getPointSources(point) {
+    if (Array.isArray(point.sources) && point.sources.length > 0) {
+      return [...new Set(point.sources)];
+    }
+
+    if (point.source) {
+      return [point.source];
+    }
+
+    return [];
+  },
+
+  getPointSourceLabel(point) {
+    const sources = OTA.carte.getPointSources(point);
+    if (sources.length === 0) return "Inconnue";
+    return sources.map(source => OTA.carte.sourceLabels[source]?.label || source).join(" + ");
+  },
+
+  getPointSourceColor(point) {
+    const sources = OTA.carte.getPointSources(point);
+
+    if (sources.includes("OSM") && sources.includes("FBOTA")) {
+      return "#8b5cf6";
+    }
+
+    const firstSource = sources[0];
+    return OTA.carte.sourceLabels[firstSource]?.color || "#94a3b8";
+  },
+
+  renderSourceBadges(point) {
+    const sources = OTA.carte.getPointSources(point);
+
+    if (sources.length === 0) {
+      return '<span class="ota-source-badge ota-source-unknown">Inconnue</span>';
+    }
+
+    return sources
+      .map(source => {
+        const meta = OTA.carte.sourceLabels[source] || { label: source, color: "#94a3b8" };
+        return `<span class="ota-source-badge" style="background:${meta.color};">${meta.label}</span>`;
+      })
+      .join("");
+  },
+
+  renderActivationBadge(point) {
+    if (point.estActif === true) {
+      return '<span class="ota-activation-badge ota-activation-badge-active">Activé</span>';
+    }
+
+    if (point.estActif === false) {
+      return '<span class="ota-activation-badge ota-activation-badge-inactive">Non activé</span>';
+    }
+
+    return '<span class="ota-activation-badge ota-activation-badge-unknown">Activation inconnue</span>';
+  },
+
   createClusterGroup() {
     if (typeof L.markerClusterGroup !== "function") {
       return L.layerGroup();
@@ -31,7 +92,7 @@ OTA.carte = {
 
     return L.markerClusterGroup({
       maxClusterRadius: 60,
-      disableClusteringAtZoom: 20,
+      disableClusteringAtZoom: 18,
       spiderfyOnMaxZoom: true,
       showCoverageOnHover: true,
       zoomToBoundsOnClick: true,
@@ -60,12 +121,16 @@ OTA.carte = {
           <div class="legend-box">
             <p class="legend-title">Légende</p>
             <div class="legend-item">
-              <span class="legend-dot" style="background: #ef4444;"></span>
-              <span>Non Activé</span>
-            </div>
-            <div class="legend-item">
               <span class="legend-dot" style="background: #22c55e;"></span>
               <span>Activé</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #ef4444;"></span>
+              <span>Non activé</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot" style="background: #64748b;"></span>
+              <span>Inconnu</span>
             </div>
           </div>
         `;
@@ -128,12 +193,20 @@ OTA.carte = {
         icon: OTA.icons.create(point.typePoint, point.estActif),
       });
 
-      marqueur.bindPopup(`
+      const popupHtml = point.typePoint === "bunker"
+        ? `
         <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
-        <p>${point.typePoint === "bunker" ? "Bunker" : OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
-        <p>Statut: ${point.estActif ? "✓ Activé" : "✗ Non-activé"}</p>
+        <p class="ota-popup-source">${OTA.carte.renderSourceBadges(point)} ${OTA.carte.renderActivationBadge(point)}</p>
         <a target="_blank" href="https://www.openstreetmap.org/?mlat=${point.lat}&mlon=${point.lon}#map=18/${point.lat}/${point.lon}">Voir sur OSM</a>
-      `);
+      `
+        : `
+        <strong>${OTA.ui.escapeHtml(point.nom || "(sans nom)")}</strong>
+        <p>${OTA.config.configTypePoint[point.typePoint]?.nom || point.typePoint}</p>
+        <p class="ota-popup-activation">Statut: ${OTA.carte.renderActivationBadge(point)}</p>
+        <a target="_blank" href="https://www.openstreetmap.org/?mlat=${point.lat}&mlon=${point.lon}#map=18/${point.lat}/${point.lon}">Voir sur OSM</a>
+      `;
+
+      marqueur.bindPopup(popupHtml);
 
       OTA.etat.couchePoints.addLayer(marqueur);
     }

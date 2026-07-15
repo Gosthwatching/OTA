@@ -1,5 +1,6 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const pdfParse = require("pdf-parse");
 
 // fetch compatible CommonJS
@@ -8,6 +9,9 @@ const fetch = (...args) =>
 
 const app = express();
 app.use(express.json());
+
+const staticRoot = path.resolve(__dirname);
+app.use(express.static(staticRoot));
 
 const ACTIVATED_JSON = "./json/bunker_activated.json";
 
@@ -47,6 +51,18 @@ app.post("/api/check-new-activations", async (req, res) => {
     console.error("Erreur traitement PDF :", err.stack || err);
     return res.status(500).json({ error: "Erreur traitement PDF" });
   }
+});
+
+app.use((req, res, next) => {
+  if (req.method !== "GET" && req.method !== "HEAD") {
+    return next();
+  }
+
+  if (req.path.startsWith("/api/")) {
+    return next();
+  }
+
+  return res.sendFile(path.join(staticRoot, "index.html"));
 });
 
 app.listen(3000, () => {

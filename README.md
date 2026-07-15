@@ -115,6 +115,28 @@ Si vous voulez mettre a jour durablement les fichiers JSON du projet :
 - gardez les scripts Python et Node en local ou dans GitHub Actions
 - ou deployeez un vrai backend avec stockage persistant sur Railway, Render, une VM ou une base de donnees
 
+## Mise a jour automatique mensuelle des bunkers
+
+Le depot inclut un workflow GitHub Actions :
+
+- `.github/workflows/monthly-bunkers-sync.yml`
+
+Ce workflow :
+
+- s'execute automatiquement le 1er de chaque mois a 05:00 UTC
+- peut aussi etre lance manuellement (`workflow_dispatch`)
+- lance `python scripts/sync_fbota_data.py`
+- met a jour les fichiers dans `json/bunker/`
+- commit et push automatiquement si des changements sont detectes
+
+### Prerequis GitHub
+
+1. le depot doit etre heberge sur GitHub
+2. GitHub Actions doit etre active pour le depot
+3. le workflow doit avoir le droit d'ecriture sur le contenu du repo
+
+Si votre site est deploye depuis la branche du repo (Vercel, etc.), un commit de ce workflow declenchera automatiquement un nouveau deploiement avec les donnees bunker a jour.
+
 ## Dependances
 
 - `express`
