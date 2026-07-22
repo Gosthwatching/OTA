@@ -1,0 +1,265 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "PB139",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.1333, 43.5650]
+      },
+      "properties": {
+        "pb": 139,
+        "nom": "La Garoupe",
+        "departement": "06",
+        "wlotta": "Non",
+        "accessibilite": "Voiture",
+        "villeProche": "Antibes",
+        "structure": "Tour carrée blanche",
+        "validationExpedition": "Oui",
+        "positionDMS": "43°33,9 N 007°08,0 E",
+        "recherchePourcentage": "52%",
+        "derniereActivite": "2000",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "PB140",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.0617, 43.5683]
+      },
+      "properties": {
+        "pb": 140,
+        "nom": "Vallauris",
+        "departement": "06",
+        "wlotta": "Non",
+        "accessibilite": "Voiture",
+        "villeProche": "Vallauris",
+        "structure": "Tour blanche haut noir",
+        "validationExpedition": "Oui",
+        "positionDMS": "43°34,1 N 007°03,7 E",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2000",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    
+    {
+    "type": "Feature",
+    "id": "PB141",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.3283, 43.675]
+      },
+      "properties": {
+        "pb": 141,
+        "nom": "Cap Ferrat",
+        "accessibilite": "Voiture",
+        "villeProche": "Saint Jean Cap Ferrat",
+        "structure": "Tour blanche lanterne verte - Bande verte à la base",
+        "validationExpedition": "Oui",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°40,5 N 007°19,7 E",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2019",
+        "typePoint": "lighthouse"
+        }
+      },
+
+    {
+    "type": "Feature",
+    "id": "PB142",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.1217, 43.5433]
+    },
+    "properties": {
+      "pb": 142,
+      "nom": "Pointe d'Ilette",
+      "accessibilite": "Voiture",
+      "villeProche": "Antibes",
+      "structure": "Tour blanche haut noir",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°32,6 N 007°07,3 E",
+      "recherchePourcentage": "62%",
+      "derniereActivite": "2000",
+      "typePoint": "lighthouse"
+    }
+  },
+
+    {
+    "type": "Feature",
+    "id": "PB184",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.2883, 43.69]
+    },
+    "properties": {
+      "pb": 184,
+      "nom": "Phare Nice - Jetée du large",
+      "accessibilite": "A pieds",
+      "villeProche": "Nice",
+      "structure": "Tour blanche lanterne rouge et dôme blanc",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°41,4 N 007°17,3 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  
+    {
+    "type": "Feature",
+    "id": "PB206",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.1333, 43.59]
+    },
+    "properties": {
+      "pb": 206,
+      "nom": "Antibes - Digue du large",
+      "accessibilite": "Voiture",
+      "villeProche": "Antibes",
+      "structure": "Tour blanche et ocre - Lanterne rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°35,4 N 007°08,0 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+    {
+    "type": "Feature",
+    "id": "PB208",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.3367, 43.6917]
+    },
+    "properties": {
+      "pb": 208,
+      "nom": "Saint Jean Cap Ferrat - Jetée Abri",
+      "accessibilite": "Voiture",
+      "villeProche": "Saint Jean Cap Ferrat",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui/Non",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°41,5 N 007°20,2 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  
+    {
+    "type": "Feature",
+    "id": "PB209",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.18, 43.655]
+    },
+    "properties": {
+      "pb": 209,
+      "nom": "Saint Laurent du Var - Jetée",
+      "accessibilite": "Voiture",
+      "villeProche": "Saint Laurent du Var",
+      "structure": "Tour blanche haut vert",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°39,3 N 007°10,8 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+    {
+    "type": "Feature",
+    "id": "PBXXX",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [LON_DECIMAL, LAT_DECIMAL]
+    },
+    "properties": {
+      "pb": XXX,
+      "nom": "NOM_DU_PHARE",
+      "accessibilite": "TYPE",
+      "villeProche": "VILLE",
+      "structure": "DESCRIPTION",
+      "validationExpedition": "Oui/Non",
+      "departement": "DEPT",
+      "wlotta": "Oui/Non",
+      "positionDMS": "LAT_DMS LON_DMS",
+      "recherchePourcentage": "XX%",
+      "derniereActivite": "ANNEE",
+      "typePoint": "lighthouse"
+    }
+  },
+  
+    {
+    "type": "Feature",
+    "id": "PBXXX",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [LON_DECIMAL, LAT_DECIMAL]
+    },
+    "properties": {
+      "pb": XXX,
+      "nom": "NOM_DU_PHARE",
+      "accessibilite": "TYPE",
+      "villeProche": "VILLE",
+      "structure": "DESCRIPTION",
+      "validationExpedition": "Oui/Non",
+      "departement": "DEPT",
+      "wlotta": "Oui/Non",
+      "positionDMS": "LAT_DMS LON_DMS",
+      "recherchePourcentage": "XX%",
+      "derniereActivite": "ANNEE",
+      "typePoint": "lighthouse"
+    }
+  },
+  
+    {
+    "type": "Feature",
+    "id": "PBXXX",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [LON_DECIMAL, LAT_DECIMAL]
+    },
+    "properties": {
+      "pb": XXX,
+      "nom": "NOM_DU_PHARE",
+      "accessibilite": "TYPE",
+      "villeProche": "VILLE",
+      "structure": "DESCRIPTION",
+      "validationExpedition": "Oui/Non",
+      "departement": "DEPT",
+      "wlotta": "Oui/Non",
+      "positionDMS": "LAT_DMS LON_DMS",
+      "recherchePourcentage": "XX%",
+      "derniereActivite": "ANNEE",
+      "typePoint": "lighthouse"
+    }
+  }
+
+  
+
+
+
+
+
+  ]
+}

@@ -5,7 +5,10 @@ OTA.pointsLoader = {
     return {
       lighthouse: "./json/lighthouse.geojson",
       beach: "./json/beach.geojson",
-      bunker: "./json/bunker/bunkers_all_with_activation.json",
+      bunker: [
+        "./json/bunker/bunkers_all_with_activation.json",
+        "./json/bunker/bunkers.geojson",
+      ],
     };
   },
 
@@ -13,10 +16,14 @@ OTA.pointsLoader = {
     const urlToTypes = {};
 
     for (const typeKey of types) {
-      const url = fileMap[typeKey];
-      if (!url) continue;
-      urlToTypes[url] = urlToTypes[url] || new Set();
-      urlToTypes[url].add(typeKey);
+      const mapped = fileMap[typeKey];
+      const urls = Array.isArray(mapped) ? mapped : [mapped];
+
+      for (const url of urls) {
+        if (!url) continue;
+        urlToTypes[url] = urlToTypes[url] || new Set();
+        urlToTypes[url].add(typeKey);
+      }
     }
 
     return urlToTypes;
@@ -70,6 +77,7 @@ OTA.pointsLoader = {
         properties: {
           name: b.name || b.bunker,
           building: "bunker",
+          _source: "FBOTA",
         },
         activated: b.activated,
       }));
@@ -132,11 +140,15 @@ OTA.pointsLoader = {
     return null;
   },
 
-  toPoint: function (feature, featureType, index) {
+  toPoint: function (feature, featureType, index, url) {
     const coords = OTA.pointsLoader.getFeatureCoordinates(feature);
     if (!coords) return null;
 
-    const sources = featureType === "bunker" ? ["FBOTA"] : [];
+    const inferredSource = feature.properties?._source
+      || (url && url.includes("bunkers_all_with_activation.json") ? "FBOTA" : null)
+      || (url && url.includes("bunkers.geojson") ? "OSM" : null);
+
+    const sources = inferredSource ? [inferredSource] : [];
 
     return {
       id: OTA.pointsLoader.getFeatureOsmId(feature) || `${featureType}/${index}`,
@@ -164,7 +176,7 @@ OTA.pointsLoader = {
 
       if (!OTA.geo.isPointInDepartment(coords.lat, coords.lon, zoneRecherche || dep)) continue;
 
-      const point = OTA.pointsLoader.toPoint(feature, featureType, j);
+      const point = OTA.pointsLoader.toPoint(feature, featureType, j, url);
       if (!point) continue;
 
       filtered.push(point);

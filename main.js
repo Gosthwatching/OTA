@@ -73,8 +73,9 @@ OTA.main = {
 
       const fileMap = OTA.pointsLoader.getTypeFileMap();
 
-      const url = fileMap[typeKey];
-      if (!url) {
+      const mapped = fileMap[typeKey];
+      const urls = Array.isArray(mapped) ? mapped : [mapped];
+      if (!urls.length || !urls[0]) {
         OTA.ui.showStatus("Type inconnu");
         return;
       }
@@ -86,22 +87,24 @@ OTA.main = {
       }
 
       const selectedTypes = new Set([typeKey]);
-      const features = await OTA.pointsLoader.fetchFeaturesForUrl(url);
       const points = [];
 
-      for (let idx = 0; idx < features.length; idx++) {
-        const feature = features[idx];
-        if (!feature.geometry || feature.geometry.type !== "Point") continue;
+      for (const url of urls) {
+        const features = await OTA.pointsLoader.fetchFeaturesForUrl(url);
 
-        const featureType = OTA.pointsLoader.resolveFeatureType(feature, url, selectedTypes);
-        if (featureType !== typeKey) continue;
+        for (let idx = 0; idx < features.length; idx++) {
+          const feature = features[idx];
 
-        const coords = OTA.pointsLoader.getFeatureCoordinates(feature);
-        if (!coords) continue;
-        if (!OTA.geo.isPointInDepartment(coords.lat, coords.lon, dep)) continue;
+          const featureType = OTA.pointsLoader.resolveFeatureType(feature, url, selectedTypes);
+          if (featureType !== typeKey) continue;
 
-        const point = OTA.pointsLoader.toPoint(feature, featureType, idx);
-        if (point) points.push(point);
+          const coords = OTA.pointsLoader.getFeatureCoordinates(feature);
+          if (!coords) continue;
+          if (!OTA.geo.isPointInDepartment(coords.lat, coords.lon, dep)) continue;
+
+          const point = OTA.pointsLoader.toPoint(feature, featureType, idx, url);
+          if (point) points.push(point);
+        }
       }
 
       OTA.carte.showPoints(points, dep, "department");
