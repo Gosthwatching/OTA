@@ -1,0 +1,5355 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+      {
+        "type": "Feature",
+        "id": "PB139",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [7.1333, 43.5650]
+        },
+        "properties": {
+          "pb": 139,
+          "nom": "La Garoupe",
+          "departement": "06",
+          "wlotta": "Non",
+          "accessibilite": "Voiture",
+          "villeProche": "Antibes",
+          "structure": "Tour carrée blanche",
+          "validationExpedition": "Oui",
+          "positionDMS": "43°33,9 N 007°08,0 E",
+          "recherchePourcentage": "52%",
+          "derniereActivite": "2000",
+          "typePoint": "lighthouse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "id": "PB140",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [7.0617, 43.5683]
+        },
+        "properties": {
+          "pb": 140,
+          "nom": "Vallauris",
+          "departement": "06",
+          "wlotta": "Non",
+          "accessibilite": "Voiture",
+          "villeProche": "Vallauris",
+          "structure": "Tour blanche haut noir",
+          "validationExpedition": "Oui",
+          "positionDMS": "43°34,1 N 007°03,7 E",
+          "recherchePourcentage": "90%",
+          "derniereActivite": "2000",
+          "typePoint": "lighthouse"
+        }
+      },
+
+      
+      {
+      "type": "Feature",
+      "id": "PB141",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [7.3283, 43.675]
+        },
+        "properties": {
+          "pb": 141,
+          "nom": "Cap Ferrat",
+          "accessibilite": "Voiture",
+          "villeProche": "Saint Jean Cap Ferrat",
+          "structure": "Tour blanche lanterne verte - Bande verte à la base",
+          "validationExpedition": "Oui",
+          "departement": "06",
+          "wlotta": "Non",
+          "positionDMS": "43°40,5 N 007°19,7 E",
+          "recherchePourcentage": "95%",
+          "derniereActivite": "2019",
+          "typePoint": "lighthouse"
+          }
+        },
+
+      {
+      "type": "Feature",
+      "id": "PB142",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.1217, 43.5433]
+      },
+      "properties": {
+        "pb": 142,
+        "nom": "Pointe d'Ilette",
+        "accessibilite": "Voiture",
+        "villeProche": "Antibes",
+        "structure": "Tour blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°32,6 N 007°07,3 E",
+        "recherchePourcentage": "62%",
+        "derniereActivite": "2000",
+        "typePoint": "lighthouse"
+      }
+    },
+
+      {
+      "type": "Feature",
+      "id": "PB184",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.2883, 43.69]
+      },
+      "properties": {
+        "pb": 184,
+        "nom": "Phare Nice - Jetée du large",
+        "accessibilite": "A pieds",
+        "villeProche": "Nice",
+        "structure": "Tour blanche lanterne rouge et dôme blanc",
+        "validationExpedition": "Oui",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°41,4 N 007°17,3 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "?",
+        "typePoint": "lighthouse"
+      }
+    },
+    
+      {
+      "type": "Feature",
+      "id": "PB206",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.1333, 43.59]
+      },
+      "properties": {
+        "pb": 206,
+        "nom": "Antibes - Digue du large",
+        "accessibilite": "Voiture",
+        "villeProche": "Antibes",
+        "structure": "Tour blanche et ocre - Lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°35,4 N 007°08,0 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "?",
+        "typePoint": "lighthouse"
+      }
+    },
+
+      {
+      "type": "Feature",
+      "id": "PB208",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.3367, 43.6917]
+      },
+      "properties": {
+        "pb": 208,
+        "nom": "Saint Jean Cap Ferrat - Jetée Abri",
+        "accessibilite": "Voiture",
+        "villeProche": "Saint Jean Cap Ferrat",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui/Non",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°41,5 N 007°20,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "?",
+        "typePoint": "lighthouse"
+      }
+    },
+    
+      {
+      "type": "Feature",
+      "id": "PB209",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.18, 43.655]
+      },
+      "properties": {
+        "pb": 209,
+        "nom": "Saint Laurent du Var - Jetée",
+        "accessibilite": "Voiture",
+        "villeProche": "Saint Laurent du Var",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "06",
+        "wlotta": "Non",
+        "positionDMS": "43°39,3 N 007°10,8 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "?",
+        "typePoint": "lighthouse"
+      }
+    },
+
+  {
+    "type": "Feature",
+    "id": "PB239",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.9400, 43.5133]
+    },
+    "properties": {
+      "pb": 239,
+      "nom": "Port de la Rague - Jetée Est",
+      "accessibilite": "Voiture",
+      "villeProche": "Théoule sur Mer",
+      "structure": "Tour blanche lanterne verte",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°30,8 N 006°56,4 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB240",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.9450, 43.5217]
+    },
+    "properties": {
+      "pb": 240,
+      "nom": "Port Mandelieu-La Napoule - Jetée",
+      "accessibilite": "A pieds",
+      "villeProche": "Mandelieu-La Napoule",
+      "structure": "Tour blanche haut vert",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°31,3 N 006°56,7 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB244",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.0183, 43.5450]
+    },
+    "properties": {
+      "pb": 244,
+      "nom": "Cannes - Le Vieux Port - Jetée Ouest",
+      "accessibilite": "A pieds",
+      "villeProche": "Cannes",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°32,7 N 007°01,1 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB246",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.0300, 43.5417]
+    },
+    "properties": {
+      "pb": 246,
+      "nom": "Cannes - Port Canto - Jetée Sud",
+      "accessibilite": "Voiture",
+      "villeProche": "Cannes",
+      "structure": "Tour ocre - Haut vert foncé",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°32,5 N 007°01,8 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB247",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.0767, 43.5633]
+    },
+    "properties": {
+      "pb": 247,
+      "nom": "Golfe Juan - Jetée du large",
+      "accessibilite": "Voiture",
+      "villeProche": "Vallauris",
+      "structure": "Tourelle blanche haut vert",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°33,8 N 007°04,6 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB248",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.1417, 43.6333]
+    },
+    "properties": {
+      "pb": 248,
+      "nom": "Marina Baie des Anges - Jetée Est",
+      "accessibilite": "Voiture",
+      "villeProche": "Villeneuve Loubet",
+      "structure": "Tour blanche haut vert",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°38,0 N 007°08,5 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB249",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.3400, 43.7083]
+    },
+    "properties": {
+      "pb": 249,
+      "nom": "Beaulieu sur Mer - Digue détachée",
+      "accessibilite": "Bateau",
+      "villeProche": "Beaulieu sur Mer",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Oui",
+      "positionDMS": "43°42,5 N 007°20,4 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB250",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.5117, 43.7750]
+    },
+    "properties": {
+      "pb": 250,
+      "nom": "Menton - Vieux Port - Jetée",
+      "accessibilite": "Voiture",
+      "villeProche": "Menton",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°46,5 N 007°30,7 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "2007",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB254",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.5233, 43.7833]
+    },
+    "properties": {
+      "pb": 254,
+      "nom": "Menton Garavane - Jetée",
+      "accessibilite": "Voiture",
+      "villeProche": "Menton",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Non",
+      "positionDMS": "43°47,0 N 007°31,4 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "2007",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB1000",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.3400, 43.7083]
+    },
+    "properties": {
+      "pb": 1000,
+      "nom": "Beaulieu sur Mer - Digue détachée",
+      "accessibilite": "Bateau",
+      "villeProche": "Beaulieu sur Mer",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "06",
+      "wlotta": "Oui",
+      "positionDMS": "43°42,5 N 007°20,4 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB147",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.0550, 42.9083]
+    },
+    "properties": {
+      "pb": 147,
+      "nom": "Cap Leucate",
+      "departement": "11",
+      "wlotta": "Non",
+      "accessibilite": "Voiture",
+      "villeProche": "?",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "42°54,5 N 003°03,3 E",
+      "recherchePourcentage": "57%",
+      "derniereActivite": "2024",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB205",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.1817, 43.1733]
+    },
+    "properties": {
+      "pb": 205,
+      "nom": "Bassin des Exals",
+      "departement": "11",
+      "wlotta": "Non",
+      "accessibilite": "Voiture, à pieds",
+      "villeProche": "?",
+      "structure": "Tour métallique grise",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°10,4 N 003°10,9 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB235",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.0700, 43.0133]
+    },
+    "properties": {
+      "pb": 235,
+      "nom": "Port La Nouvelle - Jetée Sud",
+      "departement": "11",
+      "wlotta": "Non",
+      "accessibilite": "A pieds",
+      "villeProche": "Port La Nouvelle",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°00,8 N 003°04,2 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "2011",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB243",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.0300, 43.0217]
+    },
+    "properties": {
+      "pb": 243,
+      "nom": "Port La Nouvelle - Feu arrière",
+      "departement": "11",
+      "wlotta": "Non",
+      "accessibilite": "Voiture, à pieds",
+      "villeProche": "Port La Nouvelle",
+      "structure": "Tour",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°01,3 N 003°01,8 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+
+  {
+    "type": "Feature",
+    "id": "PB004",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.3283, 43.28]
+    },
+    "properties": {
+      "pb": 4,
+      "nom": "Ile du Château d'If",
+      "accessibilite": "Bateau",
+      "villeProche": "Marseille",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "departement": "13",
+      "wlotta": "1312",
+      "positionDMS": "43°16,8 N 005°19,7 E",
+      "recherchePourcentage": "62%",
+      "derniereActivite": "1998",
+      "typePoint": "lighthouse"
+    }
+  },
+    {
+      "type": "Feature",
+      "id": "PB034",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.2300, 43.1983]
+      },
+      "properties": {
+        "pb": 34,
+        "nom": "Ile du Planier",
+        "accessibilite": "Bateau",
+        "structure": "Tour blanche",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "0109",
+        "positionDMS": "43°11,9 N 005°13,8 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "PB064",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.6883, 43.3567]
+      },
+      "properties": {
+        "pb": 64,
+        "nom": "Etang de Faraman",
+        "accessibilite": "A Pieds",
+        "structure": "Tour bandes blanches et noires",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°21,4 N 004°41,3 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "PB132",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.57, 43.455]
+      },
+      "properties": {
+        "pb": 132,
+        "nom": "La Gacholle",
+        "accessibilite": "A Pieds",
+        "structure": "Tour carrée blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°27,3 N 004°34,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "PB133",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.5850, 43.3650]
+      },
+      "properties": {
+        "pb": 133,
+        "nom": "Beauduc - Pointe du Sablon",
+        "accessibilite": "A Pieds",
+        "structure": "Tour blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°21,9 N 004°35,1 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB134",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9400, 43.4283]
+      },
+      "properties": {
+        "pb": 134,
+        "nom": "Pointe de Saint Gervais",
+        "accessibilite": "Voiture",
+        "structure": "Tour grise haut vert",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2736",
+        "positionDMS": "43°25,7 N 004°56,4 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB135",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.0533, 43.3250]
+      },
+      "properties": {
+        "pb": 135,
+        "nom": "Cap Couronne",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°19,5 N 005°03,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3550, 43.2950]
+      },
+      "properties": {
+        "pb": 196,
+        "nom": "Pointe de la Desirade",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Tour blanche lanterne verte",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°17,7 N 005°21,3 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB200",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9850, 43.3933]
+      },
+      "properties": {
+        "pb": 200,
+        "nom": "Port de Bouc - Tour du Fort",
+        "accessibilite": "A Pieds",
+        "structure": "Tour blanche",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°23,6 N 004°59,1 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+  {
+    "type": "Feature",
+    "id": "PB207",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.8050, 43.3850]
+    },
+    "properties": {
+      "pb": 207,
+      "nom": "Port Saint Louis du Rhône",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "Voiture, à Pieds",
+      "villeProche": "?",
+      "structure": "Tour carrée grise lanterne grise",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°23,1 N 004°48,3 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB231",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.8717, 43.3900]
+    },
+    "properties": {
+      "pb": 231,
+      "nom": "Canal Saint Louis - Jetée Sud",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "A Pieds",
+      "villeProche": "?",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°23,4 N 004°52,3 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB259",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.6117, 43.1733]
+    },
+    "properties": {
+      "pb": 259,
+      "nom": "La Ciotat - Môle Bérouard",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "Voiture",
+      "villeProche": "?",
+      "structure": "Tour blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°10,4 N 005°36,7 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB441",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.8683, 43.4067]
+    },
+    "properties": {
+      "pb": 441,
+      "nom": "Port de Fos - Entrée Avant",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "Voiture",
+      "villeProche": "?",
+      "structure": "Pylône gris, 2 bandes horizontales rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°24,4 N 004°52,1 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB446",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.8700, 43.4333]
+    },
+    "properties": {
+      "pb": 446,
+      "nom": "Bassin N°1",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "Voiture",
+      "villeProche": "?",
+      "structure": "Colone",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°26,0 N 004°52,2 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB448",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.0167, 43.3550]
+    },
+    "properties": {
+      "pb": 448,
+      "nom": "Anse de Laurons - Jetée",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "A Pieds",
+      "villeProche": "?",
+      "structure": "Colonne blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°21,3 N 005°01,0 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB451",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.2783, 43.3500]
+    },
+    "properties": {
+      "pb": 451,
+      "nom": "Pointe de l'Esquilladou",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "A pieds",
+      "villeProche": "?",
+      "structure": "Colonne blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°21,0 N 005°16,7 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "PB455",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.0433, 43.3300]
+    },
+    "properties": {
+      "pb": 455,
+      "nom": "Carro - Jetée",
+      "departement": "13",
+      "wlotta": "Non",
+      "accessibilite": "Voiture",
+      "villeProche": "?",
+      "structure": "Colonne blanche haut rouge",
+      "validationExpedition": "Oui",
+      "positionDMS": "43°19,8 N 004°02,6 E",
+      "recherchePourcentage": "100%",
+      "derniereActivite": "?",
+      "typePoint": "lighthouse"
+    }
+  },
+    {
+      "type": "Feature",
+      "id": "PB459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.8583, 43.4017]
+      },
+      "properties": {
+        "pb": 459,
+        "nom": "Mole Graveleau Avant",
+        "accessibilite": "Voiture",
+        "structure": "Tour metallique blanche 2 marques horizontales orange",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,1 N 004°51,5 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB462",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.2367, 43.3300]
+      },
+      "properties": {
+        "pb": 462,
+        "nom": "Ile Erevine",
+        "accessibilite": "Bateau",
+        "structure": "Tour Cardinale Sud",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2899",
+        "positionDMS": "43°19,8 N 005°14,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB465",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9950, 43.4050]
+      },
+      "properties": {
+        "pb": 465,
+        "nom": "Chantier Naval de Provence - Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylône Rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,3 N 004°59,7 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB467",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3133, 43.3550]
+      },
+      "properties": {
+        "pb": 467,
+        "nom": "Drydock N°10",
+        "accessibilite": "Voiture",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°21,3 N 005°18,8 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB472",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3183, 43.3467]
+      },
+      "properties": {
+        "pb": 472,
+        "nom": "Digue Extérieure Nord",
+        "accessibilite": "Voiture",
+        "structure": "Tripode blanc haut vert",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2906",
+        "positionDMS": "43°20,8 N 005°19,1 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB475",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9917, 43.4033]
+      },
+      "properties": {
+        "pb": 475,
+        "nom": "Port de pêche anse Aubran Avant",
+        "accessibilite": "Voiture",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,2 N 004°59,5 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB479",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3200, 43.3483]
+      },
+      "properties": {
+        "pb": 479,
+        "nom": "Jetée Saumaty",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°20,9 N 005°19,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB483",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9933, 43.4050]
+      },
+      "properties": {
+        "pb": 483,
+        "nom": "Port de pêche anse Aubran Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,3 N 004°59,6 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB485",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3533, 43.2967]
+      },
+      "properties": {
+        "pb": 485,
+        "nom": "Digue Sainte Marie - Sud Ouest",
+        "accessibilite": "A Pieds",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2906",
+        "positionDMS": "43°17,8 N 005°21,2 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB494",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3267, 43.2133]
+      },
+      "properties": {
+        "pb": 494,
+        "nom": "Ile Tiboulen",
+        "accessibilite": "Bateau",
+        "structure": "Colonne blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "1938",
+        "positionDMS": "43°12,8 N 005°19,6 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.8617, 43.4083]
+      },
+      "properties": {
+        "pb": 501,
+        "nom": "Port de Fos - Entrée Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylône gris, 2 bandes verticales rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,5 N 004°51,7 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": "PB508",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.8550, 43.4017]
+      },
+      "properties": {
+        "pb": 508,
+        "nom": "Mole Graveleau Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylône blanc haut bleu marque orange",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,1 N 004°51,3 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB512",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9833, 43.3967]
+      },
+      "properties": {
+        "pb": 512,
+        "nom": "Saint Antoine - Jetée Port de pêche",
+        "accessibilite": "Voiture",
+        "structure": "Fût blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2736",
+        "positionDMS": "43°23,8 N 004°59,0 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB516",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.6150, 43.1783]
+      },
+      "properties": {
+        "pb": 516,
+        "nom": "Bassin des Capucins - Entrée Est",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°10,7 N 005°36,9 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB521",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9933, 43.4033]
+      },
+      "properties": {
+        "pb": 521,
+        "nom": "Chantier Naval de Provence - Avant",
+        "accessibilite": "Voiture",
+        "structure": "Pylône Rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°24,2 N 004°59,6 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB527",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9467, 43.5167]
+      },
+      "properties": {
+        "pb": 527,
+        "nom": "Istres",
+        "accessibilite": "Voiture",
+        "structure": "Château d'eau",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°31,0 N 004°56,8 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB532",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9850, 43.3933]
+      },
+      "properties": {
+        "pb": 532,
+        "nom": "Saint Antoine",
+        "accessibilite": "A Pieds",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°23,6 N 004°59,1 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB541",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.1433, 43.4600]
+      },
+      "properties": {
+        "pb": 541,
+        "nom": "Pointe de Berre Jetée - Proche Lyondell Basel France",
+        "accessibilite": "Voiture",
+        "structure": "Colonne blanche lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "Non",
+        "positionDMS": "43°27,6 N 005°08,6 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1020",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9400, 43.4283]
+      },
+      "properties": {
+        "pb": 1020,
+        "nom": "Anse Saint Gervais",
+        "accessibilite": "Voiture",
+        "structure": "Tour grise haut vert",
+        "validationExpedition": "Non",
+        "departement": "13",
+        "wlotta": "2736",
+        "positionDMS": "43°25,7 N 004°56,4 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3500, 43.3200]
+      },
+      "properties": {
+        "pb": 1021,
+        "nom": "Digue Nord - Digue Sainte Marie",
+        "accessibilite": "Bateau",
+        "structure": "2 phares - Nord et Sud",
+        "validationExpedition": "Oui",
+        "departement": "13",
+        "wlotta": "2906",
+        "positionDMS": "43°19,2 N 005°21,0 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB078",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.2150, 49.4250]
+      },
+      "properties": {
+        "pb": 78,
+        "nom": "Falaise des Fonds",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°25,5 N 000°12,9 E",
+        "recherchePourcentage": "62%",
+        "derniereActivite": "2003",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB079",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.2483, 49.2800]
+      },
+      "properties": {
+        "pb": 79,
+        "nom": "Ouistreham - Feu principal",
+        "accessibilite": "Voiture",
+        "structure": "Tour cylindrique blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°16,8 N 000°14,9 W",
+        "recherchePourcentage": "57%",
+        "derniereActivite": "2006",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB145",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.7583, 49.3483]
+      },
+      "properties": {
+        "pb": 145,
+        "nom": "Port en Bessin - Rear",
+        "accessibilite": "Voiture",
+        "structure": "Maison blanche et grise",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°20,9 N 000°45,5 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2006",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB197",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.5183, 49.3400]
+      },
+      "properties": {
+        "pb": 197,
+        "nom": "Pointe de Ver",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut gris",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°20,4 N 000°31,1 W",
+        "recherchePourcentage": "67%",
+        "derniereActivite": "2003",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB303",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0750, 49.3667]
+      },
+      "properties": {
+        "pb": 303,
+        "nom": "Trouville - Entrée - Front",
+        "accessibilite": "à pieds",
+        "structure": "Tour métallique blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°22,0 N 000°04,5 E",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB304",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.0867, 49.2967]
+      },
+      "properties": {
+        "pb": 304,
+        "nom": "Dives sur Mer",
+        "accessibilite": "Voiture",
+        "structure": "Cabane rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°17,8 N 000°05,2 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB309",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0733, 49.3667]
+      },
+      "properties": {
+        "pb": 309,
+        "nom": "Trouville - Jetée Ouest",
+        "accessibilite": "à pieds",
+        "structure": "Tour métallique blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°22,0 N 000°04,4 E",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB330",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0767, 49.3650]
+      },
+      "properties": {
+        "pb": 330,
+        "nom": "Trouville - La Cahotte - Front",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°21,9 N 000°04,6 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB361",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0683, 49.3733]
+      },
+      "properties": {
+        "pb": 361,
+        "nom": "Trouville - Enrochement Ouest",
+        "accessibilite": "Bateau",
+        "structure": "Pylône noir haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°22,4 N 000°04,1 E",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB364",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.2467, 49.2800]
+      },
+      "properties": {
+        "pb": 364,
+        "nom": "Ouistreham Rear",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Tripode",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°16,8 N 000°14,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB365",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.4567, 49.3400]
+      },
+      "properties": {
+        "pb": 365,
+        "nom": "Courseulles sur Mer - Jetée Ouest submersible",
+        "accessibilite": "Bateau, à Pieds",
+        "structure": "Pylône haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°20,4 N 000°27,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB367",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.7567, 49.3533]
+      },
+      "properties": {
+        "pb": 367,
+        "nom": "Port en Bessin - Jetée Ouest",
+        "accessibilite": "A Pieds",
+        "structure": "Pylône Vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°21,2 N 000°45,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB369",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.7583, 49.3500]
+      },
+      "properties": {
+        "pb": 369,
+        "nom": "Port en Bessin - Front",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°21,0 N 000°45,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB373",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.2467, 49.2850]
+      },
+      "properties": {
+        "pb": 373,
+        "nom": "Ouistreham - Jetée Est",
+        "accessibilite": "A Pieds",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°17,1 N 000°14,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB374",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0467, 49.3900]
+      },
+      "properties": {
+        "pb": 374,
+        "nom": "Grandcamp-Maisy - Rear",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°23,4 N 001°02,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB376",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1133, 49.3267]
+      },
+      "properties": {
+        "pb": 376,
+        "nom": "Carentan - Isigny 173°",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°19,6 N 001°06,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB377",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0483, 49.3900]
+      },
+      "properties": {
+        "pb": 377,
+        "nom": "Grandcamp-Maisy - Front",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°23,4 N 001°02,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB378",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0467, 49.3850]
+      },
+      "properties": {
+        "pb": 378,
+        "nom": "Grandcamp-Maisy - La Maresquerie",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°23,1 N 001°02,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB379",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0500, 49.3917]
+      },
+      "properties": {
+        "pb": 379,
+        "nom": "Grandcamp-Maisy - Bout de la jetée Est",
+        "accessibilite": "A Pieds",
+        "structure": "Colonne blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°23,5 N 001°03,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB380",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0417, 49.3900]
+      },
+      "properties": {
+        "pb": 380,
+        "nom": "Grandcamp-Maisy - Perre",
+        "accessibilite": "Voiture, à Pieds",
+        "structure": "Pylône blanc haut vert",
+        "validationExpedition": "Oui",
+        "departement": "14",
+        "wlotta": "Non",
+        "positionDMS": "49°23,4 N 001°02,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB017",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.5617, 46.2433]
+      },
+      "properties": {
+        "pb": 17,
+        "nom": "Les Baleines",
+        "accessibilite": "A pieds",
+        "structure": "Tour grise lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1407",
+        "positionDMS": "46°14,6 N 001°33,7 W",
+        "recherchePourcentage": "62%",
+        "derniereActivite": "2006",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB025",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.5867, 46.2633]
+      },
+      "properties": {
+        "pb": 25,
+        "nom": "Haut Banc du Nord - Les Baleineaux",
+        "accessibilite": "Bateau",
+        "structure": "Tour grise haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1360",
+        "positionDMS": "46°15,8 N 001°35,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB031",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.2733, 46.1333]
+      },
+      "properties": {
+        "pb": 31,
+        "nom": "Pointe de Chauveau",
+        "accessibilite": "Bateau",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "0112",
+        "positionDMS": "46°08,0 N 001°16,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB036",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1783, 46.0100]
+      },
+      "properties": {
+        "pb": 36,
+        "nom": "Ile d'Aix",
+        "accessibilite": "Bateau",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "2997",
+        "positionDMS": "46°00,6 N 001°10,7 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2001",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB047",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4083, 46.0483]
+      },
+      "properties": {
+        "pb": 47,
+        "nom": "Ile d'Oléron - Pointe de Chassiron",
+        "accessibilite": "A pieds",
+        "structure": "Tour bandes noires et blanches",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "46°02,9 N 001°24,5 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2004",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB059",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.2317, 45.6967]
+      },
+      "properties": {
+        "pb": 59,
+        "nom": "Pointe de la Coubre",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°41,8 N 001°13,9 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2001",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB119",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3117, 45.9050]
+      },
+      "properties": {
+        "pb": 119,
+        "nom": "La Cotinière Approche",
+        "accessibilite": "A pieds",
+        "structure": "Tour bandes noires et blanches",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "45°54,3 N 001°18,7 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2000",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB127",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4717, 46.1633]
+      },
+      "properties": {
+        "pb": 127,
+        "nom": "Chanchardon",
+        "accessibilite": "Bateau",
+        "structure": "Tour noire soubassement blanc",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1998",
+        "positionDMS": "46°09,8 N 001°28,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB146",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3650, 46.2083]
+      },
+      "properties": {
+        "pb": 146,
+        "nom": "Saint Martin de Ré",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1407",
+        "positionDMS": "46°12,5 N 001°21,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1050, 45.6467]
+      },
+      "properties": {
+        "pb": 186,
+        "nom": "Terre Negre",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°38,8 N 001°06,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2001",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB194",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0250, 45.6333]
+      },
+      "properties": {
+        "pb": 194,
+        "nom": "Saint Pierre Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Sur le Château d'eau",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°38,0 N 001°01,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB212",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4783, 46.2350]
+      },
+      "properties": {
+        "pb": 212,
+        "nom": "Fier D'Ars",
+        "accessibilite": "Voiture",
+        "structure": "Tour carrée verte sur maison ocre",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1407",
+        "positionDMS": "46°14,1 N 001°28,7 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2002",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB234",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1517, 46.1567]
+      },
+      "properties": {
+        "pb": 234,
+        "nom": "La Rochelle Entrée",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut rouge bandes rouges et blanches",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "46°09,4 N 001°09,1 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2002",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB238",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.2383, 46.1633]
+      },
+      "properties": {
+        "pb": 238,
+        "nom": "La Pallice - Môle d'Escale",
+        "accessibilite": "A pieds",
+        "structure": "Tour carrée grise",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "46°09,8 N 001°14,3 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2002",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB252",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1500, 46.1567]
+      },
+      "properties": {
+        "pb": 252,
+        "nom": "La Rochelle Entrée - Arriere",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "46°09,4 N 001°09,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2002",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB262",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0300, 45.6167]
+      },
+      "properties": {
+        "pb": 262,
+        "nom": "Royan Jetée Sud",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche base Rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°37,0 N 001°01,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB449",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0400, 45.6217]
+      },
+      "properties": {
+        "pb": 449,
+        "nom": "Le Chay Avant",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut Rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°37,3 N 001°02,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB453",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1200, 45.6633]
+      },
+      "properties": {
+        "pb": 453,
+        "nom": "La Palmyre arrière",
+        "accessibilite": "Voiture",
+        "structure": "Tour radar blanche",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°39,8 N 001°07,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB507",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1450, 45.6600]
+      },
+      "properties": {
+        "pb": 507,
+        "nom": "La Palmyre avant",
+        "accessibilite": "Bateau",
+        "structure": "Mât rond blanc sur socle en mer",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "A demander",
+        "positionDMS": "45°39,6 N 001°08,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB582",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3283, 45.9150]
+      },
+      "properties": {
+        "pb": 582,
+        "nom": "La Cotinière jetée coude",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "45°54,9 N 001°19,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB601",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3300, 45.9150]
+      },
+      "properties": {
+        "pb": 601,
+        "nom": "La Cotinière arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylone bandes rouges et blanches",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "45°54,9 N 001°19,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB608",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3633, 46.0283]
+      },
+      "properties": {
+        "pb": 608,
+        "nom": "Feu directionel",
+        "accessibilite": "Voiture",
+        "structure": "Poteau en béton blanc",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "46°01,7 N 001°21,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB614",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3267, 45.9133]
+      },
+      "properties": {
+        "pb": 614,
+        "nom": "La Cotinière avant",
+        "accessibilite": "A Pieds",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "45°54,8 N 001°19,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB621",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3667, 46.0367]
+      },
+      "properties": {
+        "pb": 621,
+        "nom": "Saint Denis d'Oléron",
+        "accessibilite": "A Pieds",
+        "structure": "Cabane carrée blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "46°02,2 N 001°22,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB626",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3933, 46.0667]
+      },
+      "properties": {
+        "pb": 626,
+        "nom": "Antioche Rock",
+        "accessibilite": "Bateau",
+        "structure": "Cardinale Noire Jaune",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "A demander",
+        "positionDMS": "46°04,0 N 001°23,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB632",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0650, 45.9450]
+      },
+      "properties": {
+        "pb": 632,
+        "nom": "Port des Barques Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Tour carrée blanche bande noire",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°56,7 N 001°03,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB639",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0700, 45.9483]
+      },
+      "properties": {
+        "pb": 639,
+        "nom": "Port des Barques Avant",
+        "accessibilite": "Voiture",
+        "structure": "Tour carrée blanche",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°56,9 N 001°04,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB641",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0633, 45.9650]
+      },
+      "properties": {
+        "pb": 641,
+        "nom": "Soumard Arriere",
+        "accessibilite": "A Pieds",
+        "structure": "Tour carrée blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°57,9 N 001°03,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB647",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0717, 45.9667]
+      },
+      "properties": {
+        "pb": 647,
+        "nom": "Fouras Avant",
+        "accessibilite": "A Pieds",
+        "structure": "Tour carrée blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "Non",
+        "positionDMS": "45°58,0 N 001°04,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1008",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4000, 46.2000]
+      },
+      "properties": {
+        "pb": 1008,
+        "nom": "Ile de Ré",
+        "accessibilite": "Voiture",
+        "structure": "",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1407",
+        "positionDMS": "",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2019",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1009",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3500, 45.9500]
+      },
+      "properties": {
+        "pb": 1009,
+        "nom": "Ile d'Oléron",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "1369",
+        "positionDMS": "",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2014",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.1800, 46.0200]
+      },
+      "properties": {
+        "pb": 1014,
+        "nom": "Ile d'Aix",
+        "accessibilite": "Bateau",
+        "structure": "",
+        "validationExpedition": "Oui",
+        "departement": "17",
+        "wlotta": "2997",
+        "positionDMS": "",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB027",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0867, 48.9083]
+      },
+      "properties": {
+        "pb": 27,
+        "nom": "Les Heaux de Bréhat",
+        "accessibilite": "Bateau",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "0031",
+        "positionDMS": "48°54,5 N 003°05,2 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB041",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.6467, 48.8717]
+      },
+      "properties": {
+        "pb": 41,
+        "nom": "Les Triagoz",
+        "accessibilite": "Bateau",
+        "structure": "Tour carrée grise lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "3361",
+        "positionDMS": "48°52,3 N 003°38,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB044",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.4900, 48.8783]
+      },
+      "properties": {
+        "pb": 44,
+        "nom": "Ile Aux Moines",
+        "accessibilite": "Bateau",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "0349",
+        "positionDMS": "48°52,7 N 003°29,4 W",
+        "recherchePourcentage": "52%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB046",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.6650, 48.7483]
+      },
+      "properties": {
+        "pb": 46,
+        "nom": "Le Grand Lejon",
+        "accessibilite": "Bateau",
+        "structure": "Tour tronconique bandes rouges et blanches",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "0451",
+        "positionDMS": "48°44,9 N 002°39,9 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB051",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.8133, 49.1083]
+      },
+      "properties": {
+        "pb": 51,
+        "nom": "Les Roches Douvres",
+        "accessibilite": "Bateau",
+        "structure": "Tour rose haut vert sur édifice",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "0014",
+        "positionDMS": "49°06,5 N 002°48,8 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB053",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.4683, 48.9483]
+      },
+      "properties": {
+        "pb": 53,
+        "nom": "Kerprigent Arrière",
+        "accessibilite": "Voiture, à pieds",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°56,9 N 003°28,1 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB080",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.9417, 48.7800]
+      },
+      "properties": {
+        "pb": 80,
+        "nom": "Lost Pic",
+        "accessibilite": "Bateau",
+        "structure": "2 tours blanches haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "0446",
+        "positionDMS": "48°46,8 N 002°56,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB087",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.3200, 48.6850]
+      },
+      "properties": {
+        "pb": 87,
+        "nom": "Cap Frehel",
+        "accessibilite": "A pieds",
+        "structure": "Tour carrée grise lanterne verte",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°41,1 N 002°19,2 W",
+        "recherchePourcentage": "52%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB088",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.8083, 48.6667]
+      },
+      "properties": {
+        "pb": 88,
+        "nom": "Ile Harbour",
+        "accessibilite": "Bateau",
+        "structure": "Maison et tour blanches haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "1687",
+        "positionDMS": "48°40,0 N 002°48,5 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB089",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0050, 48.8583]
+      },
+      "properties": {
+        "pb": 89,
+        "nom": "Rosedo",
+        "accessibilite": "Bateau",
+        "structure": "Tour blanche lanterne verte",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "2010",
+        "positionDMS": "48°51,5 N 003°00,3 W",
+        "recherchePourcentage": "62%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.9867, 48.8667]
+      },
+      "properties": {
+        "pb": 90,
+        "nom": "Le Paon",
+        "accessibilite": "Bateau",
+        "structure": "Tour jaunâtre",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "2010",
+        "positionDMS": "48°52,0 N 002°59,2 W",
+        "recherchePourcentage": "67%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB107",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0867, 48.8067]
+      },
+      "properties": {
+        "pb": 107,
+        "nom": "Bodic",
+        "accessibilite": "Voiture",
+        "structure": "Maison blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°48,4 N 003°05,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+      {
+      "type": "Feature",
+      "id": "PB113",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -3.055 , 48.8383 ]
+      },
+      "properties": {
+        "pb": 113,
+        "nom": "La Croix",
+        "accessibilite": "Bateau",
+        "structure": "2 tours grises accolées face Nord Est blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "2231",
+        "positionDMS": "48°50,3 N 003°03,3 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2006",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB151",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.5483, 48.7400]
+      },
+      "properties": {
+        "pb": 151,
+        "nom": "Beg Leger",
+        "accessibilite": "Voiture",
+        "structure": "Maison blanche côté Ouest lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°44,4 N 003°32,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB155",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.3917, 48.7967]
+      },
+      "properties": {
+        "pb": 155,
+        "nom": "Kerjean",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°47,8 N 003°23,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2017",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB166",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.4450, 48.7967]
+      },
+      "properties": {
+        "pb": 166,
+        "nom": "Le Colombier",
+        "accessibilite": "Voiture",
+        "structure": "Maison Blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°47,8 N 003°26,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB332",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.5717, 48.5815]
+      },
+      "properties": {
+        "pb": 332,
+        "nom": "Dahouet - La Petite Muette",
+        "accessibilite": "Bateau, à Pieds",
+        "structure": "Tour verte et blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Un numéro sera attribué pour la première expédition",
+        "positionDMS": "48°34,9 N 002°34,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB333",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.7183, 48.5367]
+      },
+      "properties": {
+        "pb": 333,
+        "nom": "Saint Laurent de la mer - Le Legue - Pointe à l'Aigle",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°32,2 N 002°43,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB334",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.8167, 48.6017]
+      },
+      "properties": {
+        "pb": 334,
+        "nom": "Binic - Mole de Penthievre",
+        "accessibilite": "A pieds",
+        "structure": "Tour blanche lanterne verte",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°36,1 N 002°49,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB335",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.8183, 48.65]
+      },
+      "properties": {
+        "pb": 335,
+        "nom": "Saint Quay Portrieux",
+        "accessibilite": "Voiture",
+        "structure": "Tour béton",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "",
+        "positionDMS": "48°39,0 N 002°49,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB336",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0267, 48.7917]
+      },
+      "properties": {
+        "pb": 336,
+        "nom": "Pointe de Porz Don",
+        "accessibilite": "A pieds",
+        "structure": "Maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°47,5 N 003°01,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB337",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0033, 48.8367]
+      },
+      "properties": {
+        "pb": 337,
+        "nom": "Men Joliguet",
+        "accessibilite": "Bateau",
+        "structure": "Cardinale Ouest",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "1376",
+        "positionDMS": "48°50,2 N 003°00,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB338",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0617, 48.8233]
+      },
+      "properties": {
+        "pb": 338,
+        "nom": "Roch Quinonec",
+        "accessibilite": "Bateau, à pieds",
+        "structure": "Tourelle grise",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "2697",
+        "positionDMS": "48°49,4 N 003°03,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB339",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1167, 48.8500]
+      },
+      "properties": {
+        "pb": 339,
+        "nom": "Saint Antoine",
+        "accessibilite": "Voiture",
+        "structure": "Maison rouge et blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°51,0 N 003°07,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2017",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB341",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1317, 48.8600]
+      },
+      "properties": {
+        "pb": 341,
+        "nom": "Port de La Chaine - Grande Passe",
+        "accessibilite": "Voiture",
+        "structure": "Maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°51,6 N 003°07,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2017",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB342",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1783, 48.8567]
+      },
+      "properties": {
+        "pb": 342,
+        "nom": "La Corne",
+        "accessibilite": "Bateau",
+        "structure": "Tour blanche base rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°51,4 N 003°10,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB343",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3083, 48.8367]
+      },
+      "properties": {
+        "pb": 343,
+        "nom": "Port Blanc - Tourelle Le Voleur",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°50,2 N 003°18,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB407",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.2433, 48.6400]
+      },
+      "properties": {
+        "pb": 407,
+        "nom": "Saint Cast - Môle",
+        "accessibilite": "A pieds",
+        "structure": "Pylône blanc haut vert",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°38,4 N 002°14,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB408",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.6300, 48.6483]
+      },
+      "properties": {
+        "pb": 408,
+        "nom": "Le Rohein",
+        "accessibilite": "Bateau",
+        "structure": "Tourelle jaune noire jaune",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°38,9 N 002°37,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB409",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0867, 48.8267]
+      },
+      "properties": {
+        "pb": 409,
+        "nom": "Kermouster",
+        "accessibilite": "Voiture",
+        "structure": "Tour Blanche",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°49,6 N 003°05,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB411",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.4383, 48.8050]
+      },
+      "properties": {
+        "pb": 411,
+        "nom": "Perros Guirec - Jetée Est - Linkin",
+        "accessibilite": "Voiture",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°48,3 N 003°26,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB421",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.4433, 48.8033]
+      },
+      "properties": {
+        "pb": 421,
+        "nom": "Perros Guirec - Mole Ouest",
+        "accessibilite": "Voiture",
+        "structure": "Pilier blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°48,2 N 003°26,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB423",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.5850, 48.7783]
+      },
+      "properties": {
+        "pb": 423,
+        "nom": "Pointe de Lan Kerellec",
+        "accessibilite": "Voiture",
+        "structure": "Tour Grise",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°46,7 N 003°35,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB447",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0450, 48.7850]
+      },
+      "properties": {
+        "pb": 447,
+        "nom": "Kerpalud - Kernoa Arrière",
+        "accessibilite": "Voiture",
+        "structure": "Pylone blanc haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "22",
+        "wlotta": "Non",
+        "positionDMS": "48°47,1 N 003°02,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.0000, 48.8333]
+      },
+      "properties": {
+        "pb": 1001,
+        "nom": "Ile de Bréhat",
+        "accessibilite": "Bateau",
+        "structure": "?",
+        "validationExpedition": "Non",
+        "departement": "22",
+        "wlotta": "2010",
+        "positionDMS": "",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2024",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB191",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6083,
+          47.7717
+        ]
+      },
+      "properties": {
+        "pb": 191,
+        "nom": "Doelan Aval",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche bande et haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°46,3 N 003°36,5 W",
+        "recherchePourcentage": "48%",
+        "derniereActivite": "2015",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB103",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.79,
+          48.3617
+        ]
+      },
+      "properties": {
+        "pb": 103,
+        "nom": "Kermorvan",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tour carrée blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°21,7 N 004°47,4 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB95",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.98,
+          48.7233
+        ]
+      },
+      "properties": {
+        "pb": 95,
+        "nom": "Roscoff Rear",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée grise blanchie",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°43,4 N 003°58,8 W",
+        "recherchePourcentage": "48%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB382",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.895,
+          47.85
+        ]
+      },
+      "properties": {
+        "pb": 382,
+        "nom": "Baie de Pouldohan",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée blanche et verte",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°51,0 N 003°53,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0283,
+          47.775
+        ]
+      },
+      "properties": {
+        "pb": 3,
+        "nom": "Ile aux Moutons",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée et maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°46,5 N 004°01,7 W",
+        "recherchePourcentage": "62%",
+        "derniereActivite": "2018",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB96",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.3467,
+          48.6783
+        ]
+      },
+      "properties": {
+        "pb": 96,
+        "nom": "Pontusval - Pointe de Beg Pol",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée et maison blanches haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°40,7 N 004°20,8 W",
+        "recherchePourcentage": "38%",
+        "derniereActivite": "2014",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB22",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.135,
+          48.4233
+        ]
+      },
+      "properties": {
+        "pb": 22,
+        "nom": "La Jument",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour octogonale grise haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°25,4 N 005°08,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB277",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4667,
+          47.985
+        ]
+      },
+      "properties": {
+        "pb": 277,
+        "nom": "Pors Poulhan",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tourelle carrée blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°59,1 N 004°28,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.85,
+          48.0383
+        ]
+      },
+      "properties": {
+        "pb": 186,
+        "nom": "Men Brial - Ile de Sein",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour verte et blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°02,3 N 004°51,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB393",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.91,
+          47.8683
+        ]
+      },
+      "properties": {
+        "pb": 393,
+        "nom": "Lanriec",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Pylone blanc - Nom en vert sur pignon maison",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°52,1 N 003°54,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB203",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.605,
+          47.775
+        ]
+      },
+      "properties": {
+        "pb": 203,
+        "nom": "Doelan Amont",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche bande et haut rouges",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°46,5 N 003°36,3 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2015",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5683,
+          48.64
+        ]
+      },
+      "properties": {
+        "pb": 7,
+        "nom": "Ile Vierge",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°38,4 N 004°34,1 W",
+        "recherchePourcentage": "48%",
+        "derniereActivite": "2018",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB417",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.955,
+          48.3983
+        ]
+      },
+      "properties": {
+        "pb": 417,
+        "nom": "Ile Molene - jetée",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Colonne sur cabane",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°23,9 N 004°57,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2018",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB419",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5917,
+          48.2817
+        ]
+      },
+      "properties": {
+        "pb": 419,
+        "nom": "Camaret sur Mer - Môle Nord",
+        "accessibilite": "A pieds",
+        "villeProche": "",
+        "structure": "Pylône blanc et vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°16,9 N 004°35,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB40",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5767,
+          48.615
+        ]
+      },
+      "properties": {
+        "pb": 40,
+        "nom": "Ile Wrac'h",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut orange et maison",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°36,9 N 004°34,6 W",
+        "recherchePourcentage": "48%",
+        "derniereActivite": "2015",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0767,
+          48.4583
+        ]
+      },
+      "properties": {
+        "pb": 1002,
+        "nom": "Ile d'Ouessant",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Validation expédition : Non (sans carte de validation : votre expédition ne sera pas comptabilisée pour les diplômes expéditionnaires)",
+        "validationExpedition": "Non (sans carte de validation : votre expédition ne sera pas comptabilisée pour les diplômes expéditionnaires)",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°27,5N 005°04,6W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2023",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB412",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.855,
+          47.795
+        ]
+      },
+      "properties": {
+        "pb": 412,
+        "nom": "Trevignon - Shelter",
+        "accessibilite": "A pieds",
+        "villeProche": "",
+        "structure": "Colonne blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,7 N 003°51,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB116",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.275,
+          47.7967
+        ]
+      },
+      "properties": {
+        "pb": 116,
+        "nom": "Le Guilvinec - Rear",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour rectangulaire blanche bande verticale rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,8 N 004°16,5 W",
+        "recherchePourcentage": "76%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.765,
+          48.3433
+        ]
+      },
+      "properties": {
+        "pb": 101,
+        "nom": "Lochrist",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour octogonale blanche à haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°20,6 N 004°45,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB93",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.885,
+          48.6367
+        ]
+      },
+      "properties": {
+        "pb": 93,
+        "nom": "La Lande",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°38,2 N 003°53,1 W",
+        "recherchePourcentage": "29%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB410",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9683,
+          48.73
+        ]
+      },
+      "properties": {
+        "pb": 410,
+        "nom": "Men Guen Bras",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Cardinal Nord",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Non",
+        "positionDMS": "48°43,8 N 003°58,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0267,
+          48.4383
+        ]
+      },
+      "properties": {
+        "pb": 14,
+        "nom": "Men Tensel - Kereon",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°26,3 N 005°01,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB432",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.21,
+          47.7967
+        ]
+      },
+      "properties": {
+        "pb": 432,
+        "nom": "Men Ar Groas - Lesconil",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,8 N 004°12,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB347",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9,
+          47.8883
+        ]
+      },
+      "properties": {
+        "pb": 347,
+        "nom": "Beuzec",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Clocher de l'église",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°53,3 N 003°54,0 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB280",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2833,
+          47.7933
+        ]
+      },
+      "properties": {
+        "pb": 280,
+        "nom": "Guilvinec - Entrée Nord - Môle en Epi",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,6 N 004°17,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB401",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.1117,
+          47.8717
+        ]
+      },
+      "properties": {
+        "pb": 401,
+        "nom": "Pointe du Coq",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche rayure verte",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°52,3 N 004°06,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB153",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9617,
+          48.72
+        ]
+      },
+      "properties": {
+        "pb": 153,
+        "nom": "Bloscon - Jetée",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tourelle blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°43,2 N 003°57,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB296",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0533,
+          48.47
+        ]
+      },
+      "properties": {
+        "pb": 296,
+        "nom": "Port du Stiff - Môle Est",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tourelle blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°28,2 N 005°03,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB106",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.8517,
+          48.0433
+        ]
+      },
+      "properties": {
+        "pb": 106,
+        "nom": "Ile de Sein - Grand Phare",
+        "accessibilite": "Bateau, à pieds",
+        "villeProche": "",
+        "structure": "Tour tronconique blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°02,6 N 004°51,1 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2005",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.9967,
+          48.05
+        ]
+      },
+      "properties": {
+        "pb": 12,
+        "nom": "Ar Men",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour blanche base sombre haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°03,0 N 004°59,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB429",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.3383,
+          47.7883
+        ]
+      },
+      "properties": {
+        "pb": 429,
+        "nom": "locarec Rocher",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Colonne métallique sur le rocher",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,3 N 004°20,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB65",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7317,
+          48.5867
+        ]
+      },
+      "properties": {
+        "pb": 65,
+        "nom": "Corn Carhai",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour octogonale blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°35,2 N 004°43,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB104",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4983,
+          48.22
+        ]
+      },
+      "properties": {
+        "pb": 104,
+        "nom": "Pointe de Morgat",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°13,2 N 004°29,9 W",
+        "recherchePourcentage": "76%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB281",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.54,
+          48.0067
+        ]
+      },
+      "properties": {
+        "pb": 281,
+        "nom": "Trescadec - Audierne",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Vieux phare",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°00,4 N 004°32,4 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7567,
+          48.0417
+        ]
+      },
+      "properties": {
+        "pb": 26,
+        "nom": "La Vieille",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée grise haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°02,5 N 004°45,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB414",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.705,
+          48.565
+        ]
+      },
+      "properties": {
+        "pb": 414,
+        "nom": "Portsall",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Colonne Blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°33,9 N 004°42,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2023",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9183,
+          47.87
+        ]
+      },
+      "properties": {
+        "pb": 120,
+        "nom": "La Croix",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour rouge et blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°52,2 N 003°55,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2001",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB42",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.1517,
+          48.4467
+        ]
+      },
+      "properties": {
+        "pb": 42,
+        "nom": "Nividic",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour octogonale grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°26,8 N 005°09,1 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2009",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB435",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.925,
+          47.8583
+        ]
+      },
+      "properties": {
+        "pb": 435,
+        "nom": "Le Cochon",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour verte",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°51,5 N 003°55,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "pb": 101,
+        "nom": "",
+        "accessibilite": "",
+        "villeProche": "",
+        "structure": "",
+        "validationExpedition": "",
+        "departement": "",
+        "wlotta": "Non",
+        "positionDMS": "",
+        "recherchePourcentage": "",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB100",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7717,
+          48.33
+        ]
+      },
+      "properties": {
+        "pb": 100,
+        "nom": "Saint Mathieu",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour tronconique blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°19,8 N 004°46,3 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2015",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB424",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.49,
+          48.3733
+        ]
+      },
+      "properties": {
+        "pb": 424,
+        "nom": "Brest Range Rear",
+        "accessibilite": "Voiture (attention secteur protégé Radio)",
+        "villeProche": "",
+        "structure": "Sur un point haut du château - Base Navale",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°22,4 N 004°29,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB422",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4917,
+          48.38
+        ]
+      },
+      "properties": {
+        "pb": 422,
+        "nom": "Brest Range Front",
+        "accessibilite": "Voiture (attention secteur protégé Radio)",
+        "villeProche": "",
+        "structure": "Tour blanche ronde - Tour vigie - Base Navale",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°22,8 N 004°29,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0267,
+          48.7467
+        ]
+      },
+      "properties": {
+        "pb": 1010,
+        "nom": "Ile de Batz",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour grise lanterne noire",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°44,8 N 004°01,6 W",
+        "recherchePourcentage": "57%",
+        "derniereActivite": "2010",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB418",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.77,
+          48.3317
+        ]
+      },
+      "properties": {
+        "pb": 418,
+        "nom": "Saint Mathieu - Feu Auxilliaire",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°19,9 N 004°46,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB170",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.855,
+          47.7933
+        ]
+      },
+      "properties": {
+        "pb": 170,
+        "nom": "Trévignon Jetée",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,6 N 003°51,3 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB420",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.59,
+          48.34
+        ]
+      },
+      "properties": {
+        "pb": 420,
+        "nom": "Roche Mengam",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tourelle noire rouge noire",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°20,4 N 004°35,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB33",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.915,
+          48.3117
+        ]
+      },
+      "properties": {
+        "pb": 33,
+        "nom": "Les Pierres Noires",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour tronconique blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°18,7 N 004°54,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB507",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.96,
+          48.395
+        ]
+      },
+      "properties": {
+        "pb": 507,
+        "nom": "Ile de Molene",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Validation expédition : Oui",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°23,7 N 004°57,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1010",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0133,
+          48.7467
+        ]
+      },
+      "properties": {
+        "pb": 1010,
+        "nom": "Ile de Batz",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Validation expédition : Non (sans carte de validation : votre expédition ne sera pas comptabilisée pour les diplômes expéditionnaires)",
+        "validationExpedition": "Non (sans carte de validation : votre expédition ne sera pas comptabilisée pour les diplômes expéditionnaires)",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°44,8 N 004°00,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2022",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7933,
+          48.0717
+        ]
+      },
+      "properties": {
+        "pb": 13,
+        "nom": "Tevennec",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour et maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°04,3 N 004°47,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB99",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0567,
+          48.475
+        ]
+      },
+      "properties": {
+        "pb": 99,
+        "nom": "Le Stiff",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "2 tours blanches accolées",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°28,5 N 005°03,4 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB413",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.565,
+          48.5983
+        ]
+      },
+      "properties": {
+        "pb": 413,
+        "nom": "Leading light - Aber Wrac'h",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Support Blanc",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°35,9 N 004°33,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB279",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2783,
+          47.785
+        ]
+      },
+      "properties": {
+        "pb": 279,
+        "nom": "Lost Moan",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Non",
+        "positionDMS": "47°47,1 N 004°16,7 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB437",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.67,
+          47.7817
+        ]
+      },
+      "properties": {
+        "pb": 437,
+        "nom": "Brigneau",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Colonne blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°46,9 N 003°40,2 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB63",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.3383,
+          48.1033
+        ]
+      },
+      "properties": {
+        "pb": 63,
+        "nom": "Ile Tristan",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour grise bande blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°06,2 N 004°20,3 W",
+        "recherchePourcentage": "71%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.8517,
+          48.0367
+        ]
+      },
+      "properties": {
+        "pb": 1003,
+        "nom": "Ile de Sein",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Validation expédition : Non",
+        "validationExpedition": "Non",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°02,2 N 004°51,1 W",
+        "recherchePourcentage": "90%",
+        "derniereActivite": "2019",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB61",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.8767,
+          48.6733
+        ]
+      },
+      "properties": {
+        "pb": 61,
+        "nom": "Ile Noire",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée blanchie vers le large lanterne rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°40,4 N 003°52,6 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2012",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB443",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9133,
+          47.8717
+        ]
+      },
+      "properties": {
+        "pb": 443,
+        "nom": "Passage de Lanriec - Ville close",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Pylone blanc",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°52,3 N 003°54,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.89,
+          48.675
+        ]
+      },
+      "properties": {
+        "pb": 5,
+        "nom": "Ile Louet",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut noir",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°40,5 N 003°53,4 W",
+        "recherchePourcentage": "48%",
+        "derniereActivite": "2013",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB425",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.8133,
+          48.025
+        ]
+      },
+      "properties": {
+        "pb": 425,
+        "nom": "Le Chat",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tourelle noire haut jaune",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°01,5 N 004°48,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB111",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5333,
+          48.36
+        ]
+      },
+      "properties": {
+        "pb": 111,
+        "nom": "Pointe du Portzic",
+        "accessibilite": "A Pieds (Terrain Militaire)",
+        "villeProche": "",
+        "structure": "Tour octogonale grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°21,6 N 004°32,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB112",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5667,
+          48.0017
+        ]
+      },
+      "properties": {
+        "pb": 112,
+        "nom": "Pointe de Lervily",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche de l'ancien Sémaphore haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°00,1 N 004°34,0 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2017",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "pb": 101,
+        "nom": "",
+        "accessibilite": "",
+        "villeProche": "",
+        "structure": "",
+        "validationExpedition": "",
+        "departement": "",
+        "wlotta": "Non",
+        "positionDMS": "",
+        "recherchePourcentage": "",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB105",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.465,
+          48.0983
+        ]
+      },
+      "properties": {
+        "pb": 105,
+        "nom": "Pointe du Millier",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°05,9 N 004°27,9 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2002",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.805,
+          48.5233
+        ]
+      },
+      "properties": {
+        "pb": 11,
+        "nom": "Le Four",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°31,4 N 004°48,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB162",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.795,
+          48.415
+        ]
+      },
+      "properties": {
+        "pb": 162,
+        "nom": "Pointe de Corsen",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Abri et murs blancs",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°24,9 N 004°47,7 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2014",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB295",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.1117,
+          47.865
+        ]
+      },
+      "properties": {
+        "pb": 295,
+        "nom": "Pointe de Combrit",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour carrée blanche, angles gris",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°51,9 N 004°06,7 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB110",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.615,
+          48.3367
+        ]
+      },
+      "properties": {
+        "pb": 110,
+        "nom": "Pointe du Petit Minou",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tour grise et blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°20,2 N 004°36,9 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "1999",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB102",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.78,
+          48.4233
+        ]
+      },
+      "properties": {
+        "pb": 102,
+        "nom": "Trezien",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour tronconique grise et blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°25,4 N 004°46,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB276",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5417,
+          48.01
+        ]
+      },
+      "properties": {
+        "pb": 276,
+        "nom": "Raoulic - Jetée - Audierne",
+        "accessibilite": "A pieds",
+        "villeProche": "",
+        "structure": "Tour blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°00,6 N 004°32,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB97",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.13,
+          48.46
+        ]
+      },
+      "properties": {
+        "pb": 97,
+        "nom": "Pointe de Creac'h",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour bandes noires et blanches",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°27,6 N 005°07,8 W",
+        "recherchePourcentage": "95%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB109",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.63,
+          48.28
+        ]
+      },
+      "properties": {
+        "pb": 109,
+        "nom": "Pointe du Toulinguet",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tour carrée et maison blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°16,8 N 004°37,8 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB340",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.075,
+          48.69
+        ]
+      },
+      "properties": {
+        "pb": 340,
+        "nom": "Mogueriec - Front",
+        "accessibilite": "A Pieds",
+        "villeProche": "",
+        "structure": "Tour blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°41,4 N 004°04,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB431",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2833,
+          47.7917
+        ]
+      },
+      "properties": {
+        "pb": 431,
+        "nom": "Mole de Lechiagat - Middle",
+        "accessibilite": "A pieds",
+        "villeProche": "",
+        "structure": "Pylone avec marque circulaire rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,5 N 004°17,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB114",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.3733,
+          47.7983
+        ]
+      },
+      "properties": {
+        "pb": 114,
+        "nom": "Pointe de Penmarc'h",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour octogonale grise",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,9 N 004°22,4 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB415",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0233,
+          48.4667
+        ]
+      },
+      "properties": {
+        "pb": 415,
+        "nom": "Men Korn",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Cardinale Est",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°28,0 N 005°01,4 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "pb": 7,
+        "nom": "",
+        "accessibilite": "",
+        "villeProche": "",
+        "structure": "",
+        "validationExpedition": "",
+        "departement": "",
+        "wlotta": "Non",
+        "positionDMS": "",
+        "recherchePourcentage": "",
+        "derniereActivite": "",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.115,
+          47.875
+        ]
+      },
+      "properties": {
+        "pb": 1,
+        "nom": "La Pyramide",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour tronconique blanche haut vert",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°52,5 N 004°06,9 W",
+        "recherchePourcentage": "76%",
+        "derniereActivite": "2005",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB150",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5367,
+          48.61
+        ]
+      },
+      "properties": {
+        "pb": 150,
+        "nom": "Lanvaon - Rear",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour rectangulaire blanche haut orange",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°36,6 N 004°32,2 W",
+        "recherchePourcentage": "43%",
+        "derniereActivite": "2015",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB268",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.74,
+          47.8
+        ]
+      },
+      "properties": {
+        "pb": 268,
+        "nom": "Port Manec'h - Beg Ar Vechen",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour rouge et blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°48,0 N 003°44,4 W",
+        "recherchePourcentage": "92%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB38",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9533,
+          47.7217
+        ]
+      },
+      "properties": {
+        "pb": 38,
+        "nom": "Ile de Penfret",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Tour carrée blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°43,3 N 003°57,2 W",
+        "recherchePourcentage": "38%",
+        "derniereActivite": "2016",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB157",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.76,
+          48.4717
+        ]
+      },
+      "properties": {
+        "pb": 157,
+        "nom": "Aber Ildut",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Construction blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°28,3 N 004°45,6 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "2008",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB426",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7583,
+          48.04
+        ]
+      },
+      "properties": {
+        "pb": 426,
+        "nom": "La Plate",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Cardinale Ouest",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°02,4 N 004°45,5 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB416",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.9467,
+          48.4117
+        ]
+      },
+      "properties": {
+        "pb": 416,
+        "nom": "Les Trois Pierres",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Colonne blanche",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°24,7 N 004°56,8 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB165",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5467,
+          48.0167
+        ]
+      },
+      "properties": {
+        "pb": 165,
+        "nom": "Kergadec",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Audierne - Tour octogonale blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°01,0 N 004°32,8 W",
+        "recherchePourcentage": "86%",
+        "derniereActivite": "2017",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB428",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2833,
+          47.7883
+        ]
+      },
+      "properties": {
+        "pb": 428,
+        "nom": "Mole de Lechiagat - Entrance range Front",
+        "accessibilite": "A pieds",
+        "villeProche": "",
+        "structure": "Pylone blanc",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°47,3 N 004°17,0 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB117",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.16,
+          47.8317
+        ]
+      },
+      "properties": {
+        "pb": 117,
+        "nom": "Pointe de Langoz",
+        "accessibilite": "Voiture",
+        "villeProche": "",
+        "structure": "Tour blanche haut rouge",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "47°49,9 N 004°09,6 W",
+        "recherchePourcentage": "81%",
+        "derniereActivite": "2007",
+        "typePoint": "lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PB436",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9717,
+          48.7333
+        ]
+      },
+      "properties": {
+        "pb": 436,
+        "nom": "Ile Pigued - Ar Chaden",
+        "accessibilite": "Bateau",
+        "villeProche": "",
+        "structure": "Cardinale Sud",
+        "validationExpedition": "Oui",
+        "departement": "29",
+        "wlotta": "Oui",
+        "positionDMS": "48°44,0 N 003°58,3 W",
+        "recherchePourcentage": "100%",
+        "derniereActivite": "Expéditions réalisées :",
+        "typePoint": "lighthouse"
+      }
+    }
+
+  ]
+}
