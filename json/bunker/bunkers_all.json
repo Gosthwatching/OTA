@@ -1978,8 +1978,8 @@
   {
     "bunker": "B/F-0248",
     "code": "A16",
-    "name": "MAULDE Sud Ouest Gauche (15)",
-    "lat": 0.49568,
+    "name": "MAULDE Sud Ouest Gauche (1)",
+    "lat": 50.49568,
     "lon": 3.418635,
     "qth": "JO10RL"
   },
@@ -2018,9 +2018,9 @@
   {
     "bunker": "B/F-0253",
     "code": "A15",
-    "name": "MAULDE Sud Ouest 3 - AMETHY5S0T.4E9404",
-    "lat": null,
-    "lon": null,
+    "name": "MAULDE Sud Ouest 3 - AMETHYSTE",
+    "lat": 50.49404,
+    "lon": 3.413579,
     "qth": "JO10QL"
   },
   {
@@ -2050,7 +2050,7 @@
   {
     "bunker": "B/F-0257",
     "code": "A20bis",
-    "name": "B381 - FORT de MAULDE - Ca5s0e.4m9a2t5e4 de 1",
+    "name": "B381 - FORT de MAULDE - Casem5a0t.e4 9d2e5 1455",
     "lat": null,
     "lon": null,
     "qth": "JO10RL"
@@ -2410,9 +2410,9 @@
   {
     "bunker": "B/F-0302",
     "code": "B421",
-    "name": "FOSSE du SARTEAU - TOUR CA5R0R.4EE5246",
-    "lat": null,
-    "lon": null,
+    "name": "FOSSE du SARTEAU - TOUR CARREE",
+    "lat": 50.45246,
+    "lon": 3.556656,
     "qth": "JO10SK"
   },
   {
@@ -2530,9 +2530,9 @@
   {
     "bunker": "B/F-0317",
     "code": "",
-    "name": "VV-CIMETIERE du MONT des BRUYER5E0S. 4- 3C8241",
-    "lat": null,
-    "lon": null,
+    "name": "VV-CIMETIERE du MONT des BRUYERES - 5C",
+    "lat": 2.43841,
+    "lon": 3.456341,
     "qth": "JO10RK"
   },
   {
@@ -2578,8 +2578,8 @@
   {
     "bunker": "B/F-0323",
     "code": "",
-    "name": "CIMETIERE d'ESCAUPONT Ouest - C1",
-    "lat": 150.42064,
+    "name": "CIMETIERE d'ESCAUPONT Ouest - C11",
+    "lat": 50.42064,
     "lon": 3.555577,
     "qth": "JO10SK"
   },
@@ -2682,7 +2682,7 @@
   {
     "bunker": "B/F-0336",
     "code": "B454",
-    "name": "QUAROUBLE (PdS - PC S/s-Qua5r0t.i3e7r 7O9n7naing3).607185 JO10TJ",
+    "name": "QUAROUBLE (PdS - PC S/s-Quartier5 0O.n3n7a7i9n7g)",
     "lat": null,
     "lon": null,
     "qth": "JO10TJ"
@@ -2706,9 +2706,9 @@
   {
     "bunker": "B/F-0339",
     "code": "B464",
-    "name": "BARAQUE des CHASSEURS (Pd5S0).37104",
-    "lat": null,
-    "lon": null,
+    "name": "BARAQUE des CHASSEURS (PdS)",
+    "lat": 50.37104,
+    "lon": 3.583479,
     "qth": "JO10TI"
   },
   {
@@ -3002,7 +3002,7 @@
   {
     "bunker": "B/F-0376",
     "code": "B602",
-    "name": "CHAPELLE SAINT JOSEPH (pos5t0e. d3e2 2t8ir3)4",
+    "name": "CHAPELLE SAINT JOSEPH (poste de5 0ti.r3)22834",
     "lat": null,
     "lon": null,
     "qth": "JO10XH"
@@ -5098,9 +5098,9 @@
   {
     "bunker": "B/F-0638",
     "code": "B767",
-    "name": "MAISON FORESTIERE de la FO5LI0E.07347",
-    "lat": null,
-    "lon": null,
+    "name": "MAISON FORESTIERE de la FOLIE",
+    "lat": 50.07347,
+    "lon": 4.149455,
     "qth": "JO20BB"
   },
   {
@@ -5122,9 +5122,9 @@
   {
     "bunker": "B/F-0641",
     "code": "FERME SECHE CENSE",
-    "name": "CHAMP de l'A5S0IL.0E64562",
-    "lat": null,
-    "lon": null,
+    "name": "CHAMP de l'ASILE",
+    "lat": 50.064562,
+    "lon": 4.106708,
     "qth": "JO20BB"
   },
   {
@@ -5586,9 +5586,9 @@
   {
     "bunker": "B/F-0699",
     "code": "Ba12",
-    "name": "ROUTE du CONSERVATEUR O4u9e.s9t65046",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE du CONSERVATEUR Ouest",
+    "lat": 49.965046,
+    "lon": 4.178683,
     "qth": "JN29CX"
   },
   {
@@ -5906,17 +5906,17 @@
   {
     "bunker": "B/F-0739",
     "code": "Ba22",
-    "name": "ROUTE FORESTIERE MEUNIER4 N9.o9r3d6625",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE FORESTIERE MEUNIER Nor4d",
+    "lat": 9.936625,
+    "lon": 4.17668,
     "qth": "JN29CW"
   },
   {
     "bunker": "B/F-0740",
     "code": "Ba23",
-    "name": "ROUTE FORESTIERE MEUNIER4 S9u.9d36523",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE FORESTIERE MEUNIER Sud",
+    "lat": 49.936523,
+    "lon": 4.178403,
     "qth": "JN29CW"
   },
   {
@@ -8466,17 +8466,17 @@
   {
     "bunker": "B/F-1059",
     "code": "Ba67",
-    "name": "ROUTE de FOURCHEMAQUE N49o.r9d28912",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE de FOURCHEMAQUE Nord",
+    "lat": 49.928912,
+    "lon": 4.448357,
     "qth": "JN29FW"
   },
   {
     "bunker": "B/F-1060",
     "code": "Ba68",
-    "name": "ROUTE de FOURCHEMAQUE S4u9d.926696",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE de FOURCHEMAQUE Sud",
+    "lat": 49.926696,
+    "lon": 4.452479,
     "qth": "JN29FW"
   },
   {
@@ -8586,9 +8586,9 @@
   {
     "bunker": "B/F-1074",
     "code": "Ba80bis",
-    "name": "Les CENSES de l'OURSE Oue4s9t.92288",
-    "lat": null,
-    "lon": null,
+    "name": "Les CENSES de l'OURSE Ouest",
+    "lat": 49.92288,
+    "lon": 4.498995,
     "qth": "JN29FW"
   },
   {
@@ -8690,8 +8690,8 @@
   {
     "bunker": "B/F-1087",
     "code": "Ba90",
-    "name": "PETIT HONGREAU Nord-Oues4t",
-    "lat": 9.915551,
+    "name": "PETIT HONGREAU Nord-Ouest",
+    "lat": 49.915551,
     "lon": 4.530511,
     "qth": "JN29GV"
   },
@@ -8738,17 +8738,17 @@
   {
     "bunker": "B/F-1093",
     "code": "Ba96",
-    "name": "AVANCÉE de ROCROI Sud-Oue4s9t.940961",
-    "lat": null,
-    "lon": null,
+    "name": "AVANCÉE de ROCROI Sud-Ouest",
+    "lat": 49.940961,
+    "lon": 4.54018,
     "qth": "JN29GW"
   },
   {
     "bunker": "B/F-1094",
     "code": "Ba97",
-    "name": "AVANCÉE de ROCROI Nord-Ou4e9s.9t43026",
-    "lat": null,
-    "lon": null,
+    "name": "AVANCÉE de ROCROI Nord-Ouest",
+    "lat": 49.943026,
+    "lon": 4.542292,
     "qth": "JN29GW"
   },
   {
@@ -9202,24 +9202,24 @@
   {
     "bunker": "B/F-1151",
     "code": "Bb68",
-    "name": "CHATEAU de la PIERRONNERI4E",
-    "lat": 9.805166,
+    "name": "CHATEAU de la PIERRONNERIE",
+    "lat": 49.805166,
     "lon": 4.746213,
     "qth": "JN29IT"
   },
   {
     "bunker": "B/F-1152",
     "code": "Bb69-B",
-    "name": "BOIS de la PIERRONNERIE S4u9d.795375",
-    "lat": null,
-    "lon": null,
+    "name": "BOIS de la PIERRONNERIE Sud",
+    "lat": 49.795375,
+    "lon": 4.757279,
     "qth": "JN29JT"
   },
   {
     "bunker": "B/F-1153",
     "code": "Bb69",
-    "name": "BOIS de la PIERRONNERIE No4rd",
-    "lat": 9.799019,
+    "name": "BOIS de la PIERRONNERIE Nord",
+    "lat": 49.799019,
     "lon": 4.755346,
     "qth": "JN29JT"
   },
@@ -9546,24 +9546,24 @@
   {
     "bunker": "B/F-1194",
     "code": "Bb68",
-    "name": "CHATEAU de la PIERRONNERI4E",
-    "lat": 9.805166,
+    "name": "CHATEAU de la PIERRONNERIE",
+    "lat": 49.805166,
     "lon": 4.746213,
     "qth": "JN29IT"
   },
   {
     "bunker": "B/F-1195",
     "code": "Bb69-B",
-    "name": "BOIS de la PIERRONNERIE S4u9d.795375",
-    "lat": null,
-    "lon": null,
+    "name": "BOIS de la PIERRONNERIE Sud",
+    "lat": 49.795375,
+    "lon": 4.757279,
     "qth": "JN29JT"
   },
   {
     "bunker": "B/F-1196",
     "code": "Bb69",
-    "name": "BOIS de la PIERRONNERIE No4rd",
-    "lat": 9.799019,
+    "name": "BOIS de la PIERRONNERIE Nord",
+    "lat": 49.799019,
     "lon": 4.755346,
     "qth": "JN29JT"
   },
@@ -10250,7 +10250,7 @@
   {
     "bunker": "B/F-1282",
     "code": "Bb28-C",
-    "name": "Les ARDOISIERES SAINT JOS4E9P.H99 O0u0e3s7t",
+    "name": "Les ARDOISIERES SAINT JOSEPH 4O9u.9e9st0037",
     "lat": null,
     "lon": null,
     "qth": "JN29IX"
@@ -10674,9 +10674,9 @@
   {
     "bunker": "B/F-1335",
     "code": "12A",
-    "name": "BOIS de BLANCHAMPAGNE Ou4e9s.t592958",
-    "lat": null,
-    "lon": null,
+    "name": "BOIS de BLANCHAMPAGNE Ouest",
+    "lat": 49.592958,
+    "lon": 5.15568,
     "qth": "JN29NO"
   },
   {
@@ -13370,9 +13370,9 @@
   {
     "bunker": "B/F-1672",
     "code": "MF14",
-    "name": "Q - BOUCHON de la GRENOU4IL9L.7E32046",
-    "lat": null,
-    "lon": null,
+    "name": "Q - BOUCHON de la GRENOUILLE",
+    "lat": 49.732046,
+    "lon": 5.04316,
     "qth": "JN29MR"
   },
   {
@@ -14026,7 +14026,7 @@
   {
     "bunker": "B/F-1754",
     "code": "",
-    "name": "BREHAIN Ouest (C2 de l'ouvrage de B4R9.E4H4A3I0N3)3",
+    "name": "BREHAIN Ouest (C2 de l'ouvrage de BREH4A9I.N4)43033",
     "lat": null,
     "lon": null,
     "qth": "JN29WK"
@@ -14066,8 +14066,8 @@
   {
     "bunker": "B/F-1759",
     "code": "CEZF-225",
-    "name": "HAN DEVANT PIERREPON4T",
-    "lat": 9.403018,
+    "name": "HAN DEVANT PIERREPONT",
+    "lat": 49.403018,
     "lon": 5.708052,
     "qth": "JN29UJ"
   },
@@ -14890,25 +14890,25 @@
   {
     "bunker": "B/F-1862",
     "code": "Db316",
-    "name": "BOIS de BEUVEILLE Ouest",
-    "lat": 149.446816,
+    "name": "BOIS de BEUVEILLE Ouest 1",
+    "lat": 49.446816,
     "lon": 5.664274,
     "qth": "JN29TK"
   },
   {
     "bunker": "B/F-1863",
     "code": "Db317",
-    "name": "BOIS de BEUVEILLE Ouest",
-    "lat": 249.446557,
+    "name": "BOIS de BEUVEILLE Ouest 2",
+    "lat": 49.446557,
     "lon": 5.664328,
     "qth": "JN29TK"
   },
   {
     "bunker": "B/F-1864",
     "code": "Db318",
-    "name": "BOIS de BEUVEILLE Nord Ou4e9s.t452611",
-    "lat": null,
-    "lon": null,
+    "name": "BOIS de BEUVEILLE Nord Ouest",
+    "lat": 49.452611,
+    "lon": 5.667589,
     "qth": "JN29UK"
   },
   {
@@ -15762,8 +15762,8 @@
   {
     "bunker": "B/F-1971",
     "code": "",
-    "name": "VILLERS la MONTAGNE Centre - C1",
-    "lat": 649.458256,
+    "name": "VILLERS la MONTAGNE Centre - C16",
+    "lat": 49.458256,
     "lon": 5.824273,
     "qth": "JN29VK"
   },
@@ -16114,9 +16114,9 @@
   {
     "bunker": "B/F-2015",
     "code": "Bb346",
-    "name": "PFAFFENKLAUSERBUSCH Ou4e9s.t274431",
-    "lat": null,
-    "lon": null,
+    "name": "PFAFFENKLAUSERBUSCH Ouest",
+    "lat": 49.274431,
+    "lon": 6.415589,
     "qth": "JN39EG"
   },
   {
@@ -17258,8 +17258,8 @@
   {
     "bunker": "B/F-2158",
     "code": "Cb217",
-    "name": "ROUTE du LUXEMBOURG Es4t",
-    "lat": 9.419645,
+    "name": "ROUTE du LUXEMBOURG Est",
+    "lat": 49.419645,
     "lon": 6.160331,
     "qth": "JN39BK"
   },
@@ -17977,10 +17977,10 @@
   },
   {
     "bunker": "B/F-2248",
-    "code": "Cb424",
-    "name": "NEUWIESE 2",
-    "lat": 49.375891,
-    "lon": 6.363305,
+    "code": "Cb421",
+    "name": "NEUWIESE 1",
+    "lat": 49.37545,
+    "lon": 6.36225,
     "qth": "JN39EJ"
   },
   {
@@ -18698,9 +18698,9 @@
   {
     "bunker": "B/F-2338",
     "code": "",
-    "name": "LONKICH (Sous Quartier Boler - 1° CM49).434163",
-    "lat": null,
-    "lon": null,
+    "name": "LONKICH (Sous Quartier Boler - 1° CM)",
+    "lat": 49.434163,
+    "lon": 6.24953,
     "qth": "JN39CK"
   },
   {
@@ -19002,9 +19002,9 @@
   {
     "bunker": "B/F-2376",
     "code": "",
-    "name": "Reference reservee/supprimee",
-    "lat": null,
-    "lon": null,
+    "name": "Abri d\\'Hettange",
+    "lat": 49.4157,
+    "lon": 6.14785,
     "qth": null
   },
   {
@@ -27242,9 +27242,9 @@
   {
     "bunker": "B/F-3406",
     "code": "",
-    "name": "GROS REDERCHING Centre (Avant Po4s9t.e0)71057",
-    "lat": null,
-    "lon": null,
+    "name": "GROS REDERCHING Centre (Avant Poste)",
+    "lat": 49.071057,
+    "lon": 7.217077,
     "qth": "JN39OB"
   },
   {
@@ -27266,16 +27266,16 @@
   {
     "bunker": "B/F-3409",
     "code": "",
-    "name": "GROS REDERCHING Ouest (Avant Po4st9e.0)70619",
-    "lat": null,
-    "lon": null,
+    "name": "GROS REDERCHING Ouest (Avant Poste)",
+    "lat": 49.070619,
+    "lon": 7.214861,
     "qth": "JN39OB"
   },
   {
     "bunker": "B/F-3410",
     "code": "",
-    "name": "GROS REDERCHING Sud (Avant Poste4)",
-    "lat": 9.063457,
+    "name": "GROS REDERCHING Sud (Avant Poste)",
+    "lat": 49.063457,
     "lon": 7.212775,
     "qth": "JN39OB"
   },
@@ -28522,16 +28522,16 @@
   {
     "bunker": "B/F-3566",
     "code": "FERME des TUILERIES",
-    "name": "BITCHERBERG49",
-    "lat": 1.079918,
+    "name": "BITCHERBERG 1",
+    "lat": 49.079918,
     "lon": 7.381606,
     "qth": "JN39QB"
   },
   {
     "bunker": "B/F-3567",
     "code": "FERME des TUILERIES",
-    "name": "BITCHERBERG49",
-    "lat": 2.081617,
+    "name": "BITCHERBERG 2",
+    "lat": 49.081617,
     "lon": 7.381612,
     "qth": "JN39QB"
   },
@@ -29938,8 +29938,8 @@
   {
     "bunker": "B/F-3743",
     "code": "",
-    "name": "ROPPEVILLER DOUANE (Avant Poste4)",
-    "lat": 9.114833,
+    "name": "ROPPEVILLER DOUANE (Avant Poste)",
+    "lat": 49.114833,
     "lon": 7.481452,
     "qth": "JN39RC"
   },
@@ -31162,16 +31162,16 @@
   {
     "bunker": "B/F-3896",
     "code": "FM64",
-    "name": "BOIS de LANGENSOULTZBAC4H8",
-    "lat": 3.964517,
+    "name": "BOIS de LANGENSOULTZBACH 3",
+    "lat": 48.964517,
     "lon": 7.709358,
     "qth": "JN38UX"
   },
   {
     "bunker": "B/F-3897",
     "code": "FM65",
-    "name": "BOIS de LANGENSOULTZBAC4H8",
-    "lat": 1.963469,
+    "name": "BOIS de LANGENSOULTZBACH 1",
+    "lat": 48.963469,
     "lon": 7.709811,
     "qth": "JN38UX"
   },
@@ -31554,7 +31554,7 @@
   {
     "bunker": "B/F-3945",
     "code": "M14",
-    "name": "BOIS de LANGENSOULTZBACH4",
+    "name": "BOIS de LANGENSOULTZBACH 4",
     "lat": 48.966292,
     "lon": 7.712538,
     "qth": "JN38UX"
@@ -31570,8 +31570,8 @@
   {
     "bunker": "B/F-3947",
     "code": "M15",
-    "name": "BOIS de LANGENSOULTZBACH4",
-    "lat": 28.964412,
+    "name": "BOIS de LANGENSOULTZBACH 2",
+    "lat": 48.964412,
     "lon": 7.709008,
     "qth": "JN38UX"
   },
@@ -33914,40 +33914,40 @@
   {
     "bunker": "B/F-4240",
     "code": "",
-    "name": "MAISON FORESTIERE de l'EBERBACH4",
-    "lat": 18.836638,
+    "name": "MAISON FORESTIERE de l'EBERBACH 1",
+    "lat": 48.836638,
     "lon": 7.913447,
     "qth": "JN38WU"
   },
   {
     "bunker": "B/F-4241",
     "code": "",
-    "name": "MAISON FORESTIERE de RITTERSHOF4F8E.N8 81945",
-    "lat": null,
-    "lon": null,
+    "name": "MAISON FORESTIERE de RITTERSHOFFEN",
+    "lat": 418.88945,
+    "lon": 7.95431,
     "qth": "JN38XV"
   },
   {
     "bunker": "B/F-4242",
     "code": "",
-    "name": "MAISON FORESTIERE de RITTERSHOF4F8E.N8 92155",
-    "lat": null,
-    "lon": null,
+    "name": "MAISON FORESTIERE de RITTERSHOFFEN",
+    "lat": 428.89155,
+    "lon": 7.956522,
     "qth": "JN38XV"
   },
   {
     "bunker": "B/F-4243",
     "code": "MF12",
-    "name": "SCHEIBENHARDT Ouest (GRM48).980193",
-    "lat": null,
-    "lon": null,
+    "name": "SCHEIBENHARDT Ouest (GRM)",
+    "lat": 48.980193,
+    "lon": 8.130019,
     "qth": "JN48BX"
   },
   {
     "bunker": "B/F-4244",
     "code": "MF12bis",
-    "name": "SCHEIBENHARDT Nord (GR4M",
-    "lat": 8.9,
+    "name": "SCHEIBENHARDT Nord (GRM)",
+    "lat": 48.979466,
     "lon": 8.136224,
     "qth": "JN48BX"
   },
@@ -34034,9 +34034,9 @@
   {
     "bunker": "B/F-4255",
     "code": "",
-    "name": "ROUTE FORESTIERE de RITTERSHOF4FE8N.885617",
-    "lat": null,
-    "lon": null,
+    "name": "ROUTE FORESTIERE de RITTERSHOFFEN",
+    "lat": 48.885617,
+    "lon": 7.946301,
     "qth": "JN38XV"
   },
   {
@@ -37346,10 +37346,10 @@
   {
     "bunker": "B/F-4669",
     "code": "3",
-    "name": "UNTERJAEGERHOF - ROUTE du WA48LD.6H3O43F8",
+    "name": "UNTERJAEGERHOF - ROUTE du WALDH4O8F.63438",
     "lat": null,
     "lon": null,
-    "qth": "WA48LD"
+    "qth": "JN38VP"
   },
   {
     "bunker": "B/F-4670",
@@ -39602,8 +39602,8 @@
   {
     "bunker": "B/F-4951",
     "code": "",
-    "name": "FORET de WIDENSOLEN CARREFOUR4",
-    "lat": 189.024,
+    "name": "FORET de WIDENSOLEN CARREFOUR 1924",
+    "lat": 18.045397,
     "lon": 7.487377,
     "qth": "JN38RB"
   },
@@ -39618,8 +39618,8 @@
   {
     "bunker": "B/F-4953",
     "code": "",
-    "name": "FORET de WIDENSOLEN CARREFOUR4",
-    "lat": 189.024,
+    "name": "FORET de WIDENSOLEN CARREFOUR 1924",
+    "lat": 28.044077,
     "lon": 7.488537,
     "qth": "JN38RB"
   },
@@ -40442,8 +40442,8 @@
   {
     "bunker": "B/F-5056",
     "code": "G39",
-    "name": "RUMERSHEIM le Haut BERGE",
-    "lat": 347.868049,
+    "name": "RUMERSHEIM le Haut BERGE 3",
+    "lat": 47.868049,
     "lon": 7.554369,
     "qth": "JN37SU"
   },
@@ -40474,8 +40474,8 @@
   {
     "bunker": "B/F-5060",
     "code": "G40",
-    "name": "RUMERSHEIM le Haut BERGE",
-    "lat": 247.860591,
+    "name": "RUMERSHEIM le Haut BERGE 2",
+    "lat": 47.860591,
     "lon": 7.55754,
     "qth": "JN37SU"
   },
@@ -40554,8 +40554,8 @@
   {
     "bunker": "B/F-5070",
     "code": "G41",
-    "name": "RUMERSHEIM le Haut BERGE",
-    "lat": 147.852055,
+    "name": "RUMERSHEIM le Haut BERGE 1",
+    "lat": 47.852055,
     "lon": 7.561839,
     "qth": "JN37SU"
   },
@@ -44234,24 +44234,24 @@
   {
     "bunker": "B/F-5530",
     "code": "A3",
-    "name": "CHAPELLE d'ABONDANCE 3 - HS4",
-    "lat": 164.3296423,
+    "name": "CHAPELLE d'ABONDANCE 3 - HS14",
+    "lat": 346.296423,
     "lon": 6.78506,
     "qth": "JN36JH"
   },
   {
     "bunker": "B/F-5531",
     "code": "A2",
-    "name": "CHAPELLE d'ABONDANCE 2 - HS4",
-    "lat": 164.4296137,
+    "name": "CHAPELLE d'ABONDANCE 2 - HS14",
+    "lat": 446.296137,
     "lon": 6.783736,
     "qth": "JN36JH"
   },
   {
     "bunker": "B/F-5532",
     "code": "A1",
-    "name": "CHAPELLE d'ABONDANCE 1 - HS4",
-    "lat": 164.5296121,
+    "name": "CHAPELLE d'ABONDANCE 1 - HS14",
+    "lat": 546.296121,
     "lon": 6.78297,
     "qth": "JN36JH"
   },
@@ -44274,16 +44274,16 @@
   {
     "bunker": "B/F-5535",
     "code": "F51bis",
-    "name": "PONT de l'ALOUETTE Centre4 -5 H.9S91505523",
-    "lat": null,
-    "lon": null,
+    "name": "PONT de l'ALOUETTE Centre - HS4",
+    "lat": 150.5995523,
+    "lon": 6.160221,
     "qth": "JN35BX"
   },
   {
     "bunker": "B/F-5536",
     "code": "F52",
-    "name": "PONT de l'ALOUETTE Est - HS10",
-    "lat": 465.995491,
+    "name": "PONT de l'ALOUETTE Est - HS106",
+    "lat": 45.995491,
     "lon": 6.160396,
     "qth": "JN35BX"
   },
@@ -44314,8 +44314,8 @@
   {
     "bunker": "B/F-5540",
     "code": "F54bis",
-    "name": "Les TAVERNETTES 3 - HS10",
-    "lat": 945.993445,
+    "name": "Les TAVERNETTES 3 - HS109",
+    "lat": 45.993445,
     "lon": 6.16274,
     "qth": "JN35BX"
   },
@@ -44346,8 +44346,8 @@
   {
     "bunker": "B/F-5544",
     "code": "F55bis",
-    "name": "Les TAVERNETTES 5 - HS11",
-    "lat": 145.988125,
+    "name": "Les TAVERNETTES 5 - HS111",
+    "lat": 45.988125,
     "lon": 6.163918,
     "qth": "JN35BX"
   },
@@ -44410,8 +44410,8 @@
   {
     "bunker": "B/F-5552",
     "code": "O5bis",
-    "name": "CASCADE de l'ARPENAZ - HS14",
-    "lat": 257.975419,
+    "name": "CASCADE de l'ARPENAZ - HS127",
+    "lat": 45.975419,
     "lon": 6.64018,
     "qth": "JN35HX"
   },
@@ -44426,8 +44426,8 @@
   {
     "bunker": "B/F-5554",
     "code": "F105",
-    "name": "DINGY-SAINT-CLAIR Sud - HS14",
-    "lat": 250.905328,
+    "name": "DINGY-SAINT-CLAIR Sud - HS120",
+    "lat": 45.905328,
     "lon": 6.205328,
     "qth": "JN35CV"
   },
@@ -44610,7 +44610,7 @@
   {
     "bunker": "B/F-5577",
     "code": "",
-    "name": "EUCHERTS-REDOUTE RUINEE (Statio4n5 h.6a5u6te8)28",
+    "name": "EUCHERTS-REDOUTE RUINEE (Station hau4t5e.)656828",
     "lat": null,
     "lon": null,
     "qth": "JN35KP"
@@ -44770,7 +44770,7 @@
   {
     "bunker": "B/F-5597",
     "code": "",
-    "name": "EUCHERTS-REDOUTE RUINEE (Statio4n5 b.6a2ss6e4)26",
+    "name": "EUCHERTS-REDOUTE RUINEE (Station bas4s5e.)626426",
     "lat": null,
     "lon": null,
     "qth": "JN35KP"
@@ -45690,16 +45690,16 @@
   {
     "bunker": "B/F-5712",
     "code": "B11",
-    "name": "PAS de la PORTE Centre - SA",
-    "lat": -645.232435,
+    "name": "PAS de la PORTE Centre - SA-6",
+    "lat": 45.232435,
     "lon": 6.459003,
     "qth": "JN35FF"
   },
   {
     "bunker": "B/F-5713",
     "code": "B11",
-    "name": "PAS de la PORTE Centre - SA",
-    "lat": -645.232435,
+    "name": "PAS de la PORTE Centre - SA-6",
+    "lat": 45.232435,
     "lon": 6.459003,
     "qth": "JN35FF"
   },
@@ -46218,16 +46218,16 @@
   {
     "bunker": "B/F-5778",
     "code": "RIEUX ROUX 2",
-    "name": "TUNNEL FERROVIAIR4E",
-    "lat": 5.195644,
+    "name": "TUNNEL FERROVIAIRE",
+    "lat": 45.195644,
     "lon": 6.669756,
     "qth": "JN35IE"
   },
   {
     "bunker": "B/F-5779",
     "code": "RIEUX ROUX 2",
-    "name": "TUNNEL FERROVIAIR4E",
-    "lat": 5.195644,
+    "name": "TUNNEL FERROVIAIRE",
+    "lat": 45.195644,
     "lon": 6.669756,
     "qth": "JN35IE"
   },
@@ -49938,8 +49938,8 @@
   {
     "bunker": "B/F-6243",
     "code": "",
-    "name": "POINTE des TROIS COMMUNES (PTC4)",
-    "lat": 4.001071,
+    "name": "POINTE des TROIS COMMUNES (PTC)",
+    "lat": 44.001071,
     "lon": 7.433068,
     "qth": "JN34RA"
   },
@@ -50218,8 +50218,8 @@
   {
     "bunker": "B/F-6278",
     "code": "",
-    "name": "CHAMP de TIR d'AGAISEN (CT) - E0",
-    "lat": 443.891789,
+    "name": "CHAMP de TIR d'AGAISEN (CT) - E04",
+    "lat": 43.891789,
     "lon": 7.450196,
     "qth": "JN33RV"
   },
@@ -50394,7 +50394,7 @@
   {
     "bunker": "B/F-6300",
     "code": "",
-    "name": "COL de BRAUS (Sous-Secteur SOSPEL4 3- .4807°0 D9B0A5F)",
+    "name": "COL de BRAUS (Sous-Secteur SOSPEL - 404°3 D.8B7A0F9)05",
     "lat": null,
     "lon": null,
     "qth": "JN33QU"
@@ -50770,8 +50770,8 @@
   {
     "bunker": "B/F-6347",
     "code": "COL de SEGRA",
-    "name": "MAISON CANTONIER4E",
-    "lat": 3.837296,
+    "name": "MAISON CANTONIERE",
+    "lat": 43.837296,
     "lon": 7.439912,
     "qth": "JN33RU"
   },
@@ -59038,5 +59038,69 @@
     "lat": 48.596697,
     "lon": -2.538169,
     "qth": null
+  },
+  {
+    "bunker": "B/F-7381",
+    "code": "",
+    "name": "Soultz / Issenheim D83",
+    "lat": 47.88936,
+    "lon": 7.25565,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7382",
+    "code": "",
+    "name": "Vitry en Artois",
+    "lat": 50.34977,
+    "lon": 2.99872,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7383",
+    "code": "",
+    "name": "Mont-Haut",
+    "lat": 49.23032,
+    "lon": 4.30127,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7384",
+    "code": "",
+    "name": "Mont Cornillet 1",
+    "lat": 49.21207,
+    "lon": 4.27471,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7385",
+    "code": "",
+    "name": "Mont Cornillet 2",
+    "lat": 49.21203,
+    "lon": 4.27481,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7386",
+    "code": "",
+    "name": "Prosnes",
+    "lat": 49.18988,
+    "lon": 4.28938,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7387",
+    "code": "",
+    "name": "Mont St Eloi",
+    "lat": 50.3521,
+    "lon": 2.70269,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7388",
+    "code": "Cb424",
+    "name": "NEUWIESE 2",
+    "lat": 49.375891,
+    "lon": 6.363305,
+    "qth": "JN39EJ"
   }
 ]
