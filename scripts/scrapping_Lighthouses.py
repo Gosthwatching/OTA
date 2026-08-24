@@ -3,101 +3,132 @@ import json
 import re
 from playwright.async_api import async_playwright
 
-BASE = "https://dplf.wlota.com/index.php/dplf-lists"
+OUTPUT = "pb_department_29_139_507.geojson"
 
-GROUPS = [
-    ("departments-06-to-22", range(6, 23)),
-    ("departments-27-to-35", range(27, 36)),
-    ("departments-40-to-62", range(40, 63)),
-    ("departments-64-to-85", range(64, 86)),
-]
+BASE_URL = "https://dplf.wlota.com/index.php?id={id}"
 
-OUTPUT = "lighthouses_final.geojson"
-
+# -----------------------------
+#  UTILITAIRES
+# -----------------------------
 
 def dms_to_decimal(dms):
+    """
+    Convertit une position DMS du type '47°52,5 N 004°06,9 W'
+    en (lon, lat) en décimal.
+    """
     m = re.search(r"(\d+)°(\d+,\d+)\s([NS])\s(\d+)°(\d+,\d+)\s([EW])", dms)
     if not m:
         return None, None
+
     lat_deg, lat_min, lat_dir, lon_deg, lon_min, lon_dir = m.groups()
-    lat = float(lat_deg) + float(lat_min.replace(",", ".") )/60
-    lon = float(lon_deg) + float(lon_min.replace(",", ".") )/60
-    if lat_dir == "S": lat = -lat
-    if lon_dir == "W": lon = -lon
+
+    lat = float(lat_deg) + float(lat_min.replace(",", ".")) / 60
+    lon = float(lon_deg) + float(lon_min.replace(",", ".")) / 60
+
+    if lat_dir == "S":
+        lat = -lat
+    if lon_dir == "W":
+        lon = -lon
+
     return lon, lat
 
 
-async def discover_departments(page):
-    deps = []
-    for group, numbers in GROUPS:
-        for num in numbers:
-            url = f"{BASE}/{group}/department-{num}"
-            try:
-                await page.goto(url, timeout=15000)
-                body = await page.inner_text("body")
-                if "DPLF" in body or "Phare" in body:
-                    deps.append(url)
-                    print(f"Département valide : {url}")
-            except:
-                pass
-    return deps
+def extract(label, text):
+    """
+    Extrait la valeur après 'label :' sur la ligne.
+    Exemple : extract("Nom du phare", text)
+    """
+    m = re.search(rf"{label}\s*:\s*([^\n]+)", text)
+    return m.group(1).strip() if m else ""
 
 
-async def discover_pbs(page, dep_url):
-    await page.goto(dep_url, timeout=30000)
-    links = await page.query_selector_all("a[href*='?id=']")
-    pbs = set()
-    for link in links:
-        href = await link.get_attribute("href")
-        if not href:
-            continue
-        if "?id=" in href:
-            try:
-                pb = int(href.split("id=")[1])
-                pbs.add(pb)
-            except:
-                pass
-    return sorted(pbs)
+def clean_wlotta(raw):
+    """
+    Nettoie le champ WLOTA :
+    - vide -> "?"
+    - 'Non' -> 'Non'
+    - contient un numéro -> 'Oui'
+    - sinon -> '?'
+    """
+    if not raw:
+        return "?"
+    raw = raw.strip()
+
+    if raw.lower() == "non":
+        return "Non"
+
+    if re.search(r"\d+", raw):
+        return "Oui"
+
+    return "?"
 
 
-async def fetch_pb(page, dep_url, pb):
-    url = f"{dep_url}?id={pb}"
-    await page.goto(url, timeout=30000)
-    text = await page.inner_text("body")
+def clean_position_dms(raw):
+    if not raw:
+        return ""
+    return raw.replace("Position Géographique :", "").strip()
 
-    if "Accessibilité" not in text:
+
+# -----------------------------
+#  SCRAPER D'UNE PAGE
+# -----------------------------
+
+async def scrape_page(page, id_value):
+    url = BASE_URL.format(id=id_value)
+
+    try:
+        await page.goto(url, timeout=30000)
+    except Exception as e:
+        print(f"[!] Erreur de chargement pour id={id_value} : {e}")
         return None
 
-    def extract(label):
-        m = re.search(rf"{label}\s*:\s*([^\n]+)", text)
-        return m.group(1).strip() if m else ""
+    try:
+        text = await page.inner_text("body")
+    except Exception as e:
+        print(f"[!] Erreur de lecture du body pour id={id_value} : {e}")
+        return None
 
-    nom = extract("Nom du phare")
-    access = extract("Accessibilité")
-    ville = extract("Ville Proche")
-    structure = extract("Structure")
-    validation = extract("Validation expédition")
-    departement = extract("Département")
-    wlotta = extract("WLOTA")
-    position_dms = extract("Position Géographique")
-    recherche = extract("Recherché par les chasseurs de phare à")
-    derniere = extract("Dernière activité")
+    # Extraction des champs
+    dplf = extract("DPLF N° : ", text)
+    access = extract("Accessibilité", text)
+    nom = extract("Nom du phare", text)
+    structure = extract("Structure", text)
+    validation = extract("Validation expédition", text)
+    departement = extract("Département", text)
+    wlotta_raw = extract("WLOTA", text)
+    position_dms_raw = extract("Position Géographique", text)
+    recherche = extract("Recherché par les chasseurs de phare à", text)
+    derniere = extract("Dernière activité", text)
 
+    # Nettoyage
+    wlotta = clean_wlotta(wlotta_raw)
+    position_dms = clean_position_dms(position_dms_raw)
     lon, lat = dms_to_decimal(position_dms)
 
-    return {
+    # Si pas de nom de phare, on considère que la page n'est pas un phare utile
+    if not nom:
+        print(f"[i] Pas de 'Nom du phare' pour id={id_value}, page ignorée.")
+        return None
+
+    feature = {
         "type": "Feature",
-        "id": f"PB{pb}",
-        "geometry": {"type": "Point", "coordinates": [lon, lat]},
+        "id": f"ID{id_value}",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                round(lon, 4) if lon else 0.0000,
+                round(lat, 4) if lat else 0.0000
+            ]
+        },
         "properties": {
-            "pb": pb,
+            "idPage": id_value,
             "nom": nom,
-            "departement": departement,
-            "wlotta": wlotta,
+            "dplf": dplf,
             "accessibilite": access,
-            "villeProche": ville,
             "structure": structure,
             "validationExpedition": validation,
+            "departement": departement,
+            "wlotta": wlotta,
             "positionDMS": position_dms,
             "recherchePourcentage": recherche,
             "derniereActivite": derniere,
@@ -105,46 +136,43 @@ async def fetch_pb(page, dep_url, pb):
         }
     }
 
+    print(f"[+] OK id={id_value} | {nom}")
+    return feature
+
+
+# -----------------------------
+#  MAIN
+# -----------------------------
 
 async def main():
-    final = []
+    results = []
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
 
-        print("Découverte automatique des départements…")
-        deps = await discover_departments(page)
-        print(f"{len(deps)} départements trouvés.")
-
-        all_pbs = {}
-
-        for dep in deps:
-            print(f"\nScan PB du département : {dep}")
-            pbs = await discover_pbs(page, dep)
-            print(f"{len(pbs)} PB trouvés")
-            for pb in pbs:
-                all_pbs[pb] = dep
-
-        print(f"\nTotal PB trouvés : {len(all_pbs)}")
-
-        for pb, dep_url in sorted(all_pbs.items()):
-            print(f"Scraping PB{pb}…")
-            data = await fetch_pb(page, dep_url, pb)
-            if data:
-                final.append(data)
-            else:
-                print(f"⚠ PB{pb} introuvable")
+        # boucle sur tous les id de 139 à 507 inclus
+        for id_value in range(1, 579):
+            print(f"Scraping id={id_value}…")
+            feature = await scrape_page(page, id_value)
+            if feature:
+                results.append(feature)
 
         await browser.close()
 
-    geojson = {"type": "FeatureCollection", "features": final}
+    # Tri par idPage croissant
+    results = sorted(results, key=lambda f: f["properties"]["idPage"])
+
+    geojson = {
+        "type": "FeatureCollection",
+        "features": results
+    }
 
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(geojson, f, indent=2, ensure_ascii=False)
 
     print(f"\n✔ Fichier généré : {OUTPUT}")
-    print(f"✔ Total phares : {len(final)}")
+    print(f"✔ Pages valides (avec Nom du phare) : {len(results)}")
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ window.OTA = window.OTA || {};
 OTA.pointsLoader = {
   getTypeFileMap: function () {
     return {
-      lighthouse: "./json/lighthouse.geojson",
+      lighthouse: "./json/Lighthouse.geojson",
       beach: "./json/beach.geojson",
       bunker: [
         "./json/bunker/bunkers_all_with_activation.json",
@@ -32,7 +32,7 @@ OTA.pointsLoader = {
   getGeoJSONPointType: function (feature) {
     const props = feature.properties || {};
 
-    if (props.man_made === "lighthouse") return "lighthouse";
+    if (props.man_made === "lighthouse" || props.typePoint === "lighthouse") return "lighthouse";
     if (props.natural === "beach" || props.leisure === "beach") return "beach";
     if (props.military === "bunker" || props.building === "bunker") return "bunker";
 
@@ -61,6 +61,11 @@ OTA.pointsLoader = {
     const props = feature.properties || {};
     if (props.activated === true) return true;
     if (props.activated === false) return false;
+
+    // Le DPLF n'indique une annee que si le phare a deja ete active
+    if (props.typePoint === "lighthouse") {
+      return /^\d{4}$/.test(String(props.derniereActivite || "").trim());
+    }
 
     return OTA.config.isIdActif(OTA.pointsLoader.getFeatureOsmId(feature));
   },
