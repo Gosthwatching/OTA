@@ -8,17 +8,18 @@ Carte web pour explorer des points OTA par departement en France, avec affichage
 - filtrage par type de point: phare, plage, bunker
 - filtrage par activation
 - affichage cartographique Leaflet avec regroupement des marqueurs
+- icones dediees par type de point (phare, bunker, plage), coloriees en vert (active) ou rouge (non active)
 - API optionnelle pour analyser un PDF et extraire les bunkers actives
 
 ## Structure du projet
 
 - `index.html` : point d'entree de l'application
-- `main.js` et `js/` : logique frontend
+- `main.js` et `js/` : logique frontend (chargement des points, carte Leaflet, icones)
 - `assets/` : styles, images et ressources statiques
-- `json/` : jeux de donnees utilises par la carte
+- `json/` : jeux de donnees utilises par la carte (phares, plages, bunkers)
 - `server.cjs` : API Express locale
 - `api/check-new-activations.js` : version serverless compatible Vercel
-- `scripts/` : scripts de collecte, extraction et fusion de donnees
+- `scripts/` : scripts de collecte, extraction et fusion de donnees (bunkers, plages, phares DPLF)
 
 ## Lancer le projet en local
 
@@ -142,6 +143,15 @@ Si votre site est deploye depuis la branche du repo (Vercel, etc.), un commit de
 - `express`
 - `node-fetch`
 - `pdf-parse`
+
+## Donnees des phares (DPLF)
+
+Les phares affiches sur la carte proviennent de `json/lighthouse.geojson`, genere a partir du site du DPLF (Diplome des Phares du Littoral Francais) :
+
+- `scripts/scrapping_Lighthouses.py` / `scripts/scrapping_Phares2.py` : recuperent la liste des phares et leurs informations par departement
+- `scripts/dplf_map.py` : consolide les donnees en GeoJSON
+
+Un phare est considere comme "active" si le champ `derniereActivite` contient une annee (ex. `2022`) ; sinon il est affiche comme non active.
 
 ## Suite possible
 

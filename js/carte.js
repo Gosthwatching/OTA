@@ -20,7 +20,11 @@ OTA.carte = {
     OTA.etat.couchePoints = OTA.carte.createClusterGroup();
     OTA.etat.couchePoints.addTo(OTA.etat.carte);
     OTA.etat.coucheUtilisateur = L.layerGroup().addTo(OTA.etat.carte);
+    OTA.etat.coucheZones = L.layerGroup().addTo(OTA.etat.carte);
     OTA.etat.coucheDepartement = null;
+
+    OTA.etat.carte.on("zoomend moveend", OTA.carte.updateLighthouseCirclesVisibility);
+    OTA.etat.couchePoints.on("animationend", OTA.carte.updateLighthouseCirclesVisibility);
 
     // Légende
     OTA.carte.addLegendControl();
@@ -172,8 +176,13 @@ OTA.carte = {
     );
   },
 
+  rayonActivationLighthouseMetres: 150,
+  lighthouseCircles: [],
+
   showPoints(points, zoneRecherche, portee) {
     OTA.etat.couchePoints.clearLayers();
+    OTA.etat.coucheZones.clearLayers();
+    OTA.carte.lighthouseCircles = [];
 
     if (portee === "single") {
       const p = OTA.config.pointTest;
@@ -209,7 +218,19 @@ OTA.carte = {
       marqueur.bindPopup(popupHtml);
 
       OTA.etat.couchePoints.addLayer(marqueur);
+
+      if (point.typePoint === "lighthouse") {
+        const cercle = L.circle([point.lat, point.lon], {
+          radius: OTA.carte.rayonActivationLighthouseMetres,
+          color: point.estActif ? OTA.icons.colors.activationColor : OTA.icons.colors.inactiveColor,
+          weight: 1,
+          fillOpacity: 0.08,
+        });
+        OTA.carte.lighthouseCircles.push({ marker: marqueur, circle: cercle });
+      }
     }
+
+    OTA.carte.updateLighthouseCirclesVisibility();
 
     // Mise à jour du panneau de stats
     const total = points.length;
@@ -218,6 +239,22 @@ OTA.carte = {
 
     document.getElementById("ota-stats").innerHTML =
       `${total} points affichés (${actifs} actifs, ${inactifs} inactifs)`;
+  },
+
+  // N'affiche le cercle que si son phare n'est pas fondu dans un cluster
+  updateLighthouseCirclesVisibility() {
+    const groupe = OTA.etat.couchePoints;
+    const peutDetecterCluster = typeof groupe.getVisibleParent === "function";
+
+    for (const entree of OTA.carte.lighthouseCircles) {
+      const visible = !peutDetecterCluster || groupe.getVisibleParent(entree.marker) === entree.marker;
+
+      if (visible && !OTA.etat.coucheZones.hasLayer(entree.circle)) {
+        entree.circle.addTo(OTA.etat.coucheZones);
+      } else if (!visible && OTA.etat.coucheZones.hasLayer(entree.circle)) {
+        OTA.etat.coucheZones.removeLayer(entree.circle);
+      }
+    }
   },
 
   drawDepartment(departement) {
