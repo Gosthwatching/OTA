@@ -59102,5 +59102,205 @@
     "lat": 49.375891,
     "lon": 6.363305,
     "qth": "JN39EJ"
+  },
+  {
+    "bunker": "B/F-7389",
+    "code": "",
+    "name": "Berrwiller 1",
+    "lat": 47.833933,
+    "lon": 7.223521,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7390",
+    "code": "",
+    "name": "Berrwiller 2",
+    "lat": 47.832337,
+    "lon": 7.224458,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7391",
+    "code": "",
+    "name": "Bollwiller 1",
+    "lat": 47.867329,
+    "lon": 7.252834,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7392",
+    "code": "",
+    "name": "Bollwiller 2",
+    "lat": 47.86662,
+    "lon": 7.252514,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7393",
+    "code": "",
+    "name": "Bollwiller 3",
+    "lat": 47.865632,
+    "lon": 7.25217,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7394",
+    "code": "",
+    "name": "Bollwiller 4",
+    "lat": 47.864938,
+    "lon": 7.251836,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7395",
+    "code": "",
+    "name": "BERRE 1",
+    "lat": 43.47995,
+    "lon": 5.17879,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7396",
+    "code": "",
+    "name": "BERRE 2",
+    "lat": 43.47973,
+    "lon": 5.17752,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7397",
+    "code": "",
+    "name": "BERRE 3",
+    "lat": 43.47966,
+    "lon": 5.17712,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7398",
+    "code": "",
+    "name": "BERRE 4",
+    "lat": 43.47953,
+    "lon": 5.17628,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7399",
+    "code": "",
+    "name": "Bunker de la Villa Louise",
+    "lat": 49.340203,
+    "lon": 0.029257,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7400",
+    "code": "",
+    "name": "Erbaut",
+    "lat": 47.882245,
+    "lon": 7.146403,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7401",
+    "code": "",
+    "name": "Soultz 1",
+    "lat": 47.883993,
+    "lon": 7.259049,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7402",
+    "code": "",
+    "name": "Soultz 2",
+    "lat": 47.8836,
+    "lon": 7.259152,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7403",
+    "code": "",
+    "name": "Reference reservee/supprimee",
+    "lat": null,
+    "lon": null,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7404",
+    "code": "",
+    "name": "Illfurt 2",
+    "lat": 47.679078,
+    "lon": 7.25335,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7405",
+    "code": "",
+    "name": "Illfurt 3",
+    "lat": 47.67452,
+    "lon": 7.253154,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7406",
+    "code": "",
+    "name": "Spechbach 1",
+    "lat": 47.685701,
+    "lon": 7.239046,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7407",
+    "code": "",
+    "name": "Spechbach 2",
+    "lat": 47.68568,
+    "lon": 7.235713,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7408",
+    "code": "",
+    "name": "Spechbach 2 bis",
+    "lat": 47.68956,
+    "lon": 7.22658,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7409",
+    "code": "",
+    "name": "Spechbach 3",
+    "lat": 47.68183,
+    "lon": 7.232758,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7410",
+    "code": "",
+    "name": "Spechbach 4",
+    "lat": 47.682413,
+    "lon": 7.227539,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7411",
+    "code": "",
+    "name": "Spechbach 5",
+    "lat": 47.681783,
+    "lon": 7.227469,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7412",
+    "code": "",
+    "name": "Spechbach 6",
+    "lat": 47.677823,
+    "lon": 7.222467,
+    "qth": null
+  },
+  {
+    "bunker": "B/F-7413",
+    "code": "",
+    "name": "Spechbach 7",
+    "lat": 47.672074,
+    "lon": 7.2305,
+    "qth": null
   }
 ]

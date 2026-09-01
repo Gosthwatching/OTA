@@ -1,20 +1,22 @@
 {
-  "updated_at": "2026-08-01T04:08:14Z",
+  "updated_at": "2026-09-01T03:10:15Z",
   "sources": {
     "update_page": "https://www.qsl.net/f1lpt/Update.html",
-    "list_pdf": "https://www.qsl.net/f1lpt/FBOTAV326Web.pdf",
+    "list_pdf": "https://www.qsl.net/f1lpt/FBOTAV329Web.pdf",
     "activation_pdf": "https://www.qsl.net/f1lpt/ActivationFBOTAweb06072026.pdf"
   },
   "declared": {
-    "bunkers_total": 7388,
+    "bunkers_total": 7413,
     "activated_rows": 525
   },
   "generated": {
-    "bunkers_total": 7388,
-    "bunkers_with_coordinates": 7379,
+    "bunkers_total": 7413,
+    "bunkers_with_coordinates": 7403,
     "activated_rows": 525,
     "activated_unique": 519,
     "all_with_activation_active": 519
   },
-  "missing_ids_filled": []
+  "missing_ids_filled": [
+    "B/F-7403"
+  ]
 }
